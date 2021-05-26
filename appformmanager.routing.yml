@@ -1,0 +1,15 @@
+appformmanager.example:
+  path: '/appformmanager/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\appformmanager\Controller\AppformmanagerController::build'
+  requirements:
+    _permission: 'access content'
+
+appformmanager.settings_form:
+  path: '/admin/config/system/appformmanager'
+  defaults:
+    _title: 'AppFormManager settings'
+    _form: 'Drupal\appformmanager\Form\SettingsForm'
+  requirements:
+    _permission: 'administer appformmanager configuration'

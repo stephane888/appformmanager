@@ -1,0 +1,6 @@
+appformmanager.settings_form:
+  title: AppFormManager
+  description: Configure AppFormManager.
+  parent: system.admin_config_system
+  route_name: appformmanager.settings_form
+  weight: 10
