@@ -1,7 +1,7 @@
-appformmanager.example:
-  path: '/appformmanager/example'
+appformmanager.build:
+  path: '/appformmanager/form'
   defaults:
-    _title: 'Example'
+    _title: 'Travaux de renovations'
     _controller: '\Drupal\appformmanager\Controller\AppformmanagerController::build'
   requirements:
     _permission: 'access content'
