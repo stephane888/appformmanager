@@ -45,4 +45,15 @@ app_form:
       files/appForm.css: {}
   dependencies:
     - core/drupalSettings
-    - appformmanager/vuejs
+    - wb_universe/vue_js
+
+#
+manager:
+  js:
+    appadmin/appForm.umd.min.js: {}
+  css:
+    component:
+      appadmin/appForm.css: {}
+  dependencies:
+    - core/drupalSettings
+    - wb_universe/vue_js
