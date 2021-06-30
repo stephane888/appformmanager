@@ -1,6 +1,7 @@
 <?php
 
 /**
+ *
  * @file
  * Primary module hooks for AppFormManager module.
  *
@@ -8,3 +9,14 @@
  * This file is no longer required in Drupal 8.
  * @see https://www.drupal.org/node/2217931
  */
+/**
+ * implement hook_ENTYTY_TYPE_insert
+ *
+ * @inheritdoc
+ * @param Drupal\user\Entity\User $user
+ *
+ */
+function appformmanager_user_insert(Drupal\user\Entity\User $user){
+	$user->activate();
+	$user->save();
+}

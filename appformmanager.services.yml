@@ -1,0 +1,6 @@
+services:
+  appformmanager.error_rest_message:
+    class: '\Drupal\appformmanager\EventSubscriber\AppFormmanagerListenerEvent'
+    tags:
+      - { name: 'event_subscriber' }
+    arguments: ['@serializer', '%serializer.formats%']

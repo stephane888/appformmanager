@@ -21,3 +21,20 @@ appformmanager.settings_form:
     _form: 'Drupal\appformmanager\Form\SettingsForm'
   requirements:
     _permission: 'administer appformmanager configuration'
+
+
+appformmanager.user:
+  path: '/appformmanager/user'
+  defaults:
+    _title: 'Travaux de renovations'
+    _controller: '\Drupal\appformmanager\Controller\AppformmanagerController::user'
+  requirements:
+    _permission: 'access content'
+
+appformmanager.user_register:
+  path: '/appformmanager/user-register'
+  defaults:
+    _title: 'Travaux de renovations'
+    _controller: '\Drupal\appformmanager\Controller\AppformmanagerController::register'
+  requirements:
+    _permission: 'access content'
