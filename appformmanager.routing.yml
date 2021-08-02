@@ -12,7 +12,7 @@ appformmanager.administer:
     _title: 'Travaux de renovations'
     _controller: '\Drupal\appformmanager\Controller\AppformmanagerController::manager'
   requirements:
-    _permission: 'access content'
+    _permission: 'administer modules'
 
 appformmanager.settings_form:
   path: '/admin/config/system/appformmanager'
@@ -23,18 +23,18 @@ appformmanager.settings_form:
     _permission: 'administer appformmanager configuration'
 
 
+appformmanager.current_user:
+  path: '/appformmanager/current-user'
+  defaults:
+    _title: 'Travaux de renovations'
+    _controller: '\Drupal\appformmanager\Controller\AppformmanagerController::currentUser'
+  requirements:
+    _permission: 'access content'
+
 appformmanager.user:
   path: '/appformmanager/user'
   defaults:
     _title: 'Travaux de renovations'
-    _controller: '\Drupal\appformmanager\Controller\AppformmanagerController::user'
-  requirements:
-    _permission: 'access content'
-
-appformmanager.user_register:
-  path: '/appformmanager/user-register'
-  defaults:
-    _title: 'Travaux de renovations'
-    _controller: '\Drupal\appformmanager\Controller\AppformmanagerController::register'
+    _controller: '\Drupal\appformmanager\Controller\AppformmanagerController::getUser'
   requirements:
     _permission: 'access content'
