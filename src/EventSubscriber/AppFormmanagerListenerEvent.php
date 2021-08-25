@@ -4,7 +4,7 @@ namespace Drupal\appformmanager\EventSubscriber;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Drupal\serialization\EventSubscriber\DefaultExceptionSubscriber;
-use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
+//use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Drupal\Core\Cache\CacheableDependencyInterface;
 use Drupal\Core\Cache\CacheableResponse;
 use Symfony\Component\HttpFoundation\Response;
@@ -12,7 +12,8 @@ use Symfony\Component\Serializer\SerializerInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 
 
-// use Symfony\Component\HttpKernel\Event\ExceptionEvent;
+
+ use Symfony\Component\HttpKernel\Event\ExceptionEvent;
 
 /**
  * Class EntityTypeSubscriber.
@@ -43,7 +44,7 @@ class AppFormmanagerListenerEvent extends DefaultExceptionSubscriber
 	 * @param \Symfony\Component\HttpKernel\Event\ExceptionEvent $event
 	 *        	The event to process.
 	 */
-	public function on4xx(GetResponseForExceptionEvent $event)
+	public function on4xx(ExceptionEvent $event)
 	{
 		/** @var \Symfony\Component\HttpKernel\Exception\HttpExceptionInterface $exception */
 		// $event->ex
