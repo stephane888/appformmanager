@@ -40,7 +40,7 @@
 /* unused harmony export required_if */
 /* unused harmony export size */
 /**
-  * vee-validate v3.4.11
+  * vee-validate v3.4.13
   * (c) 2021 Abdelrahman Awad
   * @license MIT
   */
@@ -752,12 +752,9 @@ var size = {
 
 var validate = function (value, params) {
     var _a = params || {}, _b = _a.decimals, decimals = _b === void 0 ? 0 : _b, _c = _a.separator, separator = _c === void 0 ? 'dot' : _c;
-    var separators = {
-        dot: '.',
-        comma: ','
-    };
-    var regexPart = +decimals === 0 ? '+' : "{" + decimals + "}";
-    var regex = new RegExp("^-?\\d+\\" + (separators[separator] || '.') + "\\d" + regexPart + "$");
+    var delimiterRegexPart = separator === 'comma' ? ',?' : '\\.?';
+    var decimalRegexPart = decimals === 0 ? '\\d*' : "(\\d{" + decimals + "})?";
+    var regex = new RegExp("^-?\\d+" + delimiterRegexPart + decimalRegexPart + "$");
     return Array.isArray(value) ? value.every(function (val) { return regex.test(String(val)); }) : regex.test(String(value));
 };
 var params = [
