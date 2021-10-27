@@ -58239,7 +58239,8 @@ var config = Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /
 
     return new Promise(function (resolv) {
       if (_this.token) resolv(_this.token);
-      src_config.get(src_config.baseURl + _this.url_session).then(function (resp) {
+      console.log(" Config :: ", src_config.BaseUrl(), "\n this.url_session :: ", _this.url_session);
+      src_config.get(src_config.BaseUrl() + _this.url_session).then(function (resp) {
         _this.token = resp.data;
         resolv(resp.data);
       });
@@ -58302,7 +58303,7 @@ var utilities = Object(objectSpread2["a" /* default */])(Object(objectSpread2["a
   },
 
   /**
-   * get datas;
+   * Get datas;
    */
   dGet: function dGet(url) {
     var _arguments2 = arguments,
@@ -63897,8 +63898,8 @@ var config = __webpack_require__("f158");
 
 
 external_commonjs_vue_commonjs2_vue_root_Vue_default.a.use(vuex_esm["a" /* default */]);
-drupal_vuejs["a" /* drupalUtilities */].TestDomain = "http://lesroisdelareno.habeuk.com";
-drupal_vuejs["e" /* users */].TestDomain = "http://lesroisdelareno.habeuk.com";
+drupal_vuejs["a" /* drupalUtilities */].TestDomain = "http://v2lesroisdelareno.kksa";
+drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
 /* harmony default export */ var store = (new vuex_esm["a" /* default */].Store({
   state: {
     /* contient les information de la page d'afficha des formulaires */
@@ -63975,7 +63976,7 @@ drupal_vuejs["e" /* users */].TestDomain = "http://lesroisdelareno.habeuk.com";
      */
     userlogin: {
       name: {
-        value: "dfr",
+        value: "",
         ref: ""
       },
       prenom: {
@@ -64571,12 +64572,12 @@ drupal_vuejs["e" /* users */].TestDomain = "http://lesroisdelareno.habeuk.com";
           _this = this;
 
       return Object(asyncToGenerator["a" /* default */])( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
-        var commit, state, getters, status, self, datas, url, msg, msgCreate, displayMsg, statusName, statusEmail, statusPassword;
+        var state, getters, status, self, datas, url, msg, msgCreate, displayMsg, statusName, statusEmail, statusPassword;
         return regeneratorRuntime.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                commit = _ref19.commit, state = _ref19.state, getters = _ref19.getters;
+                state = _ref19.state, getters = _ref19.getters;
                 status = _arguments.length > 1 && _arguments[1] !== undefined ? _arguments[1] : 0;
                 self = _this, datas = [], url = null, msg = "";
                 /**
@@ -64628,41 +64629,39 @@ drupal_vuejs["e" /* users */].TestDomain = "http://lesroisdelareno.habeuk.com";
                 }; //On valide les données utilisateur,
 
 
-                console.log("saveDatasUser : ", commit, state);
-
                 if (getters.uid) {
-                  _context3.next = 23;
+                  _context3.next = 22;
                   break;
                 }
 
                 statusName = {}, statusEmail = {}, statusPassword = {};
-                _context3.next = 10;
+                _context3.next = 9;
                 return state.userlogin.name.ref.validate();
 
-              case 10:
+              case 9:
                 statusName = _context3.sent;
 
                 if (!(state.userlogin.tabIndex === "register")) {
-                  _context3.next = 17;
+                  _context3.next = 16;
                   break;
                 }
 
-                _context3.next = 14;
+                _context3.next = 13;
                 return state.userlogin.email.ref.validate();
 
-              case 14:
+              case 13:
                 statusEmail = _context3.sent;
-                _context3.next = 20;
+                _context3.next = 19;
                 break;
 
-              case 17:
-                _context3.next = 19;
+              case 16:
+                _context3.next = 18;
                 return state.userlogin.password.ref.validate();
 
-              case 19:
+              case 18:
                 statusPassword = _context3.sent;
 
-              case 20:
+              case 19:
                 if (statusName.valid && (statusEmail.valid || statusPassword.valid)) {
                   // Inscription d'un utilisateur.
                   if (state.userlogin.tabIndex === "register") {
@@ -64680,7 +64679,7 @@ drupal_vuejs["e" /* users */].TestDomain = "http://lesroisdelareno.habeuk.com";
                         value: state.userlogin.telephone.value
                       }]
                     };
-                    url = "/fr/user/register?_format=json";
+                    url = "/user/register?_format=json";
                     msg = msgCreate([config["a" /* default */].messages.devisRappel, config["a" /* default */].messages.devisCreateUser, config["a" /* default */].messages.devisEnd]);
                   } // Connexion d'un utilisateur
                   else {
@@ -64736,15 +64735,15 @@ drupal_vuejs["e" /* users */].TestDomain = "http://lesroisdelareno.habeuk.com";
                   });
                 }
 
-                _context3.next = 24;
+                _context3.next = 23;
                 break;
 
-              case 23:
-                utilities["a" /* default */].saveDatas(state, getters, getters.uid, status).then(function () {
+              case 22:
+                utilities["a" /* default */].saveDatas(state, getters.uid, status).then(function () {
                   if (status) displayMsg(msgCreate([config["a" /* default */].messages.devisSave]));else displayMsg(msgCreate([config["a" /* default */].messages.devisRappel]));
                 });
 
-              case 24:
+              case 23:
               case "end":
                 return _context3.stop();
             }
@@ -64763,7 +64762,7 @@ drupal_vuejs["e" /* users */].TestDomain = "http://lesroisdelareno.habeuk.com";
       }
 
       utilities["a" /* default */].saveDatas(state, uid).then(function (response) {
-        //console.log("Données stocké du store", response);
+        // console.log("Données stocké du store", response);
         if (state.idSoumission === null) {
           commit("SET_ID_SOUMISSION", response.data[0].result);
         }
@@ -68099,16 +68098,16 @@ var Listesfomes_header_component = Object(componentNormalizer["a" /* default */]
 )
 
 /* harmony default export */ var Listesfomes_header = (Listesfomes_header_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/Listesfomes--items.vue?vue&type=template&id=0416ecac&lang=html&
-var Listesfomes_itemsvue_type_template_id_0416ecac_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('loaderIcon',{attrs:{"busy":_vm.busy}}),(!_vm.busy)?_c('div',{staticClass:"block-option"},[_vm._l((_vm.items),function(form,index){return _c('div',{key:index,staticClass:"block"},[_c('div',{staticClass:"form-stats",attrs:{"number":_vm.getStatisqueByNumber(form)}},[_c('div',[(form.onWaitNumber)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-danger",modifiers:{"hover":true,"v-danger":true}}],staticClass:"form-stats__btn form-stats__red",attrs:{"variant":"","title":"Projet en attente de rappel"}},[_c('span',[_vm._v(" "+_vm._s(form.onWaitNumber)+" ")])]):_vm._e(),(form.onSave)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-primary",modifiers:{"hover":true,"v-primary":true}}],staticClass:"form-stats__btn form-stats__bleu",attrs:{"variant":"","title":"Projet sauvegardé"}},[_c('span',[_vm._v(" "+_vm._s(form.onSave)+" ")])]):_vm._e(),(form.onCancel)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-secondary",modifiers:{"hover":true,"v-secondary":true}}],staticClass:"form-stats__btn form-stats__gris",attrs:{"variant":"","title":"Projet abandonné"}},[_c('span',[_vm._v(_vm._s(form.onCancel))])]):_vm._e()],1),_c('div',{staticClass:"block_img",on:{"click":function($event){!_vm.$store.state.mode
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/Listesfomes--items.vue?vue&type=template&id=b5543eb4&lang=html&
+var Listesfomes_itemsvue_type_template_id_b5543eb4_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"w-100"},[_c('loaderIcon',{attrs:{"busy":_vm.busy}}),(!_vm.busy)?_c('div',{staticClass:"block-option"},[_vm._l((_vm.items),function(form,index){return _c('div',{key:index,staticClass:"block"},[_c('div',{staticClass:"form-stats",attrs:{"number":_vm.getStatisqueByNumber(form)}},[_c('div',[(form.onWaitNumber)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-danger",modifiers:{"hover":true,"v-danger":true}}],staticClass:"form-stats__btn form-stats__red",attrs:{"variant":"","title":"Projet en attente de rappel"}},[_c('span',[_vm._v(" "+_vm._s(form.onWaitNumber)+" ")])]):_vm._e(),(form.onSave)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-primary",modifiers:{"hover":true,"v-primary":true}}],staticClass:"form-stats__btn form-stats__bleu",attrs:{"variant":"","title":"Projet sauvegardé"}},[_c('span',[_vm._v(" "+_vm._s(form.onSave)+" ")])]):_vm._e(),(form.onCancel)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-secondary",modifiers:{"hover":true,"v-secondary":true}}],staticClass:"form-stats__btn form-stats__gris",attrs:{"variant":"","title":"Projet abandonné"}},[_c('span',[_vm._v(_vm._s(form.onCancel))])]):_vm._e()],1),_c('div',{staticClass:"block_img",on:{"click":function($event){!_vm.$store.state.mode
               ? _vm.updateMyOwnForm(form.id)
               : _vm.showResult(form.id)}}},[_c('img',{attrs:{"src":_vm.findUrlImg(form)}})]),_c('div',{staticClass:"block_desc",on:{"click":function($event){!_vm.$store.state.mode
               ? _vm.updateMyOwnForm(form.id)
               : _vm.showResult(form.id)}}},[_c('span',[_vm._v(" "+_vm._s(form.name)+" ")])]),_c('b-button-group',{staticClass:"home-button"},[_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-primary",modifiers:{"hover":true,"v-primary":true}}],attrs:{"variant":"outline-primary","title":"Estimer mes travaux"},on:{"click":function($event){return _vm.voirForm(form.id)}}},[_c('b-icon',{attrs:{"icon":"eye"}})],1),_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-secondary",modifiers:{"hover":true,"v-secondary":true}}],attrs:{"variant":"outline-secondary","title":"voir mes devis"},on:{"click":function($event){return _vm.updateMyOwnForm(form.id)}}},[_c('b-icon',{attrs:{"icon":"newspaper"}})],1),(_vm.$store.state.mode)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-warning",modifiers:{"hover":true,"v-warning":true}}],attrs:{"variant":"outline-warning","title":"Modifier"},on:{"click":function($event){return _vm.updateForm(form.id)}}},[_c('b-icon',{attrs:{"icon":"pencil"}})],1):_vm._e(),(_vm.$store.state.mode)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-success",modifiers:{"hover":true,"v-success":true}}],attrs:{"variant":"outline-success","title":"Voir les soumissions"},on:{"click":function($event){return _vm.showResult(form.id)}}},[_c('b-icon',{attrs:{"icon":"server"}})],1):_vm._e(),(_vm.$store.state.mode)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-danger",modifiers:{"hover":true,"v-danger":true}}],attrs:{"variant":"outline-danger","title":"Supprimer le formulaire "},on:{"click":function($event){return _vm.deleteForm(form.id)}}},[_c('b-icon',{attrs:{"icon":"trash"}})],1):_vm._e()],1)],1)])}),(_vm.$store.state.mode)?_c('div',{staticClass:"block-plus",on:{"click":_vm.newForm}},[_c('div',{staticClass:"horiz"}),_c('div',{staticClass:"verti"}),_vm._m(0)]):_vm._e(),_c('AddEditForm')],2):_vm._e()],1)}
-var Listesfomes_itemsvue_type_template_id_0416ecac_lang_html_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"block_desc"},[_c('span',[_vm._v("Nouveau Formulaire")])])}]
+var Listesfomes_itemsvue_type_template_id_b5543eb4_lang_html_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"block_desc"},[_c('span',[_vm._v("Nouveau Formulaire")])])}]
 
 
-// CONCATENATED MODULE: ./src/App/Listesfomes--items.vue?vue&type=template&id=0416ecac&lang=html&
+// CONCATENATED MODULE: ./src/App/Listesfomes--items.vue?vue&type=template&id=b5543eb4&lang=html&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/ConfigsForms/AddEditForm.vue?vue&type=template&id=7f068a3c&scoped=true&lang=html&
 var AddEditFormvue_type_template_id_7f068a3c_scoped_true_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('b-modal',{ref:"modal",attrs:{"id":"add-edit-form","title":"Creer un nouveau formulaire","hide-footer":""},on:{"ok":_vm.handleOk}},[_c('form',{ref:"form",on:{"submit":_vm.handleSubmit}},[_c('b-row',{staticClass:"p-3"},[_c('b-col',{attrs:{"cols":"8"}},[_c('b-form-group',{attrs:{"label":"name","label-for":"name-input"}},[_c('b-form-input',{attrs:{"required":""},model:{value:(_vm.form.name),callback:function ($$v) {_vm.$set(_vm.form, "name", $$v)},expression:"form.name"}})],1)],1),_c('b-col',{attrs:{"cols":"8"}},[_c('b-form-group',{attrs:{"label":"Description","label-for":"description-input"}},[_c('b-form-textarea',{attrs:{"required":""},model:{value:(_vm.form.description),callback:function ($$v) {_vm.$set(_vm.form, "description", $$v)},expression:"form.description"}})],1)],1),_c('b-col',{attrs:{"cols":"12"}},[_c('b-form-group',{attrs:{"label":"image","label-for":"description-input"}},[_c('UploadImage',{attrs:{"field":_vm.form}})],1)],1)],1),_c('b-row',{attrs:{"align-h":"end"}},[_c('div',{staticClass:"mr-3"},[_c('b-button',{staticClass:"mr-2",attrs:{"type":"submit","variant":"primary"}},[_vm._v(" Ajouter ")])],1)])],1)])],1)}
@@ -68491,8 +68490,8 @@ var loaderIcon = __webpack_require__("021a");
 
 var Listesfomes_items_component = Object(componentNormalizer["a" /* default */])(
   App_Listesfomes_itemsvue_type_script_lang_js_,
-  Listesfomes_itemsvue_type_template_id_0416ecac_lang_html_render,
-  Listesfomes_itemsvue_type_template_id_0416ecac_lang_html_staticRenderFns,
+  Listesfomes_itemsvue_type_template_id_b5543eb4_lang_html_render,
+  Listesfomes_itemsvue_type_template_id_b5543eb4_lang_html_staticRenderFns,
   false,
   null,
   null,

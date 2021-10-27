@@ -38,3 +38,19 @@ appformmanager.user:
     _controller: '\Drupal\appformmanager\Controller\AppformmanagerController::getUser'
   requirements:
     _permission: 'access content'
+
+appformmanager.getforms_steps:
+  path: '/appformmanager/getforms-steps/{step}'
+  defaults:
+    _title: 'Travaux de renovations'
+    _controller: '\Drupal\appformmanager\Controller\AppformmanagerController::getFormsSteps'
+  requirements:
+    _permission: 'access content'
+
+appformmanager.save_soumissions:
+  path: '/appformmanager/save-soumissions'
+  defaults:
+    _title: 'Travaux de renovations'
+    _controller: '\Drupal\appformmanager\Controller\AppformmanagerController::SaveSoumissions'
+  requirements:
+    _permission: 'access content'
