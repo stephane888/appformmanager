@@ -816,12 +816,12 @@ Object(vee_validate__WEBPACK_IMPORTED_MODULE_1__[/* extend */ "c"])("alpha", vee
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/input/userlogin.vue?vue&type=template&id=087038c2&lang=html&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:!_vm.validationField && _vm.mode ? 'mb-5' : ''},[(_vm.validationField && (!_vm.uid || (_vm.uid && _vm.mode)))?_c('transition',{attrs:{"name":"fade"}},[_c('form',{ref:"form_userlogin",staticClass:"form-userlogin choice-section min-height",on:{"submit":function($event){$event.stopPropagation();$event.preventDefault();return _vm.handleSubmit.apply(null, arguments)}}},[_c('ul',{staticClass:"d-flex p-0 mx-0 select-tab"},[_c('li',{staticClass:"item",class:[_vm.current_tab === 'register' ? 'active' : ''],on:{"click":function($event){return _vm.select_tab('register')}}},[_vm._v(" Creer un compte ... ")]),_c('li',{staticClass:"item",class:[_vm.current_tab !== 'register' ? 'active' : ''],on:{"click":function($event){return _vm.select_tab('login')}}},[_vm._v(" Se connecter ")])]),_c('ValidationProvider',{ref:"userlogin_name",staticClass:"d-block",attrs:{"rules":"required","name":"Nom"},scopedSlots:_vm._u([{key:"default",fn:function(v){return [_c('div',{staticClass:"login-form"},[_c('label',{staticClass:"label d-flex align-items-center"},[_c('span',[_vm._v(_vm._s(_vm.field.label))])])]),_c('b-form-group',{attrs:{"label":_vm.nomDisplay}},[_c('b-form-input',{attrs:{"type":"text"},on:{"input":function($event){return _vm.input($event, 'name')}},model:{value:(_vm.userlogin.name.value),callback:function ($$v) {_vm.$set(_vm.userlogin.name, "value", $$v)},expression:"userlogin.name.value"}})],1),_c('div',{staticClass:"text-danger"},_vm._l((v.errors),function(error,ii){return _c('small',{key:ii,staticClass:"d-block"},[_vm._v(" "+_vm._s(error)+" ")])}),0)]}}],null,false,1650481904)}),(_vm.current_tab === 'register')?_c('b-form-group',{attrs:{"label":"Prenom"}},[_c('b-form-input',{attrs:{"type":"text"},on:{"input":function($event){return _vm.input($event, 'prenom')}},model:{value:(_vm.userlogin.prenom.value),callback:function ($$v) {_vm.$set(_vm.userlogin.prenom, "value", $$v)},expression:"userlogin.prenom.value"}})],1):_vm._e(),(_vm.current_tab === 'register')?_c('ValidationProvider',{ref:"userlogin_tel",staticClass:"d-block",attrs:{"rules":"required","name":"Telephone"},scopedSlots:_vm._u([{key:"default",fn:function(v){return [_c('b-form-group',{attrs:{"label":"Telephone"}},[_c('b-form-input',{attrs:{"type":"text"},on:{"input":function($event){return _vm.input($event, 'telephone')}},model:{value:(_vm.userlogin.telephone.value),callback:function ($$v) {_vm.$set(_vm.userlogin.telephone, "value", $$v)},expression:"userlogin.telephone.value"}})],1),_c('div',{staticClass:"text-danger"},_vm._l((v.errors),function(error,ii){return _c('small',{key:ii,staticClass:"d-block"},[_vm._v(" "+_vm._s(error)+" ")])}),0)]}}],null,false,1994085191)}):_vm._e(),(_vm.current_tab === 'register')?_c('ValidationProvider',{ref:"userlogin_email",staticClass:"d-block",attrs:{"rules":"required|email","name":"Email"},scopedSlots:_vm._u([{key:"default",fn:function(v){return [_c('b-form-group',{attrs:{"label":"Email"}},[_c('b-form-input',{attrs:{"type":"email"},on:{"input":function($event){return _vm.input($event, 'email')}},model:{value:(_vm.userlogin.email.value),callback:function ($$v) {_vm.$set(_vm.userlogin.email, "value", $$v)},expression:"userlogin.email.value"}})],1),_c('div',{staticClass:"text-danger"},_vm._l((v.errors),function(error,ii){return _c('small',{key:ii,staticClass:"d-block"},[_vm._v(" "+_vm._s(error)+" ")])}),0)]}}],null,false,1829562814)}):_vm._e(),(_vm.current_tab === 'login')?_c('ValidationProvider',{ref:"userlogin_password",staticClass:"d-block",attrs:{"rules":"required","name":"Password"},scopedSlots:_vm._u([{key:"default",fn:function(v){return [_c('b-form-group',{attrs:{"label":"Mot de passe"}},[_c('b-form-input',{attrs:{"type":"password"},on:{"input":function($event){return _vm.input($event, 'password')}},model:{value:(_vm.userlogin.password.value),callback:function ($$v) {_vm.$set(_vm.userlogin.password, "value", $$v)},expression:"userlogin.password.value"}})],1),_c('div',{staticClass:"text-danger"},_vm._l((v.errors),function(error,ii){return _c('small',{key:ii,staticClass:"d-block"},[_vm._v(" "+_vm._s(error)+" ")])}),0)]}}],null,false,3320814594)}):_vm._e(),_c('div',{staticClass:"text-center sepation-login"},[_c('strong',{staticClass:"sepation-login-text"},[_vm._v("Ou")])]),(_vm.current_tab === 'login')?_c('b-row',{staticClass:"rs-login"},[_c('b-col',{staticClass:"p-4 rs-login__btn rs-login__btn--face",class:_vm.mediaBtn ? '' : 'bg-light',attrs:{"cols":"12","md":"6"},on:{"click":_vm.initFacebookLogin}},[_c('b-icon',{staticClass:"mr-3",attrs:{"icon":"facebook "}}),_vm._v("login via facebook ")],1),_c('b-col',{staticClass:"p-4 rs-login__btn rs-login__btn--google",class:_vm.mediaBtn ? '' : 'bg-light',attrs:{"cols":"12","md":"6"},on:{"click":_vm.initGoogleLogin}},[_c('b-icon',{staticClass:"mr-3",attrs:{"icon":"google"}}),_vm._v("login via Google")],1)],1):_vm._e(),(_vm.current_tab === 'register')?_c('b-row',{staticClass:"rs-login"},[_c('b-col',{staticClass:"p-4 rs-login__btn rs-login__btn--face",class:_vm.mediaBtn ? '' : 'bg-light',attrs:{"cols":"12","md":"6"},on:{"click":_vm.initFacebookLogin}},[_c('b-icon',{staticClass:"mr-3",attrs:{"icon":"facebook "}}),_vm._v("Créer avec facebook ")],1),_c('b-col',{staticClass:"p-4 rs-login__btn rs-login__btn--google",class:_vm.mediaBtn ? '' : 'bg-light',attrs:{"cols":"12","md":"6"},on:{"click":_vm.initGoogleLogin}},[_c('b-icon',{staticClass:"mr-3",attrs:{"icon":"google"}}),_vm._v(" Créer avec Google ")],1)],1):_vm._e()],1)]):_vm._e()],1)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/input/userlogin.vue?vue&type=template&id=53561580&lang=html&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:!_vm.validationField && _vm.mode ? 'mb-5' : ''},[(_vm.validationField && (!_vm.uid || (_vm.uid && _vm.mode)))?_c('transition',{attrs:{"name":"fade"}},[_c('form',{ref:"form_userlogin",staticClass:"form-userlogin choice-section min-height",on:{"submit":function($event){$event.stopPropagation();$event.preventDefault();return _vm.handleSubmit.apply(null, arguments)}}},[_c('ul',{staticClass:"d-flex p-0 mx-0 select-tab"},[_c('li',{staticClass:"item",class:[_vm.current_tab === 'register' ? 'active' : ''],on:{"click":function($event){return _vm.select_tab('register')}}},[_vm._v(" Creer un compte ... ")]),_c('li',{staticClass:"item",class:[_vm.current_tab !== 'register' ? 'active' : ''],on:{"click":function($event){return _vm.select_tab('login')}}},[_vm._v(" Se connecter ")])]),_c('b-row',{staticClass:"rs-login"},[_c('b-col',{attrs:{"cols":"12","md":"12"}},[_c('loginGoogle',{staticClass:"mb-3",attrs:{"idHtml":"app-form-login"},on:{"ev_logingoogle":_vm.ev_logingoogle}})],1),_c('b-col',{staticClass:"p-3 rs-login__btn rs-login__btn--face border",class:_vm.mediaBtn ? '' : 'bg-light',attrs:{"cols":"12","md":"12"},on:{"click":_vm.initFacebookLogin}},[_c('b-icon',{staticClass:"mr-3",attrs:{"icon":"facebook "}}),_vm._v(" Se connecter avec facebook ")],1)],1),_c('div',{staticClass:"text-center sepation-login"},[_c('strong',{staticClass:"sepation-login-text"},[_vm._v("Ou")])]),_c('ValidationProvider',{ref:"userlogin_name",staticClass:"d-block",attrs:{"rules":"required","name":"Nom"},scopedSlots:_vm._u([{key:"default",fn:function(v){return [_c('div',{staticClass:"login-form"},[_c('label',{staticClass:"label d-flex align-items-center"},[_c('span',[_vm._v(_vm._s(_vm.field.label))])])]),_c('b-form-group',{attrs:{"label":_vm.nomDisplay}},[_c('b-form-input',{attrs:{"type":"text"},on:{"input":function($event){return _vm.input($event, 'name')}},model:{value:(_vm.userlogin.name.value),callback:function ($$v) {_vm.$set(_vm.userlogin.name, "value", $$v)},expression:"userlogin.name.value"}})],1),_c('div',{staticClass:"text-danger"},_vm._l((v.errors),function(error,ii){return _c('small',{key:ii,staticClass:"d-block"},[_vm._v(" "+_vm._s(error)+" ")])}),0)]}}],null,false,1650481904)}),(_vm.current_tab === 'register')?_c('b-form-group',{attrs:{"label":"Prenom"}},[_c('b-form-input',{attrs:{"type":"text"},on:{"input":function($event){return _vm.input($event, 'prenom')}},model:{value:(_vm.userlogin.prenom.value),callback:function ($$v) {_vm.$set(_vm.userlogin.prenom, "value", $$v)},expression:"userlogin.prenom.value"}})],1):_vm._e(),(_vm.current_tab === 'register')?_c('ValidationProvider',{ref:"userlogin_tel",staticClass:"d-block",attrs:{"rules":"required","name":"Telephone"},scopedSlots:_vm._u([{key:"default",fn:function(v){return [_c('b-form-group',{attrs:{"label":"Telephone"}},[_c('b-form-input',{attrs:{"type":"text"},on:{"input":function($event){return _vm.input($event, 'telephone')}},model:{value:(_vm.userlogin.telephone.value),callback:function ($$v) {_vm.$set(_vm.userlogin.telephone, "value", $$v)},expression:"userlogin.telephone.value"}})],1),_c('div',{staticClass:"text-danger"},_vm._l((v.errors),function(error,ii){return _c('small',{key:ii,staticClass:"d-block"},[_vm._v(" "+_vm._s(error)+" ")])}),0)]}}],null,false,1994085191)}):_vm._e(),(_vm.current_tab === 'register')?_c('ValidationProvider',{ref:"userlogin_email",staticClass:"d-block",attrs:{"rules":"required|email","name":"Email"},scopedSlots:_vm._u([{key:"default",fn:function(v){return [_c('b-form-group',{attrs:{"label":"Email"}},[_c('b-form-input',{attrs:{"type":"email"},on:{"input":function($event){return _vm.input($event, 'email')}},model:{value:(_vm.userlogin.email.value),callback:function ($$v) {_vm.$set(_vm.userlogin.email, "value", $$v)},expression:"userlogin.email.value"}})],1),_c('div',{staticClass:"text-danger"},_vm._l((v.errors),function(error,ii){return _c('small',{key:ii,staticClass:"d-block"},[_vm._v(" "+_vm._s(error)+" ")])}),0)]}}],null,false,1829562814)}):_vm._e(),(_vm.current_tab === 'login')?_c('ValidationProvider',{ref:"userlogin_password",staticClass:"d-block",attrs:{"rules":"required","name":"Password"},scopedSlots:_vm._u([{key:"default",fn:function(v){return [_c('b-form-group',{attrs:{"label":"Mot de passe"}},[_c('b-form-input',{attrs:{"type":"password"},on:{"input":function($event){return _vm.input($event, 'password')}},model:{value:(_vm.userlogin.password.value),callback:function ($$v) {_vm.$set(_vm.userlogin.password, "value", $$v)},expression:"userlogin.password.value"}})],1),_c('div',{staticClass:"text-danger"},_vm._l((v.errors),function(error,ii){return _c('small',{key:ii,staticClass:"d-block"},[_vm._v(" "+_vm._s(error)+" ")])}),0)]}}],null,false,3320814594)}):_vm._e()],1)]):_vm._e()],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/input/userlogin.vue?vue&type=template&id=087038c2&lang=html&
+// CONCATENATED MODULE: ./src/App/input/userlogin.vue?vue&type=template&id=53561580&lang=html&
 
 // EXTERNAL MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js + 1 modules
 var objectSpread2 = __webpack_require__("f3f3");
@@ -838,7 +838,7 @@ var vee_validate_esm = __webpack_require__("7bb1");
 // EXTERNAL MODULE: ./src/App/EditsFields/vee-validate-custom.js
 var vee_validate_custom = __webpack_require__("b6d1");
 
-// EXTERNAL MODULE: ../drupal-vuejs/index.js + 11 modules
+// EXTERNAL MODULE: ../drupal-vuejs/index.js + 16 modules
 var drupal_vuejs = __webpack_require__("e674");
 
 // EXTERNAL MODULE: ./src/App/config/config.js
@@ -1061,23 +1061,6 @@ var component = Object(componentNormalizer["a" /* default */])(
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -1098,7 +1081,8 @@ var component = Object(componentNormalizer["a" /* default */])(
     }
   },
   components: {
-    ValidationProvider: vee_validate_esm["b" /* ValidationProvider */]
+    ValidationProvider: vee_validate_esm["b" /* ValidationProvider */],
+    loginGoogle: drupal_vuejs["b" /* loginGoogle */]
   },
   data: function data() {
     return {
@@ -1114,12 +1098,8 @@ var component = Object(componentNormalizer["a" /* default */])(
   },
   mounted: function mounted() {
     this.TryToLoginWithFacebook();
-    this.TryToLoginWithGoogle();
-    drupal_vuejs["b" /* loginfacebook */].appId = 889256191665205;
-    this.loadScript(); //
-
-    drupal_vuejs["c" /* logingoogle */].client_id = "90673796165-fndv3eu9tog6b9g5p8camiueffcfdc8p.apps.googleusercontent.com";
-    drupal_vuejs["c" /* logingoogle */].loadGapi();
+    drupal_vuejs["c" /* loginfacebook */].appId = 889256191665205;
+    this.loadScript();
   },
   watch: {//
   },
@@ -1142,8 +1122,7 @@ var component = Object(componentNormalizer["a" /* default */])(
       //var self = this
       this.$nextTick(function () {
         _this.mediaBtn = false;
-        drupal_vuejs["b" /* loginfacebook */].chargement();
-        drupal_vuejs["c" /* logingoogle */].loadGapi();
+        drupal_vuejs["c" /* loginfacebook */].chargement();
         _this.mediaBtn = true;
       });
     },
@@ -1157,7 +1136,7 @@ var component = Object(componentNormalizer["a" /* default */])(
       document.addEventListener("wbu-fb-status-change", function () {
         _this2.isBusy = true;
         console.log("TryToLoginWithFacebook", _this2.isBusy);
-        config["a" /* default */].post("/login-rx-vuejs/facebook-check", drupal_vuejs["b" /* loginfacebook */].user).then(function (resp) {
+        config["a" /* default */].post("/login-rx-vuejs/facebook-check", drupal_vuejs["c" /* loginfacebook */].user).then(function (resp) {
           console.log("TryToLoginWithFacebook resp : ", resp);
 
           if (resp.reponse && resp.reponse.config.url !== resp.reponse.request.responseURL) {
@@ -1179,57 +1158,12 @@ var component = Object(componentNormalizer["a" /* default */])(
         });
       }, false);
     },
-
-    /**
-     * Ecoute un evenement afin de determiner si l'utilisateur a clique sur le bonton de connexion et que le processus soit terminé.
-     */
-    TryToLoginWithGoogle: function TryToLoginWithGoogle() {
-      var _this3 = this;
-
-      document.addEventListener("wbu-gl-status-change", function () {
-        _this3.IsBusy();
-
-        console.log("TryToLoginWithGoogle :", drupal_vuejs["c" /* logingoogle */].user);
-        config["a" /* default */].post("/login-rx-vuejs/google-check", drupal_vuejs["c" /* logingoogle */].user).then(function (resp) {
-          console.log("TryToLoginWithGoogle resp : ", resp);
-
-          if (resp.reponse && resp.reponse.config.url !== resp.reponse.request.responseURL) {
-            //window.location.assign(resp.reponse.request.responseURL);
-            console.log("user is connect : ", resp.reponse); //on connecte l'utilisateur:
-
-            _this3.$store.dispatch("getCurrentUser").then(function () {
-              //save form
-              setTimeout(function () {
-                _this3.$store.dispatch("saveDatasUser");
-              }, 600);
-            });
-          } // Il faut s'assurer que les données sont ok.
-          else if (resp.data) {
-            if (resp.data.createuser) {
-              _this3.stepe = "final-gl-register";
-            }
-          }
-        });
-      }, false);
-    },
-    final_click_h2: function final_click_h2() {
-      alert("final_click_h2");
-    },
-
-    /*
-    async getFiledRegisterUser() {
-      const drupalFormField = new drupalFormFields("user", "user", this);
-      this.fieldsRegisterRender = await drupalFormField.format();
-      console.log("fieldsRegisterRender : ", this.fieldsRegisterRender);
-      this.modelsFields = drupalFormField.modelsFields;
-    },
-    /**/
     handleOk: function handleOk(event) {
       event.preventDefault();
       this.handleSubmit();
     },
     handleSubmit: function handleSubmit(event) {
-      var _this4 = this;
+      var _this3 = this;
 
       event.preventDefault();
       this.isOpen = !this.isOpen; // Push the name to submitted names
@@ -1237,18 +1171,18 @@ var component = Object(componentNormalizer["a" /* default */])(
       this.$emit("input_to_add", this.fields); // Hide the modal manually
 
       this.$nextTick(function () {
-        _this4.$bvModal.hide("modal-prevent-closing");
+        _this3.$bvModal.hide("modal-prevent-closing");
       });
     },
     setRefs: function setRefs() {
-      var _this5 = this;
+      var _this4 = this;
 
       this.$nextTick(function () {
         //alert("Dd");
-        _this5.userlogin.name.ref = _this5.$refs.userlogin_name;
-        _this5.userlogin.telephone.ref = _this5.$refs.userlogin_tel;
-        _this5.userlogin.email.ref = _this5.$refs.userlogin_email;
-        _this5.userlogin.password.ref = _this5.$refs.userlogin_password;
+        _this4.userlogin.name.ref = _this4.$refs.userlogin_name;
+        _this4.userlogin.telephone.ref = _this4.$refs.userlogin_tel;
+        _this4.userlogin.email.ref = _this4.$refs.userlogin_email;
+        _this4.userlogin.password.ref = _this4.$refs.userlogin_password;
       });
     },
     input: function input(value, field) {
@@ -1295,19 +1229,17 @@ var component = Object(componentNormalizer["a" /* default */])(
 
     /* facebook login methods */
     getFacebookLoginStatus: function getFacebookLoginStatus() {
-      drupal_vuejs["b" /* loginfacebook */].getUserStatus();
+      drupal_vuejs["c" /* loginfacebook */].getUserStatus();
     },
     facebookStatusCallback: function facebookStatusCallback(reponse) {
       console.log("status", reponse);
       console.log(reponse.status == "connected" ? "je suis connecté avec facebook" : "Pas connecté avec facebook");
     },
     initFacebookLogin: function initFacebookLogin() {
-      drupal_vuejs["b" /* loginfacebook */].openPopup();
+      drupal_vuejs["c" /* loginfacebook */].openPopup();
     },
-
-    /* google login methods */
-    initGoogleLogin: function initGoogleLogin() {
-      drupal_vuejs["c" /* logingoogle */].typeOfLogin(false);
+    ev_logingoogle: function ev_logingoogle(user) {
+      console.log("user : ", user);
     }
   }
 });

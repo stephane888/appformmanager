@@ -69,7 +69,7 @@ var es_string_includes = __webpack_require__("2532");
 // EXTERNAL MODULE: ./src/store/utilities.js
 var utilities = __webpack_require__("fd71");
 
-// EXTERNAL MODULE: ../drupal-vuejs/index.js + 11 modules
+// EXTERNAL MODULE: ../drupal-vuejs/index.js + 16 modules
 var drupal_vuejs = __webpack_require__("e674");
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/affichage/bloc.vue?vue&type=template&id=65f57565&
