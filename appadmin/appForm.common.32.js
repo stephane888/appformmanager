@@ -21,6 +21,208 @@ Object(vee_validate__WEBPACK_IMPORTED_MODULE_1__[/* extend */ "c"])("alpha", vee
 
 /***/ }),
 
+/***/ "e412":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return validationRessource; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ValidationInstance; });
+/* harmony import */ var _siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("276c");
+/* harmony import */ var _siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("e954");
+/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("b0c0");
+/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_array_includes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("caad");
+/* harmony import */ var core_js_modules_es_array_includes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_includes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("2532");
+/* harmony import */ var core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _config_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("f158");
+
+
+
+
+
+
+var validationRessource = {
+  conditions: function conditions() {
+    return {
+      action: "",
+      name: "",
+      operator: "",
+      value: "",
+      state_name: ""
+    };
+  },
+  listsOperators: function listsOperators() {
+    return [{
+      text: "Validé",
+      value: "validated"
+    }, {
+      text: "non vide",
+      value: "not_empty"
+    }, {
+      text: " vide",
+      value: "empty"
+    }, {
+      text: "la valeur du champs est egal à",
+      value: "egal"
+    }, {
+      text: "la valeur du champs est superieur à",
+      value: ">"
+    }];
+  },
+  Action: function Action() {
+    var val = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "Ce champs";
+    return [{
+      text: val + " est visible",
+      value: "visible"
+    }, {
+      text: val + " est caché",
+      value: "hidden"
+    }];
+  },
+
+  /**
+   * Validation des champs.
+   * Retourne false, pour desactiver.
+   * NB: formDatasValidate prend plus de temps pour ce mettre à jour.
+   */
+  computedValidation: function computedValidation(formDatas, currentField, formDatasValidate) {
+    for (var i in formDatas.fields) {
+      var field = formDatas.fields[i];
+
+      if (field.name !== currentField.name) {
+        for (var j in currentField.states) {
+          var state = currentField.states[j]; // si le champs n'est pas definit on retourne false;
+
+          if (formDatasValidate[state.name] === undefined) {
+            //console.log("Validation non forunit : ", formDatasValidate);
+            return null;
+          }
+
+          if (field.name === state.name) {
+            // visible
+            if (state.action === "visible") {
+              if (field.value === "" && state.operator === "not_empty") return false;else if (field.value !== "" && state.operator === "empty") return false;else if (state.operator === "validated" && formDatasValidate[field.name]) return formDatasValidate[field.name].valid;else if (state.operator === "egal") {
+                /*
+                console.log(
+                  "Valeur requise : ",
+                  state.value,
+                  " :: Valeur du parent",
+                  field.value
+                );
+                /**/
+                if (field.value) {
+                  if (_config_js__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"].typeSelection.includes(field.type) && field.value.includes) {
+                    return field.value.includes(state.value) ? true : false;
+                  } else {
+                    var x = new String(field.value);
+                    var y = new String(state.value);
+                    return x.localeCompare(y) === 0 ? true : false;
+                  }
+                } else {
+                  return false;
+                }
+              } else if (state.operator === ">") {
+                if (field.value) {
+                  var _x = parseInt(field.value);
+
+                  var _y = parseInt(state.value);
+
+                  return _y < _x ? true : false;
+                } else {
+                  return false;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  /**
+   * Retourne la liste des etapes.
+   */
+  listesEtapes: function listesEtapes(form, formDatas) {
+    var etapes = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
+
+    if (form && form.forms.length > 1) {
+      //console.log("listesEtapes ");
+      for (var i in form.forms) {
+        var currentForm = form.forms[i];
+
+        if (currentForm.info.name !== "") {
+          etapes.push({
+            text: "(" + i + ") " + currentForm.info.title,
+            value: currentForm.info.name
+          });
+        }
+      }
+    }
+  },
+  getFormStateByName: function getFormStateByName(state_name, forms) {
+    for (var i in forms) {
+      var form = forms[i];
+
+      if (form.info.name === state_name) {
+        return form;
+      }
+    }
+  },
+  getFieldByName: function getFieldByName(name, fields) {
+    for (var i in fields) {
+      if (fields[i].name === name) {
+        return fields[i];
+      }
+    }
+  }
+};
+
+var ValidationInstance = /*#__PURE__*/function () {
+  function ValidationInstance() {
+    Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(this, ValidationInstance);
+
+    //
+    this.StepeValidationOptions = [];
+  } //Retourne les etapes sous forme de listes.
+
+
+  Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(ValidationInstance, [{
+    key: "listeDesChamps",
+    value: function listeDesChamps(condition, form) {
+      var fields = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
+
+      if (condition.state_name && condition.state_name !== "") {
+        var currentForm = validationRessource.getFormStateByName(condition.state_name, form.forms);
+
+        if (currentForm !== undefined) {
+          //console.log("listeDesChamps ", currentForm);
+          for (var i in currentForm.fields) {
+            var field = currentForm.fields[i];
+
+            if (condition.name == field.name && field.options.length) {
+              this.StepeValidationOptions = field.options;
+            }
+
+            fields.push({
+              text: field.label,
+              value: field.name
+            });
+          }
+        }
+      }
+    }
+  }]);
+
+  return ValidationInstance;
+}();
+/**/
+
+
+
+
+/***/ }),
+
 /***/ "fd80":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -54,7 +256,7 @@ var vee_validate_custom = __webpack_require__("b6d1");
 var vue_multiselect_min = __webpack_require__("8e5f");
 var vue_multiselect_min_default = /*#__PURE__*/__webpack_require__.n(vue_multiselect_min);
 
-// EXTERNAL MODULE: ../drupal-vuejs/index.js + 11 modules
+// EXTERNAL MODULE: ../drupal-vuejs/index.js + 16 modules
 var drupal_vuejs = __webpack_require__("e674");
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/input/Autocomplete.vue?vue&type=script&lang=js&

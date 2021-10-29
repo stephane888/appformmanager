@@ -127,13 +127,72 @@ class AppformmanagerController extends ControllerBase {
           $step * $nbreSteps . "' and st.stepid<'" .
           ($nbreSteps + $nbreSteps * $step) . "'";
       $param .= " order by st.stepid ASC ";
+      return $param;
       $configs = $this->Connection->query($param)->fetchAll(\PDO::FETCH_ASSOC);
       $configs = $this->retrieveDatas($configs);
     }
     catch (\Exception $e) {
-      $configs = 'error';
+      return $this->reponse($e->getTrace(), $e->getCode(), $e->getMessage());
     }
     return $this->reponse($configs);
+  }
+  
+  /**
+   * Recupere un devis plus sa premiere etape.
+   */
+  function getDevis($step, Request $Request) {
+    $body = JSON::decode($Request->getContent());
+    $formId = $body['formId'];
+    $pagination = $step;
+    $activeDomaine = $this->getActiveDomain();
+    try {
+      $param = " select dv.price, dv.status, dv.domaineid, dv.created, dv.uid, dv.id, st.step, f.name from `appformmanager_datas` as dv ";
+      $param .= " inner join appformmanager_datas_steps as st ON st.datasid = dv.id ";
+      $param .= " inner join appformmanager_fomrs as f ON f.id = dv.appformmanager_forms ";
+      $param .= " where dv.appformmanager_forms='" . $formId .
+          "' and st.order='0' and dv.domaineid = '" . $activeDomaine . "' ";
+      $param .= " order by dv.id DESC limit 20 OFFSET " . $pagination;
+      $configs = $this->Connection->query($param)->fetchAll(\PDO::FETCH_ASSOC);
+      $this->retrieveDevis($configs);
+    }
+    catch (\Exception $e) {
+      return $this->reponse($param, 409, urlencode($e->getMessage()));
+    }
+    return $this->reponse($configs);
+  }
+  
+  /**
+   * Recupere les etapes de devis de maniere progressive.
+   */
+  function getDevisSteps($step, Request $Request) {
+    $body = JSON::decode($Request->getContent());
+    $DevisId = isset($body['DevisId']) ? $body['DevisId'] : null;
+    try {
+      $param = " select dv.step from `appformmanager_datas_steps` as dv ";
+      $param .= " where dv.datasid='" . $DevisId . "' and dv.order > 0 ";
+      $param .= " order by dv.order ASC ";
+      $configs = $this->Connection->query($param)->fetchAll(\PDO::FETCH_ASSOC);
+      if (!empty($configs)) {
+        foreach ($configs as $k => $row) {
+          $configs[$k]['step'] = JSON::decode($row['step']);
+        }
+      }
+    }
+    catch (\Exception $e) {
+      return $this->reponse($param, 409, urlencode($e->getMessage()));
+    }
+    return $this->reponse($configs);
+  }
+  
+  /**
+   *
+   * @param array $devis
+   */
+  protected function retrieveDevis(array &$devis) {
+    foreach ($devis as $k => $dev) {
+      $devis[$k]['datas'] = [JSON::decode($dev['step'])
+      ];
+    }
   }
   
   function SaveSoumissions(Request $Request) {

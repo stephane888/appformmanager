@@ -1,19 +1,21 @@
 ((typeof self !== 'undefined' ? self : this)["webpackJsonpappForm"] = (typeof self !== 'undefined' ? self : this)["webpackJsonpappForm"] || []).push([[18],{
 
-/***/ "10b2":
+/***/ "498a":
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ "30eb":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
 "use strict";
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_8_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_userlogin_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("10b2");
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_8_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_userlogin_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_8_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_userlogin_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
+
+var $ = __webpack_require__("23e7");
+var $trim = __webpack_require__("58a8").trim;
+var forcedStringTrimMethod = __webpack_require__("c8d2");
+
+// `String.prototype.trim` method
+// https://tc39.es/ecma262/#sec-string.prototype.trim
+$({ target: 'String', proto: true, forced: forcedStringTrimMethod('trim') }, {
+  trim: function trim() {
+    return $trim(this);
+  }
+});
 
 
 /***/ }),
@@ -788,6 +790,51 @@ var double = {
 
 /***/ }),
 
+/***/ "8bfb":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/input/Radio.vue?vue&type=template&id=bca44c4e&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:!_vm.validationField && _vm.mode ? 'mb-5' : ''},[(_vm.validationField)?_c('transition',{attrs:{"name":"fade"}},[_c('b-row',{staticClass:"choice-section min-height"},[(!_vm.field.label_hidden === true)?_c('b-col',{staticClass:"text-left",attrs:{"cols":"12"}},[_c('p',{staticClass:"page-label"},[_vm._v(_vm._s(_vm.field.label))])]):_vm._e(),_c('ValidationProvider',{staticClass:"col-12 p-0",attrs:{"rules":_vm.field.require,"name":_vm.field.name},scopedSlots:_vm._u([{key:"default",fn:function(v){return [_vm._l((_vm.field.options),function(item,i){return _c('b-col',{key:i,attrs:{"cols":"12"}},[_c('div',{staticClass:"input-list"},[_c('b-col',{staticClass:"input-list__label",attrs:{"sm":"11"}},[_c('label',{staticClass:"m-0 d-block w-100",attrs:{"for":("input-radio-a" + (_vm.field.name) + i)}},[_vm._v(" "+_vm._s(_vm.formatTemplateString(item.text))+" ")])]),_c('b-col',{staticClass:"input-list__input"},[_c('b-form-radio',{attrs:{"name":_vm.field.name,"size":"lg","id":("input-radio-a" + (_vm.field.name) + i),"value":item.value},model:{value:(_vm.field.value),callback:function ($$v) {_vm.$set(_vm.field, "value", $$v)},expression:"field.value"}})],1)],1)])}),_c('div',{staticClass:"text-danger"},_vm._l((v.errors),function(error,ii){return _c('small',{key:ii,staticClass:"d-block"},[_vm._v(" "+_vm._s(error)+" ")])}),0)]}}],null,false,3542752685)})],1)],1):_vm._e()],1)}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/App/input/Radio.vue?vue&type=template&id=bca44c4e&
+
+// EXTERNAL MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/input/Radio.vue?vue&type=script&lang=js&
+var Radiovue_type_script_lang_js_ = __webpack_require__("daa9");
+
+// CONCATENATED MODULE: ./src/App/input/Radio.vue?vue&type=script&lang=js&
+ /* harmony default export */ var input_Radiovue_type_script_lang_js_ = (Radiovue_type_script_lang_js_["a" /* default */]); 
+// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__("2877");
+
+// CONCATENATED MODULE: ./src/App/input/Radio.vue
+
+
+
+
+
+/* normalize component */
+
+var component = Object(componentNormalizer["a" /* default */])(
+  input_Radiovue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var Radio = __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
 /***/ "b6d1":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -809,230 +856,47 @@ Object(vee_validate__WEBPACK_IMPORTED_MODULE_1__[/* extend */ "c"])("alpha", vee
 
 /***/ }),
 
-/***/ "be10":
+/***/ "c8d2":
+/***/ (function(module, exports, __webpack_require__) {
+
+var PROPER_FUNCTION_NAME = __webpack_require__("5e77").PROPER;
+var fails = __webpack_require__("d039");
+var whitespaces = __webpack_require__("5899");
+
+var non = '\u200B\u0085\u180E';
+
+// check that a method works with the correct list
+// of whitespaces and has a correct name
+module.exports = function (METHOD_NAME) {
+  return fails(function () {
+    return !!whitespaces[METHOD_NAME]()
+      || non[METHOD_NAME]() !== non
+      || (PROPER_FUNCTION_NAME && whitespaces[METHOD_NAME].name !== METHOD_NAME);
+  });
+};
+
+
+/***/ }),
+
+/***/ "daa9":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/input/userlogin.vue?vue&type=template&id=087038c2&lang=html&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:!_vm.validationField && _vm.mode ? 'mb-5' : ''},[(_vm.validationField && (!_vm.uid || (_vm.uid && _vm.mode)))?_c('transition',{attrs:{"name":"fade"}},[_c('form',{ref:"form_userlogin",staticClass:"form-userlogin choice-section min-height",on:{"submit":function($event){$event.stopPropagation();$event.preventDefault();return _vm.handleSubmit.apply(null, arguments)}}},[_c('ul',{staticClass:"d-flex p-0 mx-0 select-tab"},[_c('li',{staticClass:"item",class:[_vm.current_tab === 'register' ? 'active' : ''],on:{"click":function($event){return _vm.select_tab('register')}}},[_vm._v(" Creer un compte ... ")]),_c('li',{staticClass:"item",class:[_vm.current_tab !== 'register' ? 'active' : ''],on:{"click":function($event){return _vm.select_tab('login')}}},[_vm._v(" Se connecter ")])]),_c('ValidationProvider',{ref:"userlogin_name",staticClass:"d-block",attrs:{"rules":"required","name":"Nom"},scopedSlots:_vm._u([{key:"default",fn:function(v){return [_c('div',{staticClass:"login-form"},[_c('label',{staticClass:"label d-flex align-items-center"},[_c('span',[_vm._v(_vm._s(_vm.field.label))])])]),_c('b-form-group',{attrs:{"label":_vm.nomDisplay}},[_c('b-form-input',{attrs:{"type":"text"},on:{"input":function($event){return _vm.input($event, 'name')}},model:{value:(_vm.userlogin.name.value),callback:function ($$v) {_vm.$set(_vm.userlogin.name, "value", $$v)},expression:"userlogin.name.value"}})],1),_c('div',{staticClass:"text-danger"},_vm._l((v.errors),function(error,ii){return _c('small',{key:ii,staticClass:"d-block"},[_vm._v(" "+_vm._s(error)+" ")])}),0)]}}],null,false,1650481904)}),(_vm.current_tab === 'register')?_c('b-form-group',{attrs:{"label":"Prenom"}},[_c('b-form-input',{attrs:{"type":"text"},on:{"input":function($event){return _vm.input($event, 'prenom')}},model:{value:(_vm.userlogin.prenom.value),callback:function ($$v) {_vm.$set(_vm.userlogin.prenom, "value", $$v)},expression:"userlogin.prenom.value"}})],1):_vm._e(),(_vm.current_tab === 'register')?_c('ValidationProvider',{ref:"userlogin_tel",staticClass:"d-block",attrs:{"rules":"required","name":"Telephone"},scopedSlots:_vm._u([{key:"default",fn:function(v){return [_c('b-form-group',{attrs:{"label":"Telephone"}},[_c('b-form-input',{attrs:{"type":"text"},on:{"input":function($event){return _vm.input($event, 'telephone')}},model:{value:(_vm.userlogin.telephone.value),callback:function ($$v) {_vm.$set(_vm.userlogin.telephone, "value", $$v)},expression:"userlogin.telephone.value"}})],1),_c('div',{staticClass:"text-danger"},_vm._l((v.errors),function(error,ii){return _c('small',{key:ii,staticClass:"d-block"},[_vm._v(" "+_vm._s(error)+" ")])}),0)]}}],null,false,1994085191)}):_vm._e(),(_vm.current_tab === 'register')?_c('ValidationProvider',{ref:"userlogin_email",staticClass:"d-block",attrs:{"rules":"required|email","name":"Email"},scopedSlots:_vm._u([{key:"default",fn:function(v){return [_c('b-form-group',{attrs:{"label":"Email"}},[_c('b-form-input',{attrs:{"type":"email"},on:{"input":function($event){return _vm.input($event, 'email')}},model:{value:(_vm.userlogin.email.value),callback:function ($$v) {_vm.$set(_vm.userlogin.email, "value", $$v)},expression:"userlogin.email.value"}})],1),_c('div',{staticClass:"text-danger"},_vm._l((v.errors),function(error,ii){return _c('small',{key:ii,staticClass:"d-block"},[_vm._v(" "+_vm._s(error)+" ")])}),0)]}}],null,false,1829562814)}):_vm._e(),(_vm.current_tab === 'login')?_c('ValidationProvider',{ref:"userlogin_password",staticClass:"d-block",attrs:{"rules":"required","name":"Password"},scopedSlots:_vm._u([{key:"default",fn:function(v){return [_c('b-form-group',{attrs:{"label":"Mot de passe"}},[_c('b-form-input',{attrs:{"type":"password"},on:{"input":function($event){return _vm.input($event, 'password')}},model:{value:(_vm.userlogin.password.value),callback:function ($$v) {_vm.$set(_vm.userlogin.password, "value", $$v)},expression:"userlogin.password.value"}})],1),_c('div',{staticClass:"text-danger"},_vm._l((v.errors),function(error,ii){return _c('small',{key:ii,staticClass:"d-block"},[_vm._v(" "+_vm._s(error)+" ")])}),0)]}}],null,false,3320814594)}):_vm._e(),_c('div',{staticClass:"text-center sepation-login"},[_c('strong',{staticClass:"sepation-login-text"},[_vm._v("Ou")])]),(_vm.current_tab === 'login')?_c('b-row',{staticClass:"rs-login"},[_c('b-col',{staticClass:"p-4 rs-login__btn rs-login__btn--face",class:_vm.mediaBtn ? '' : 'bg-light',attrs:{"cols":"12","md":"6"},on:{"click":_vm.initFacebookLogin}},[_c('b-icon',{staticClass:"mr-3",attrs:{"icon":"facebook "}}),_vm._v("login via facebook ")],1),_c('b-col',{staticClass:"p-4 rs-login__btn rs-login__btn--google",class:_vm.mediaBtn ? '' : 'bg-light',attrs:{"cols":"12","md":"6"},on:{"click":_vm.initGoogleLogin}},[_c('b-icon',{staticClass:"mr-3",attrs:{"icon":"google"}}),_vm._v("login via Google")],1)],1):_vm._e(),(_vm.current_tab === 'register')?_c('b-row',{staticClass:"rs-login"},[_c('b-col',{staticClass:"p-4 rs-login__btn rs-login__btn--face",class:_vm.mediaBtn ? '' : 'bg-light',attrs:{"cols":"12","md":"6"},on:{"click":_vm.initFacebookLogin}},[_c('b-icon',{staticClass:"mr-3",attrs:{"icon":"facebook "}}),_vm._v("Créer avec facebook ")],1),_c('b-col',{staticClass:"p-4 rs-login__btn rs-login__btn--google",class:_vm.mediaBtn ? '' : 'bg-light',attrs:{"cols":"12","md":"6"},on:{"click":_vm.initGoogleLogin}},[_c('b-icon',{staticClass:"mr-3",attrs:{"icon":"google"}}),_vm._v(" Créer avec Google ")],1)],1):_vm._e()],1)]):_vm._e()],1)}
-var staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./src/App/input/userlogin.vue?vue&type=template&id=087038c2&lang=html&
-
-// EXTERNAL MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js + 1 modules
-var objectSpread2 = __webpack_require__("f3f3");
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
-var es_function_name = __webpack_require__("b0c0");
-
-// EXTERNAL MODULE: ./node_modules/vuex/dist/vuex.esm.js
-var vuex_esm = __webpack_require__("2f62");
-
-// EXTERNAL MODULE: ./node_modules/vee-validate/dist/vee-validate.esm.js
-var vee_validate_esm = __webpack_require__("7bb1");
-
-// EXTERNAL MODULE: ./src/App/EditsFields/vee-validate-custom.js
-var vee_validate_custom = __webpack_require__("b6d1");
-
-// EXTERNAL MODULE: ../drupal-vuejs/index.js + 11 modules
-var drupal_vuejs = __webpack_require__("e674");
-
-// EXTERNAL MODULE: ./src/App/config/config.js
-var config = __webpack_require__("f158");
-
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/testrenjsx.vue?vue&type=script&lang=js&
-/* harmony default export */ var testrenjsxvue_type_script_lang_js_ = ({
-  name: "CardsJSXTest",
-  functional: true,
-  props: {
-    multiline: Boolean,
-    name: String,
-    value: String
-  },
-  render: function render(createElement, context) {
-    var self = this;
-    console.log("context : ", context);
-    var input = createElement("b-form-input", {
-      props: {
-        type: "text"
-      },
-      on: {
-        input: function input(e) {
-          self.$emit("ev_select_project", e);
-          console.log(" Vue instance : ", self.$emit);
-        }
-      }
-    });
-    var g = createElement("h2", {
-      on: {
-        click: function click() {
-          self.$emit("click_h2", "kk888");
-        },
-        ev_select_project: function ev_select_project() {
-          alert("ev_select_project");
-        }
-      }
-    }, ["kksa888 ?????", input]);
-    return g;
-  }
-});
-// CONCATENATED MODULE: ./src/App/testrenjsx.vue?vue&type=script&lang=js&
- /* harmony default export */ var App_testrenjsxvue_type_script_lang_js_ = (testrenjsxvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__("2877");
-
-// CONCATENATED MODULE: ./src/App/testrenjsx.vue
-var testrenjsx_render, testrenjsx_staticRenderFns
+/* harmony import */ var _siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("f3f3");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("ac1f");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("498a");
+/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("5319");
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("2f62");
+/* harmony import */ var vee_validate__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("7bb1");
+/* harmony import */ var _config_validation_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("e412");
+/* harmony import */ var _EditsFields_vee_validate_custom_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("b6d1");
 
 
 
 
-/* normalize component */
-
-var component = Object(componentNormalizer["a" /* default */])(
-  App_testrenjsxvue_type_script_lang_js_,
-  testrenjsx_render,
-  testrenjsx_staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* harmony default export */ var testrenjsx = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/input/userlogin.vue?vue&type=script&lang=js&
-
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -1082,261 +946,282 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 
 
- //import { drupalFormFields } from "drupal-vuejs";
 
- //import facebook from "drupal-vuejs/src/App/rx/facebook";
-
-/* harmony default export */ var userloginvue_type_script_lang_js_ = ({
-  name: "userloginV2",
+/* harmony default export */ __webpack_exports__["a"] = ({
   props: {
     field: {
       type: Object,
-      require: true,
-      validator: function validator(val) {
-        return val.states !== undefined && val.states !== undefined ? true : false;
-      }
+      require: true
     }
   },
   components: {
-    ValidationProvider: vee_validate_esm["b" /* ValidationProvider */]
+    ValidationProvider: vee_validate__WEBPACK_IMPORTED_MODULE_5__[/* ValidationProvider */ "b"]
   },
   data: function data() {
     return {
-      tabIndex: 0,
-      current_tab: "register",
-      fieldsRegisterRender: [],
-      modelsFields: {},
-      testrenjsx: testrenjsx,
-      mediaBtn: true,
-      userFacebook: "",
-      userGoogle: ""
+      value: 1,
+      nombre_de_personne_dans_le_logeme: 7
     };
   },
-  mounted: function mounted() {
-    this.TryToLoginWithFacebook();
-    this.TryToLoginWithGoogle();
-    drupal_vuejs["b" /* loginfacebook */].appId = 889256191665205;
-    this.loadScript(); //
-
-    drupal_vuejs["c" /* logingoogle */].client_id = "90673796165-fndv3eu9tog6b9g5p8camiueffcfdc8p.apps.googleusercontent.com";
-    drupal_vuejs["c" /* logingoogle */].loadGapi();
-  },
-  watch: {//
-  },
-  computed: Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])({}, Object(vuex_esm["c" /* mapState */])(["userlogin", "mode"])), Object(vuex_esm["b" /* mapGetters */])(["uid"])), {}, {
+  watch: {},
+  computed: Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({}, Object(vuex__WEBPACK_IMPORTED_MODULE_4__[/* mapGetters */ "b"])(["formDatas"])), Object(vuex__WEBPACK_IMPORTED_MODULE_4__[/* mapState */ "c"])(["formDatasValidate", "mode"])), {}, {
     validationField: function validationField() {
-      return true;
-    },
-    nomDisplay: function nomDisplay() {
-      if (this.current_tab === "register") {
-        return "Nom";
+      var status = true;
+
+      if (this.field.states.length) {
+        status = _config_validation_js__WEBPACK_IMPORTED_MODULE_6__[/* validationRessource */ "b"].computedValidation(this.formDatas, this.field, this.formDatasValidate); //console.log("update status : ", status);
+
+        if (status === undefined || status === null) status = this.field.status !== undefined ? this.field.status : false;
+        this.setStatus(status);
+        return status;
       } else {
-        return "Login ou email";
+        this.setStatus(status);
+        return status;
       }
     }
   }),
   methods: {
-    loadScript: function loadScript() {
-      var _this = this;
-
-      //var self = this
-      this.$nextTick(function () {
-        _this.mediaBtn = false;
-        drupal_vuejs["b" /* loginfacebook */].chargement();
-        drupal_vuejs["c" /* logingoogle */].loadGapi();
-        _this.mediaBtn = true;
-      });
+    setStatus: function setStatus(status) {
+      this.$set(this.field, "status", status);
     },
 
     /**
-     * Ecoute un evenement afin de determiner si l'utilisateur a clique sur le bonton de connexion et que le processus soit terminé.
+     * -
      */
-    TryToLoginWithFacebook: function TryToLoginWithFacebook() {
-      var _this2 = this;
-
-      document.addEventListener("wbu-fb-status-change", function () {
-        _this2.isBusy = true;
-        console.log("TryToLoginWithFacebook", _this2.isBusy);
-        config["a" /* default */].post("/login-rx-vuejs/facebook-check", drupal_vuejs["b" /* loginfacebook */].user).then(function (resp) {
-          console.log("TryToLoginWithFacebook resp : ", resp);
-
-          if (resp.reponse && resp.reponse.config.url !== resp.reponse.request.responseURL) {
-            //window.location.assign(resp.reponse.request.responseURL);
-            console.log("user is connect : ", resp.reponse); //on connecte l'utilisateur:
-
-            _this2.$store.dispatch("getCurrentUser").then(function () {
-              //save form
-              setTimeout(function () {
-                _this2.$store.dispatch("saveDatasUser");
-              }, 600);
-            });
-          } // il faut s'assurer que les données sont ok.
-          else if (resp.data) {
-            if (resp.data.createuser) {
-              _this2.stepe = "final-fb-register";
-            }
-          }
-        });
-      }, false);
+    formatTemplateString: function formatTemplateString(string) {
+      return this.formatString(string); //return string;
     },
 
     /**
-     * Ecoute un evenement afin de determiner si l'utilisateur a clique sur le bonton de connexion et que le processus soit terminé.
+     * -
      */
-    TryToLoginWithGoogle: function TryToLoginWithGoogle() {
-      var _this3 = this;
+    formatString: function formatString(str) {
+      var regex = /\{\{(.*?)\}\}/g;
+      var strFinal = str;
+      var monTableau;
 
-      document.addEventListener("wbu-gl-status-change", function () {
-        _this3.IsBusy();
-
-        console.log("TryToLoginWithGoogle :", drupal_vuejs["c" /* logingoogle */].user);
-        config["a" /* default */].post("/login-rx-vuejs/google-check", drupal_vuejs["c" /* logingoogle */].user).then(function (resp) {
-          console.log("TryToLoginWithGoogle resp : ", resp);
-
-          if (resp.reponse && resp.reponse.config.url !== resp.reponse.request.responseURL) {
-            //window.location.assign(resp.reponse.request.responseURL);
-            console.log("user is connect : ", resp.reponse); //on connecte l'utilisateur:
-
-            _this3.$store.dispatch("getCurrentUser").then(function () {
-              //save form
-              setTimeout(function () {
-                _this3.$store.dispatch("saveDatasUser");
-              }, 600);
-            });
-          } // Il faut s'assurer que les données sont ok.
-          else if (resp.data) {
-            if (resp.data.createuser) {
-              _this3.stepe = "final-gl-register";
-            }
-          }
-        });
-      }, false);
-    },
-    final_click_h2: function final_click_h2() {
-      alert("final_click_h2");
-    },
-
-    /*
-    async getFiledRegisterUser() {
-      const drupalFormField = new drupalFormFields("user", "user", this);
-      this.fieldsRegisterRender = await drupalFormField.format();
-      console.log("fieldsRegisterRender : ", this.fieldsRegisterRender);
-      this.modelsFields = drupalFormField.modelsFields;
-    },
-    /**/
-    handleOk: function handleOk(event) {
-      event.preventDefault();
-      this.handleSubmit();
-    },
-    handleSubmit: function handleSubmit(event) {
-      var _this4 = this;
-
-      event.preventDefault();
-      this.isOpen = !this.isOpen; // Push the name to submitted names
-
-      this.$emit("input_to_add", this.fields); // Hide the modal manually
-
-      this.$nextTick(function () {
-        _this4.$bvModal.hide("modal-prevent-closing");
-      });
-    },
-    setRefs: function setRefs() {
-      var _this5 = this;
-
-      this.$nextTick(function () {
-        //alert("Dd");
-        _this5.userlogin.name.ref = _this5.$refs.userlogin_name;
-        _this5.userlogin.telephone.ref = _this5.$refs.userlogin_tel;
-        _this5.userlogin.email.ref = _this5.$refs.userlogin_email;
-        _this5.userlogin.password.ref = _this5.$refs.userlogin_password;
-      });
-    },
-    input: function input(value, field) {
-      this.field.value[field].value = value;
-    },
-    initValue: function initValue() {
-      if (!this.field.value) {
-        this.$set(this.field, "value", {
-          name: {
-            value: "",
-            label: "Nom"
-          },
-          prenom: {
-            value: "",
-            label: "Prenom"
-          },
-          telephone: {
-            value: "",
-            label: "Telephone"
-          },
-          email: {
-            value: "",
-            label: "Email"
-          },
-          password: {
-            value: "",
-            label: "Password"
-          }
-        });
-      } else if (this.field.value.name) {
-        this.userlogin.name.value = this.field.value.name.value;
-        this.userlogin.prenom.value = this.field.value.prenom.value;
-        this.userlogin.telephone.value = this.field.value.telephone.value;
-        this.userlogin.email.value = this.field.value.email.value;
-        this.userlogin.password.value = this.field.value.password.value;
+      while ((monTableau = regex.exec(str)) !== null) {
+        var msg = monTableau[1].trim(" ");
+        strFinal = strFinal.replace(monTableau[0], eval(msg));
       }
-    },
-    select_tab: function select_tab(val) {
-      var self = this;
-      this.current_tab = val;
-      this.userlogin.tabIndex = val;
-      self.setRefs();
+
+      return strFinal;
     },
 
-    /* facebook login methods */
-    getFacebookLoginStatus: function getFacebookLoginStatus() {
-      drupal_vuejs["b" /* loginfacebook */].getUserStatus();
-    },
-    facebookStatusCallback: function facebookStatusCallback(reponse) {
-      console.log("status", reponse);
-      console.log(reponse.status == "connected" ? "je suis connecté avec facebook" : "Pas connecté avec facebook");
-    },
-    initFacebookLogin: function initFacebookLogin() {
-      drupal_vuejs["b" /* loginfacebook */].openPopup();
-    },
+    /**
+     * -
+     */
+    getFieldValueByName: function getFieldValueByName(name) {
+      var field = _config_validation_js__WEBPACK_IMPORTED_MODULE_6__[/* validationRessource */ "b"].getFieldByName(name, this.formDatas.fields); //console.log("field getFieldValueByName : ", field);
 
-    /* google login methods */
-    initGoogleLogin: function initGoogleLogin() {
-      drupal_vuejs["c" /* logingoogle */].typeOfLogin(false);
+      if (field && field.value) {
+        return field.value;
+      }
     }
   }
 });
-// CONCATENATED MODULE: ./src/App/input/userlogin.vue?vue&type=script&lang=js&
- /* harmony default export */ var input_userloginvue_type_script_lang_js_ = (userloginvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/App/input/userlogin.vue?vue&type=style&index=0&lang=scss&
-var userloginvue_type_style_index_0_lang_scss_ = __webpack_require__("30eb");
 
-// CONCATENATED MODULE: ./src/App/input/userlogin.vue
+/***/ }),
+
+/***/ "e412":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return validationRessource; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ValidationInstance; });
+/* harmony import */ var _siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("276c");
+/* harmony import */ var _siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("e954");
+/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("b0c0");
+/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_array_includes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("caad");
+/* harmony import */ var core_js_modules_es_array_includes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_includes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("2532");
+/* harmony import */ var core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _config_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("f158");
 
 
 
 
 
 
-/* normalize component */
+var validationRessource = {
+  conditions: function conditions() {
+    return {
+      action: "",
+      name: "",
+      operator: "",
+      value: "",
+      state_name: ""
+    };
+  },
+  listsOperators: function listsOperators() {
+    return [{
+      text: "Validé",
+      value: "validated"
+    }, {
+      text: "non vide",
+      value: "not_empty"
+    }, {
+      text: " vide",
+      value: "empty"
+    }, {
+      text: "la valeur du champs est egal à",
+      value: "egal"
+    }, {
+      text: "la valeur du champs est superieur à",
+      value: ">"
+    }];
+  },
+  Action: function Action() {
+    var val = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "Ce champs";
+    return [{
+      text: val + " est visible",
+      value: "visible"
+    }, {
+      text: val + " est caché",
+      value: "hidden"
+    }];
+  },
 
-var userlogin_component = Object(componentNormalizer["a" /* default */])(
-  input_userloginvue_type_script_lang_js_,
-  render,
-  staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
+  /**
+   * Validation des champs.
+   * Retourne false, pour desactiver.
+   * NB: formDatasValidate prend plus de temps pour ce mettre à jour.
+   */
+  computedValidation: function computedValidation(formDatas, currentField, formDatasValidate) {
+    for (var i in formDatas.fields) {
+      var field = formDatas.fields[i];
 
-/* harmony default export */ var userlogin = __webpack_exports__["default"] = (userlogin_component.exports);
+      if (field.name !== currentField.name) {
+        for (var j in currentField.states) {
+          var state = currentField.states[j]; // si le champs n'est pas definit on retourne false;
+
+          if (formDatasValidate[state.name] === undefined) {
+            //console.log("Validation non forunit : ", formDatasValidate);
+            return null;
+          }
+
+          if (field.name === state.name) {
+            // visible
+            if (state.action === "visible") {
+              if (field.value === "" && state.operator === "not_empty") return false;else if (field.value !== "" && state.operator === "empty") return false;else if (state.operator === "validated" && formDatasValidate[field.name]) return formDatasValidate[field.name].valid;else if (state.operator === "egal") {
+                /*
+                console.log(
+                  "Valeur requise : ",
+                  state.value,
+                  " :: Valeur du parent",
+                  field.value
+                );
+                /**/
+                if (field.value) {
+                  if (_config_js__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"].typeSelection.includes(field.type) && field.value.includes) {
+                    return field.value.includes(state.value) ? true : false;
+                  } else {
+                    var x = new String(field.value);
+                    var y = new String(state.value);
+                    return x.localeCompare(y) === 0 ? true : false;
+                  }
+                } else {
+                  return false;
+                }
+              } else if (state.operator === ">") {
+                if (field.value) {
+                  var _x = parseInt(field.value);
+
+                  var _y = parseInt(state.value);
+
+                  return _y < _x ? true : false;
+                } else {
+                  return false;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  /**
+   * Retourne la liste des etapes.
+   */
+  listesEtapes: function listesEtapes(form, formDatas) {
+    var etapes = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
+
+    if (form && form.forms.length > 1) {
+      //console.log("listesEtapes ");
+      for (var i in form.forms) {
+        var currentForm = form.forms[i];
+
+        if (currentForm.info.name !== "") {
+          etapes.push({
+            text: "(" + i + ") " + currentForm.info.title,
+            value: currentForm.info.name
+          });
+        }
+      }
+    }
+  },
+  getFormStateByName: function getFormStateByName(state_name, forms) {
+    for (var i in forms) {
+      var form = forms[i];
+
+      if (form.info.name === state_name) {
+        return form;
+      }
+    }
+  },
+  getFieldByName: function getFieldByName(name, fields) {
+    for (var i in fields) {
+      if (fields[i].name === name) {
+        return fields[i];
+      }
+    }
+  }
+};
+
+var ValidationInstance = /*#__PURE__*/function () {
+  function ValidationInstance() {
+    Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(this, ValidationInstance);
+
+    //
+    this.StepeValidationOptions = [];
+  } //Retourne les etapes sous forme de listes.
+
+
+  Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(ValidationInstance, [{
+    key: "listeDesChamps",
+    value: function listeDesChamps(condition, form) {
+      var fields = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
+
+      if (condition.state_name && condition.state_name !== "") {
+        var currentForm = validationRessource.getFormStateByName(condition.state_name, form.forms);
+
+        if (currentForm !== undefined) {
+          //console.log("listeDesChamps ", currentForm);
+          for (var i in currentForm.fields) {
+            var field = currentForm.fields[i];
+
+            if (condition.name == field.name && field.options.length) {
+              this.StepeValidationOptions = field.options;
+            }
+
+            fields.push({
+              text: field.label,
+              value: field.name
+            });
+          }
+        }
+      }
+    }
+  }]);
+
+  return ValidationInstance;
+}();
+/**/
+
+
+
 
 /***/ })
 

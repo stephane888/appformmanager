@@ -47,6 +47,25 @@ appformmanager.getforms_steps:
   requirements:
     _permission: 'access content'
 
+
+appformmanager.getdevisStep:
+  path: '/appformmanager/getdevis-steps/{step}'
+  defaults:
+    _title: 'Travaux de renovations'
+    _controller: '\Drupal\appformmanager\Controller\AppformmanagerController::getDevisSteps'
+  requirements:
+    _permission: 'access content'
+
+
+appformmanager.getdevis:
+  path: '/appformmanager/getdevis/{step}'
+  defaults:
+    _title: 'Travaux de renovations'
+    _controller: '\Drupal\appformmanager\Controller\AppformmanagerController::getDevis'
+  requirements:
+    _permission: 'access content'
+
+
 appformmanager.save_soumissions:
   path: '/appformmanager/save-soumissions'
   defaults:
