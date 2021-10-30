@@ -127,7 +127,6 @@ class AppformmanagerController extends ControllerBase {
           $step * $nbreSteps . "' and st.stepid<'" .
           ($nbreSteps + $nbreSteps * $step) . "'";
       $param .= " order by st.stepid ASC ";
-      return $param;
       $configs = $this->Connection->query($param)->fetchAll(\PDO::FETCH_ASSOC);
       $configs = $this->retrieveDatas($configs);
     }
