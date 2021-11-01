@@ -62316,7 +62316,8 @@ module.exports = function buildFullPath(baseURL, requestedURL) {
 
 vue__WEBPACK_IMPORTED_MODULE_14___default.a.use(bootstrap_vue__WEBPACK_IMPORTED_MODULE_13__[/* BVToastPlugin */ "a"]);
 /* harmony default export */ __webpack_exports__["a"] = (Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({}, wbuutilities__WEBPACK_IMPORTED_MODULE_11__[/* AjaxToastBootStrap */ "b"]), {}, {
-  //TestDomain: "http://v2lesroisdelareno.kksa", //"http://lesroisdelareno.habeuk.com",
+  TestDomain: "http://v2lesroisdelareno.kksa",
+  //"http://lesroisdelareno.habeuk.com",
   typeSelection: ["radio", "select", "checkbox"],
 
   /**
@@ -63306,9 +63307,9 @@ var config = __webpack_require__("f158");
 
 
 
-external_commonjs_vue_commonjs2_vue_root_Vue_default.a.use(vuex_esm["a" /* default */]); //drupalUtilities.TestDomain = "http://v2lesroisdelareno.kksa";
-//users.TestDomain = "http://v2lesroisdelareno.kksa";
-
+external_commonjs_vue_commonjs2_vue_root_Vue_default.a.use(vuex_esm["a" /* default */]);
+drupal_vuejs["a" /* drupalUtilities */].TestDomain = "http://v2lesroisdelareno.kksa";
+drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
 /* harmony default export */ var store = (new vuex_esm["a" /* default */].Store({
   state: {
     /* contient les information de la page d'afficha des formulaires */

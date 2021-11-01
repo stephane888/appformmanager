@@ -163,12 +163,12 @@ var filtresvue_type_template_id_0db71dec_staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/App/gestions-chemps/filtres.vue?vue&type=template&id=0db71dec&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/gestions-chemps/Addfield.vue?vue&type=template&id=2f5b3244&
-var Addfieldvue_type_template_id_2f5b3244_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('b-modal',{ref:"addForm",attrs:{"size":"lg","id":'modal-addForm--' + _vm.idModal,"title":"Ajouter un champs dans le gestionnaire de champs","hide-footer":"","content-class":['mange-add-field']},on:{"ok":_vm.handleOk}},[_c('loaderIcon',{attrs:{"busy":_vm.busy}}),_c('form',{ref:"forme",on:{"submit":_vm.handleSubmit,"reset":_vm.resetModal,"hidden":_vm.resetModal}},[_c('b-row',[_c('b-col',{attrs:{"cols":"6"}},[_c('b-form-group',{attrs:{"label":"Sélectionner un model de base","label-for":"type-input","invalid-feedback":"type is required"}},[_c('b-form-select',{attrs:{"options":_vm.typeOptions,"id":"type-input","required":""},model:{value:(_vm.field.type),callback:function ($$v) {_vm.$set(_vm.field, "type", $$v)},expression:"field.type"}})],1)],1),_c('b-col',{attrs:{"cols":"6"}},[_c('b-form-group',{attrs:{"label":"Accosier à un formulaire","label-for":"type-input","invalid-feedback":"type is required"}},[_c('b-form-select',{attrs:{"options":_vm.listForms,"id":"type-input-2","required":""},model:{value:(_vm.field.formid),callback:function ($$v) {_vm.$set(_vm.field, "formid", $$v)},expression:"field.formid"}})],1)],1)],1),_c('input-option-form',{staticClass:"content-config-field",attrs:{"type":_vm.field.type,"fields":_vm.field}}),_c('b-row',{attrs:{"align-h":"end"}},[_c('div',{staticClass:"mt-3 mx-3"},[_c('b-button',{staticClass:"mr-2",attrs:{"type":"submit","variant":"primary","disabled":_vm.field.name.length > 2 ? false : true}},[_vm._v(" "+_vm._s(_vm.nameButtonOk)+" ")])],1)])],1),_c('pre',[_vm._v(" "+_vm._s(_vm.field)+" ")])],1)}
-var Addfieldvue_type_template_id_2f5b3244_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/gestions-chemps/Addfield.vue?vue&type=template&id=5f26ca92&
+var Addfieldvue_type_template_id_5f26ca92_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('b-modal',{attrs:{"size":"lg","id":'modal-addForm--' + _vm.idModal,"title":"Ajouter un champs dans le gestionnaire de champs","hide-footer":"","content-class":['mange-add-field']},on:{"ok":_vm.handleOk}},[_c('loaderIcon',{attrs:{"busy":_vm.busy}}),_c('form',{ref:"forme",on:{"submit":_vm.handleSubmit,"reset":_vm.resetModal,"hidden":_vm.resetModal}},[_c('b-row',[_c('b-col',{attrs:{"cols":"6"}},[_c('b-form-group',{attrs:{"label":"Sélectionner un model de base","label-for":"type-input","invalid-feedback":"type is required"}},[_c('b-form-select',{attrs:{"options":_vm.typeOptions,"id":"type-input","required":""},model:{value:(_vm.field.type),callback:function ($$v) {_vm.$set(_vm.field, "type", $$v)},expression:"field.type"}})],1)],1),_c('b-col',{attrs:{"cols":"6"}},[_c('b-form-group',{attrs:{"label":"Accosier à un formulaire","label-for":"type-input","invalid-feedback":"type is required","description":"Cela permet de grouper ce champs avec le formulaire selectionné"}},[_c('b-form-select',{attrs:{"options":_vm.listForms,"id":"type-input-2","required":""},model:{value:(_vm.field.formid),callback:function ($$v) {_vm.$set(_vm.field, "formid", $$v)},expression:"field.formid"}})],1)],1)],1),_c('input-option-form',{staticClass:"content-config-field",attrs:{"type":_vm.field.type,"field":_vm.field}}),_c('b-row',{attrs:{"align-h":"end"}},[_c('div',{staticClass:"mt-3 mx-3"},[_c('b-button',{staticClass:"mr-2",attrs:{"type":"submit","variant":"primary","disabled":_vm.field.name.length > 2 ? false : true}},[_vm._v(" "+_vm._s(_vm.nameButtonOk)+" ")])],1)])],1)],1)}
+var Addfieldvue_type_template_id_5f26ca92_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/gestions-chemps/Addfield.vue?vue&type=template&id=2f5b3244&
+// CONCATENATED MODULE: ./src/App/gestions-chemps/Addfield.vue?vue&type=template&id=5f26ca92&
 
 // EXTERNAL MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js + 1 modules
 var objectSpread2 = __webpack_require__("f3f3");
@@ -195,7 +195,6 @@ var config = __webpack_require__("f158");
 
 
 
-//
 //
 //
 //
@@ -394,8 +393,8 @@ var componentNormalizer = __webpack_require__("2877");
 
 var component = Object(componentNormalizer["a" /* default */])(
   gestions_chemps_Addfieldvue_type_script_lang_js_,
-  Addfieldvue_type_template_id_2f5b3244_render,
-  Addfieldvue_type_template_id_2f5b3244_staticRenderFns,
+  Addfieldvue_type_template_id_5f26ca92_render,
+  Addfieldvue_type_template_id_5f26ca92_staticRenderFns,
   false,
   null,
   null,
@@ -520,12 +519,12 @@ var tableauChampsvue_type_template_id_3a7ac706_staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/App/gestions-chemps/tableauChamps.vue?vue&type=template&id=3a7ac706&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/gestions-chemps/tableauChampsAction.vue?vue&type=template&id=644779a2&
-var tableauChampsActionvue_type_template_id_644779a2_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"boutton-absolute d-flex"},[_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-info",modifiers:{"hover":true,"v-info":true}}],staticClass:"border-0",attrs:{"size":"md","variant":"outline-info","title":"Editer le champs"},on:{"click":_vm.editerField}},[_c('b-icon',{attrs:{"icon":"pencil-square","aria-hidden":"true"}})],1),_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-info",modifiers:{"hover":true,"v-info":true}}],staticClass:"border-0",attrs:{"size":"md","variant":"outline-secondary","title":"cloner le champs"},on:{"click":function($event){return _vm.$emit('cloner-field', _vm.row)}}},[_c('b-icon',{attrs:{"icon":"clipboard-plus","aria-hidden":"true"}})],1),_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-danger",modifiers:{"hover":true,"v-danger":true}}],staticClass:"border-0",attrs:{"size":"md","variant":"outline-danger","title":"Supprimer le champs"},on:{"click":_vm.deleteField}},[_c('b-icon',{attrs:{"icon":"trash-fill","aria-hidden":"true"}})],1),_c('AddForm',{attrs:{"listForms":_vm.listForms,"defaultFormid":_vm.field.formid,"field":_vm.field,"idModal":'edit' + _vm.row.index}})],1)}
-var tableauChampsActionvue_type_template_id_644779a2_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/gestions-chemps/tableauChampsAction.vue?vue&type=template&id=633afe98&
+var tableauChampsActionvue_type_template_id_633afe98_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"boutton-absolute d-flex"},[_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-info",modifiers:{"hover":true,"v-info":true}}],staticClass:"border-0",attrs:{"size":"md","variant":"outline-info","title":"Editer le champs"},on:{"click":_vm.editerField}},[_c('b-icon',{attrs:{"icon":"pencil-square","aria-hidden":"true"}})],1),_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-info",modifiers:{"hover":true,"v-info":true}}],staticClass:"border-0",attrs:{"size":"md","variant":"outline-secondary","title":"cloner le champs"},on:{"click":function($event){return _vm.$emit('cloner-field', _vm.row)}}},[_c('b-icon',{attrs:{"icon":"clipboard-plus","aria-hidden":"true"}})],1),_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-danger",modifiers:{"hover":true,"v-danger":true}}],staticClass:"border-0",attrs:{"size":"md","variant":"outline-danger","title":"Supprimer le champs"},on:{"click":_vm.deleteField}},[_c('b-icon',{attrs:{"icon":"trash-fill","aria-hidden":"true"}})],1),_c('AddForm',{attrs:{"listForms":_vm.listForms,"defaultFormid":_vm.field.formid,"field":_vm.field,"idModal":'edit' + _vm.row.index}})],1)}
+var tableauChampsActionvue_type_template_id_633afe98_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/gestions-chemps/tableauChampsAction.vue?vue&type=template&id=644779a2&
+// CONCATENATED MODULE: ./src/App/gestions-chemps/tableauChampsAction.vue?vue&type=template&id=633afe98&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.splice.js
 var es_array_splice = __webpack_require__("a434");
@@ -599,7 +598,7 @@ var es_array_splice = __webpack_require__("a434");
   },
   methods: {
     editerField: function editerField() {
-      this.$bvModal.show("modal-addForm--edit" + this.id);
+      this.$bvModal.show("modal-addForm--edit" + this.row.index);
     },
 
     /**
@@ -631,8 +630,8 @@ var es_array_splice = __webpack_require__("a434");
 
 var tableauChampsAction_component = Object(componentNormalizer["a" /* default */])(
   gestions_chemps_tableauChampsActionvue_type_script_lang_js_,
-  tableauChampsActionvue_type_template_id_644779a2_render,
-  tableauChampsActionvue_type_template_id_644779a2_staticRenderFns,
+  tableauChampsActionvue_type_template_id_633afe98_render,
+  tableauChampsActionvue_type_template_id_633afe98_staticRenderFns,
   false,
   null,
   null,

@@ -5,12 +5,12 @@
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/FormStep.vue?vue&type=template&id=b9baedbe&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"element-center full-block"},[_c('div',{staticClass:"choice-section text-right"},[_c('b-row',{attrs:{"align-h":"end"}},[_c('b-col',[_c('p',{staticClass:"button-travaux"},[_c('a',{attrs:{"href":"/node/52"}},[_vm._v("Tous les travaux")])])])],1),(_vm.mode)?_c('b-button-group',{staticClass:"boutton-absolute"},[_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-info",modifiers:{"hover":true,"v-info":true}}],attrs:{"variant":"outline-info","size":"md","title":"Ajouter un champs"},on:{"click":_vm.addFormField}},[_c('b-icon',{staticStyle:{"font-size":"1.5rem"},attrs:{"icon":"plus"}})],1),_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-success",modifiers:{"hover":true,"v-success":true}}],attrs:{"variant":"outline-success","size":"md","title":"Editer le formulaire"},on:{"click":_vm.configSteps}},[_c('b-icon',{attrs:{"icon":"pencil"}})],1),_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-danger",modifiers:{"hover":true,"v-danger":true}}],attrs:{"variant":"outline-danger","size":"md","title":"Suprimer le formulaire"},on:{"click":_vm.deleteSteps}},[_c('b-icon',{attrs:{"icon":"trash"}})],1),_c('b-button',{directives:[{name:"b-modal",rawName:"v-b-modal.clone-current-stepe",modifiers:{"clone-current-stepe":true}},{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-secondary",modifiers:{"hover":true,"v-secondary":true}}],attrs:{"variant":"outline-secondary","size":"md","title":"cloner l'etape"}},[_c('b-icon',{attrs:{"icon":"clipboard-plus"}})],1)],1):_vm._e()],1),_c('forms'),(_vm.mode)?_c('div',[_c('add-form-field',{ref:"formField",attrs:{"isOpen":_vm.modalFormFieldIsOpen,"nouveau":true,"id-modal":'form-step'}}),_c('StepConfiguration',{ref:"StepConfiguration"}),_c('cloneCurrentStepe')],1):_vm._e()],1)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/FormStep.vue?vue&type=template&id=9e8a9c34&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"element-center full-block"},[_c('div',{staticClass:"choice-section text-right"},[_c('b-row',{attrs:{"align-h":"end"}},[_c('b-col',[_c('p',{staticClass:"button-travaux"},[_c('a',{attrs:{"href":"/node/52"}},[_vm._v("Tous les travaux")])])])],1),(_vm.mode)?_c('b-button-group',{staticClass:"boutton-absolute"},[_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-info",modifiers:{"hover":true,"v-info":true}}],attrs:{"variant":"outline-info","size":"md","title":"Ajouter un champs"},on:{"click":_vm.addFormField}},[_c('b-icon',{staticStyle:{"font-size":"1.5rem"},attrs:{"icon":"plus"}})],1),_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-success",modifiers:{"hover":true,"v-success":true}}],attrs:{"variant":"outline-success","size":"md","title":"Editer le formulaire"},on:{"click":_vm.configSteps}},[_c('b-icon',{attrs:{"icon":"pencil"}})],1),_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-danger",modifiers:{"hover":true,"v-danger":true}}],attrs:{"variant":"outline-danger","size":"md","title":"Suprimer le formulaire"},on:{"click":_vm.deleteSteps}},[_c('b-icon',{attrs:{"icon":"trash"}})],1),_c('b-button',{directives:[{name:"b-modal",rawName:"v-b-modal.clone-current-stepe",modifiers:{"clone-current-stepe":true}},{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-secondary",modifiers:{"hover":true,"v-secondary":true}}],attrs:{"variant":"outline-secondary","size":"md","title":"cloner l'etape"}},[_c('b-icon',{attrs:{"icon":"clipboard-plus"}})],1)],1):_vm._e()],1),_c('forms'),(_vm.mode)?_c('div',[_c('add-form-field',{attrs:{"isOpen":_vm.modalFormFieldIsOpen,"nouveau":true,"id-modal":'form-step'}}),_c('StepConfiguration',{ref:"StepConfiguration"}),_c('cloneCurrentStepe')],1):_vm._e()],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/FormStep.vue?vue&type=template&id=b9baedbe&
+// CONCATENATED MODULE: ./src/App/FormStep.vue?vue&type=template&id=9e8a9c34&
 
 // EXTERNAL MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js + 1 modules
 var objectSpread2 = __webpack_require__("f3f3");
@@ -652,7 +652,6 @@ var forms_component = Object(componentNormalizer["a" /* default */])(
 //
 //
 //
-//
 
 
 /* harmony default export */ var FormStepvue_type_script_lang_js_ = ({
@@ -693,8 +692,6 @@ var forms_component = Object(componentNormalizer["a" /* default */])(
       }]
     };
   },
-  mounted: function mounted() {//
-  },
   watch: {
     fields: function fields() {
       console.log("changement");
@@ -721,8 +718,8 @@ var forms_component = Object(componentNormalizer["a" /* default */])(
 
     },
     addFormField: function addFormField() {
-      //remove this line
-      this.$refs.formField.openAddFormFieldPopUp();
+      var idModel = "modal-addForm--form-step";
+      this.$bvModal.show(idModel);
     },
     configSteps: function configSteps() {
       this.$refs.StepConfiguration.openPopUp();

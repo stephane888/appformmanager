@@ -21,12 +21,12 @@ var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpac
 // EXTERNAL MODULE: ./src/App/components/loaderIcon.vue + 4 modules
 var loaderIcon = __webpack_require__("021a");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/AddFormField.vue?vue&type=template&id=289bc4dc&
-var AddFormFieldvue_type_template_id_289bc4dc_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('b-modal',{ref:"addForm",attrs:{"size":"lg","id":'modal-addForm--' + _vm.idModal,"title":"Ajouter un champs dans cette etape","hide-footer":"","content-class":['mange-add-field']},on:{"ok":_vm.handleOk},model:{value:(_vm.isOpen),callback:function ($$v) {_vm.isOpen=$$v},expression:"isOpen"}},[_c('form',{ref:"forme",on:{"submit":_vm.handleSubmit,"reset":_vm.resetModal,"hidden":_vm.resetModal}},[_c('b-row',{},[_c('b-col',{attrs:{"md":"6"}},[(!_vm.dynamicfield)?_c('b-form-group',{attrs:{"label":"Sélectionner un type de champs","invalid-feedback":"type is required"}},[_c('b-form-select',{attrs:{"options":_vm.typeOptions,"required":""},model:{value:(_vm.field.type),callback:function ($$v) {_vm.$set(_vm.field, "type", $$v)},expression:"field.type"}})],1):_vm._e(),(_vm.dynamicfield)?_c('b-form-group',{attrs:{"label":"Formulaire","invalid-feedback":"type is required"}},[_c('b-form-select',{attrs:{"options":_vm.formItems,"required":""},model:{value:(_vm.typeFormId),callback:function ($$v) {_vm.typeFormId=$$v},expression:"typeFormId"}})],1):_vm._e()],1),_c('b-col',{attrs:{"md":"6"}},[_c('b-form-group',{attrs:{"isOverride":_vm.isOverride}},[_c('b-form-checkbox',{attrs:{"switch":"","size":"lg"},model:{value:(_vm.dynamicfield),callback:function ($$v) {_vm.dynamicfield=$$v},expression:"dynamicfield"}},[_vm._v(" Champs dynamique ")])],1)],1)],1),_c('div',{staticClass:"content-config-field"},[(!_vm.dynamicfield)?_c('input-option-form',{attrs:{"type":_vm.field.type,"field":_vm.field}}):_vm._e(),(_vm.dynamicfield)?_c('div',[_c('hr'),_c('b-form-group',{attrs:{"label":"Sélectionner le champs dynamique","invalid-feedback":"type is required"}},[_c('b-form-select',{attrs:{"options":_vm.OptionDynamicsField},on:{"change":_vm.selectDynamicLabel},model:{value:(_vm.field.name),callback:function ($$v) {_vm.$set(_vm.field, "name", $$v)},expression:"field.name"}})],1),_c('compositeHeaderField',{attrs:{"field":_vm.field}})],1):_vm._e()],1),_c('b-row',{attrs:{"align-h":"end"}},[_c('div',{staticClass:"mr-3"},[_c('b-button',{staticClass:"mr-2",attrs:{"type":"submit","variant":"primary"}},[_vm._v(" "+_vm._s(_vm.nameButtonOk)+" ")])],1)])],1),_c('pre',[_vm._v(" field "+_vm._s(_vm.field)+" ")])])}
-var AddFormFieldvue_type_template_id_289bc4dc_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/AddFormField.vue?vue&type=template&id=8f627a4a&
+var AddFormFieldvue_type_template_id_8f627a4a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('b-modal',{ref:"addForm",attrs:{"size":"lg","id":'modal-addForm--' + _vm.idModal,"title":"Ajouter un champs dans cette etape","hide-footer":"","content-class":['mange-add-field']},on:{"ok":_vm.handleOk},model:{value:(_vm.isOpen),callback:function ($$v) {_vm.isOpen=$$v},expression:"isOpen"}},[_c('form',{ref:"forme",on:{"submit":_vm.handleSubmit,"reset":_vm.resetModal,"hidden":_vm.resetModal}},[_c('b-row',{},[_c('b-col',{attrs:{"md":"6"}},[(!_vm.dynamicfield)?_c('b-form-group',{attrs:{"label":"Sélectionner un type de champs","invalid-feedback":"type is required"}},[_c('b-form-select',{attrs:{"options":_vm.typeOptions,"required":""},model:{value:(_vm.field.type),callback:function ($$v) {_vm.$set(_vm.field, "type", $$v)},expression:"field.type"}})],1):_vm._e(),(_vm.dynamicfield)?_c('b-form-group',{attrs:{"label":"Formulaire","invalid-feedback":"type is required"}},[_c('b-form-select',{attrs:{"options":_vm.formItems,"required":""},model:{value:(_vm.typeFormId),callback:function ($$v) {_vm.typeFormId=$$v},expression:"typeFormId"}})],1):_vm._e()],1),_c('b-col',{attrs:{"md":"6"}},[_c('b-form-group',{attrs:{"isOverride":_vm.isOverride}},[_c('b-form-checkbox',{attrs:{"switch":"","size":"lg"},model:{value:(_vm.dynamicfield),callback:function ($$v) {_vm.dynamicfield=$$v},expression:"dynamicfield"}},[_vm._v(" Champs dynamique ")])],1)],1)],1),_c('div',{staticClass:"content-config-field"},[(!_vm.dynamicfield)?_c('input-option-form',{attrs:{"type":_vm.field.type,"field":_vm.field}}):_vm._e(),(_vm.dynamicfield)?_c('div',[_c('hr'),_c('b-form-group',{attrs:{"label":"Sélectionner le champs dynamique","invalid-feedback":"type is required"}},[_c('b-form-select',{attrs:{"options":_vm.OptionDynamicsField},on:{"change":_vm.selectDynamicLabel},model:{value:(_vm.field.name),callback:function ($$v) {_vm.$set(_vm.field, "name", $$v)},expression:"field.name"}})],1),_c('compositeHeaderField',{attrs:{"field":_vm.field}})],1):_vm._e()],1),_c('b-row',{attrs:{"align-h":"end"}},[_c('div',{staticClass:"mr-3"},[_c('b-button',{staticClass:"mr-2",attrs:{"type":"submit","variant":"primary"}},[_vm._v(" "+_vm._s(_vm.nameButtonOk)+" ")])],1)])],1)])}
+var AddFormFieldvue_type_template_id_8f627a4a_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/AddFormField.vue?vue&type=template&id=289bc4dc&
+// CONCATENATED MODULE: ./src/App/AddFormField.vue?vue&type=template&id=8f627a4a&
 
 // EXTERNAL MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/classCallCheck.js
 var classCallCheck = __webpack_require__("276c");
@@ -64,8 +64,6 @@ var config = __webpack_require__("f158");
 
 
 
-//
-//
 //
 //
 //
@@ -338,8 +336,8 @@ var componentNormalizer = __webpack_require__("2877");
 
 var component = Object(componentNormalizer["a" /* default */])(
   App_AddFormFieldvue_type_script_lang_js_,
-  AddFormFieldvue_type_template_id_289bc4dc_render,
-  AddFormFieldvue_type_template_id_289bc4dc_staticRenderFns,
+  AddFormFieldvue_type_template_id_8f627a4a_render,
+  AddFormFieldvue_type_template_id_8f627a4a_staticRenderFns,
   false,
   null,
   null,
