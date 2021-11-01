@@ -1,0 +1,4 @@
+appformmanager manage devis:
+  title: 'Appformmanager manage devis'
+  description: "Permet à l'adminitrateur de gerer les devis"
+  restrict access: true

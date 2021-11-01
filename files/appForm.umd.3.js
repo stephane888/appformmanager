@@ -7,12 +7,12 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/TraitementMyOwn.vue?vue&type=template&id=bd36de3a&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('b-container',{attrs:{"fluid":"lg"}},[_c('div',{attrs:{"checkUid":_vm.checkUid}},[_c('title-bar',{attrs:{"conf":{ col: true, text: 'Mes Devis' },"id":_vm.id,"showDevis":false}})],1),_c('div',{staticClass:"appfom-container"},[_c('b-row',{attrs:{"align-h":"center"}},[_c('b-col',{attrs:{"cols":"12"}},[_c('listBlocks',{attrs:{"liste_fields_check":_vm.ListeFieldsCheck,"liste_fields_display":_vm.ListeFieldsDisplay,"totalRows":_vm.totalRows,"isBusy":_vm.isBusy,"perPage":_vm.perPage},on:{"ev-change-pagination":_vm.ChangePagination}})],1)],1)],1)])],1)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/TraitementMyOwn.vue?vue&type=template&id=044326f8&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('b-container',{attrs:{"fluid":"md"}},[_c('div',[_c('title-bar',{attrs:{"conf":{ col: true, text: 'Mes Devis : ' + _vm.titreDevis },"id":_vm.id,"showDevis":false}})],1),_c('div',{staticClass:"appfom-container"},[_c('b-row',{attrs:{"align-h":"center"}},[_c('b-col',{attrs:{"cols":"12"}},[_c('listBlocks',{attrs:{"liste_fields_check":_vm.ListeFieldsCheck,"liste_fields_display":_vm.ListeFieldsDisplay,"totalRows":_vm.totalRows,"isBusy":_vm.isBusy,"perPage":_vm.perPage},on:{"ev-change-pagination":_vm.ChangePagination}})],1)],1)],1)])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/traitement/TraitementMyOwn.vue?vue&type=template&id=bd36de3a&
+// CONCATENATED MODULE: ./src/App/traitement/TraitementMyOwn.vue?vue&type=template&id=044326f8&
 
 // EXTERNAL MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js + 1 modules
 var objectSpread2 = __webpack_require__("f3f3");
@@ -23,24 +23,24 @@ var es_function_name = __webpack_require__("b0c0");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.splice.js
 var es_array_splice = __webpack_require__("a434");
 
-// EXTERNAL MODULE: ./src/App/config/config.js
-var config = __webpack_require__("f158");
-
 // EXTERNAL MODULE: ./src/App/components/TitleBar.vue + 4 modules
 var TitleBar = __webpack_require__("63c9");
+
+// EXTERNAL MODULE: ./src/App/config/config.js
+var config = __webpack_require__("f158");
 
 // EXTERNAL MODULE: ./node_modules/vuex/dist/vuex.esm.js
 var vuex_esm = __webpack_require__("2f62");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/blocks/listBlocks.vue?vue&type=template&id=3c7cc266&
-var listBlocksvue_type_template_id_3c7cc266_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.isBusy)?_c('div',{staticClass:"d-flex justify-content-center p-5"},[_c('b-icon',{attrs:{"icon":"circle-fill","animation":"throb","font-scale":"4","variant":"primary"}})],1):_vm._e(),(!_vm.isBusy)?_c('div',{staticClass:"titre-project-resume"},[_c('b-col',{staticClass:"notif",attrs:{"cols":"12","md":"5","lg":"3"}},[_c('span',{staticClass:"notif-alert notif-at"},[_vm._v(_vm._s(_vm.nombreStatus.rappel.length))]),_c('span',[_vm._v("projet en attente de rappel")])]),_c('b-col',{staticClass:"notif",attrs:{"cols":"12","md":"5","lg":"3"}},[_c('span',{staticClass:"notif-alert notif-sa"},[_vm._v(_vm._s(_vm.nombreStatus.save.length))]),_c('span',[_vm._v("projet sauvegardé,")])]),(_vm.$store.state.mode)?_c('b-col',{staticClass:"notif",attrs:{"cols":"12","md":"5","lg":"3"}},[_c('span',{staticClass:"notif-ab notif-alert"},[_vm._v(_vm._s(_vm.nombreStatus.loose.length))]),_c('span',[_vm._v("projet abandonné")])]):_vm._e()],1):_vm._e(),(!_vm.isBusy)?_c('b-row',{staticClass:"list-block",attrs:{"trigger_perfom":_vm.trigger_perfom}},_vm._l((_vm.traitementFormItemsDisplay),function(item,i){return _c('b-col',{key:i,attrs:{"md":"12"}},[_c('block',{attrs:{"item":item,"form":_vm.form,"traitementFormItems":_vm.traitementFormItems,"data-id":i},on:{"get-valide-stepe":_vm.getValideStepe,"form-traiter":_vm.formTraiter,"get-info-user":_vm.getInfoUser}})],1)}),1):_vm._e(),(_vm.totalRows > 20)?_c('b-pagination',{staticClass:"pt-5 pb-5 mt-5 mb-0",attrs:{"total-rows":_vm.totalRows,"per-page":_vm.perPage,"align":"fill","size":"sm"},on:{"change":_vm.changePagination},model:{value:(_vm.currentPage),callback:function ($$v) {_vm.currentPage=$$v},expression:"currentPage"}}):_vm._e(),_c('b-modal',{ref:"modal",staticClass:"super-hover",attrs:{"id":"modal--closing","size":"lg","title":'Résultat du formulaire ...',"scrollable":"","cancelTitle":"Quitter","okTitle":"Me rappeler"},scopedSlots:_vm._u([{key:"modal-footer",fn:function(){return [_c('div',{staticClass:"d-flex"},[_c('div',{staticClass:"w-100"},[_c('b-button',{staticClass:"mr-3",attrs:{"variant":"primary","size":"sm"},on:{"click":function($event){return _vm.$bvModal.hide('modal--closing')}}},[_vm._v(" Quitter ")]),(
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/blocks/listBlocks.vue?vue&type=template&id=3d11377d&
+var listBlocksvue_type_template_id_3d11377d_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('loader-icon',{attrs:{"busy":_vm.isBusy}}),(!_vm.isBusy)?_c('div',{staticClass:"titre-project-resume"},[_c('b-col',{staticClass:"notif",attrs:{"cols":"12","md":"5","lg":"3"}},[_c('span',{staticClass:"notif-alert notif-at"},[_vm._v(_vm._s(_vm.nombreStatus.rappel.length))]),_c('span',[_vm._v("projet en attente de rappel")])]),_c('b-col',{staticClass:"notif",attrs:{"cols":"12","md":"5","lg":"3"}},[_c('span',{staticClass:"notif-alert notif-sa"},[_vm._v(_vm._s(_vm.nombreStatus.save.length))]),_c('span',[_vm._v("projet sauvegardé,")])]),(_vm.$store.state.mode)?_c('b-col',{staticClass:"notif",attrs:{"cols":"12","md":"5","lg":"3"}},[_c('span',{staticClass:"notif-ab notif-alert"},[_vm._v(_vm._s(_vm.nombreStatus.loose.length))]),_c('span',[_vm._v("projet abandonné")])]):_vm._e()],1):_vm._e(),(!_vm.isBusy)?_c('b-row',{staticClass:"list-block",attrs:{"trigger_perfom":_vm.trigger_perfom}},_vm._l((_vm.traitementFormItemsDisplay),function(item,i){return _c('b-col',{key:i,attrs:{"md":"12"}},[_c('block',{attrs:{"item":item,"form":_vm.form,"traitementFormItems":_vm.traitementFormItems,"data-id":i},on:{"get-valide-stepe":_vm.getValideStepe,"form-traiter":_vm.formTraiter,"get-info-user":_vm.getInfoUser}})],1)}),1):_vm._e(),(_vm.totalRows > 20)?_c('b-pagination',{staticClass:"pt-5 pb-5 mt-5 mb-0",attrs:{"total-rows":_vm.totalRows,"per-page":_vm.perPage,"align":"fill","size":"sm"},on:{"change":_vm.changePagination},model:{value:(_vm.currentPage),callback:function ($$v) {_vm.currentPage=$$v},expression:"currentPage"}}):_vm._e(),_c('b-modal',{ref:"modal",staticClass:"super-hover",attrs:{"id":"modal--closing","size":"lg","title":'Résultat du formulaire ...',"scrollable":"","cancelTitle":"Quitter","okTitle":"Me rappeler"},scopedSlots:_vm._u([{key:"modal-footer",fn:function(){return [_c('div',{staticClass:"d-flex"},[_c('div',{staticClass:"w-100"},[_c('b-button',{staticClass:"mr-3",attrs:{"variant":"primary","size":"sm"},on:{"click":function($event){return _vm.$bvModal.hide('modal--closing')}}},[_vm._v(" Quitter ")]),(
               (_vm.currentDevis.status === '1' || _vm.currentDevis.status === 1) &&
               _vm.currentDevis.uid.includes(_vm.$store.getters.uid)
             )?_c('b-button',{attrs:{"variant":"primary","size":"sm"},on:{"click":function($event){return _vm.updateStatus()}}},[_vm._v(" Me rappeler ")]):_vm._e()],1)])]},proxy:true}]),model:{value:(_vm.showModal),callback:function ($$v) {_vm.showModal=$$v},expression:"showModal"}},[(_vm.traitementFormItems.length)?_c('b-row',{attrs:{"align-h":"center"}},_vm._l((_vm.validSteps2),function(steps,i){return _c('b-col',{key:i,staticClass:"mb-4",attrs:{"sm":"12"}},[(steps !== undefined)?_c('b-card',{staticClass:"mb-1",attrs:{"no-body":""}},[_c('b-card-header',{staticClass:"p-1",attrs:{"header-tag":"header","role":"tab"}},[_c('b-button',{attrs:{"block":"","variant":"dark","disabled":""}},[_vm._v(" "+_vm._s(steps.info.title)+" ")])],1),_c('b-collapse',{attrs:{"id":"accordion-option","accordion":"my-accordion","role":"tabpanel","visible":""}},[_c('b-card-body',{staticClass:"p-2"},[_c('b-row',{staticClass:"d-flex flex-wrap"},_vm._l((steps.fields),function(field,index){return _c('b-col',{key:index,attrs:{"cols":"12"}},[(field.status === undefined || field.status)?_c('type-displays',{staticClass:"mb-2",attrs:{"field":field,"currentDevis":_vm.currentDevis}}):_c('div',[_c('pre',{staticClass:"d-none"},[_vm._v("                      "+_vm._s(field.name)+"\n                    ")])])],1)}),1)],1)],1)],1):_vm._e()],1)}),1):_vm._e()],1)],1)}
-var listBlocksvue_type_template_id_3c7cc266_staticRenderFns = []
+var listBlocksvue_type_template_id_3d11377d_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/traitement/blocks/listBlocks.vue?vue&type=template&id=3c7cc266&
+// CONCATENATED MODULE: ./src/App/traitement/blocks/listBlocks.vue?vue&type=template&id=3d11377d&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.number.constructor.js
 var es_number_constructor = __webpack_require__("a9e3");
@@ -255,6 +255,9 @@ var component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var bloc = (component.exports);
+// EXTERNAL MODULE: ./src/App/components/loaderIcon.vue + 4 modules
+var loaderIcon = __webpack_require__("021a");
+
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/blocks/listBlocks.vue?vue&type=script&lang=js&
 
 
@@ -394,14 +397,8 @@ var component = Object(componentNormalizer["a" /* default */])(
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
  //import Utilities from "../../../store/utilities";
+
 
 
 
@@ -438,7 +435,8 @@ var component = Object(componentNormalizer["a" /* default */])(
     block: bloc,
     typeDisplays: function typeDisplays() {
       return __webpack_require__.e(/* import() */ 32).then(__webpack_require__.bind(null, "5b90"));
-    }
+    },
+    LoaderIcon: loaderIcon["a" /* default */]
   },
   data: function data() {
     return {
@@ -520,18 +518,19 @@ var component = Object(componentNormalizer["a" /* default */])(
         this.traitementFormItemsDisplay.push(row);
       }
     },
-    showResult: function showResult(id) {
-      console.log("id", id);
-    },
-    formTraiter: function formTraiter(id) {
+
+    /**
+     * -
+     */
+    formTraiter: function formTraiter(item) {
       var status = "";
 
-      if (id.status == "0") {
+      if (item.status == "0") {
         status = "1";
       } else status = "0";
 
-      this.$bvModal.msgBoxConfirm("Confirmez-vous l'action ?", {
-        title: "Alerte",
+      this.$bvModal.msgBoxConfirm(" Confirmez-vous l'action ? ", {
+        title: " Alerte ",
         size: "sm",
         buttonSize: "sm",
         okVariant: "success",
@@ -542,20 +541,15 @@ var component = Object(componentNormalizer["a" /* default */])(
         centered: true
       }).then(function (value) {
         if (value) {
-          console.log("Refus : ", id);
-          config["a" /* default */].deleteFormTraitement(id.id, status).then(function () {
-            window.location.reload();
+          config["a" /* default */].deleteFormTraitement(item.id, status).then(function () {
+            item.status = status;
           });
         }
       });
-      /**
-       *  .catch((err) => {
-       *    console.log("refus : ", err);
-       *  });
-       */
     },
 
     /**
+     * -
      */
     getUser: function getUser(uid) {
       var _this = this;
@@ -575,6 +569,10 @@ var component = Object(componentNormalizer["a" /* default */])(
         });
       }
     },
+
+    /**
+     * -
+     */
     getInfoUser: function getInfoUser(item) {
       var user = item.user;
       var idloop = item.idloop;
@@ -683,8 +681,8 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 var listBlocks_component = Object(componentNormalizer["a" /* default */])(
   blocks_listBlocksvue_type_script_lang_js_,
-  listBlocksvue_type_template_id_3c7cc266_render,
-  listBlocksvue_type_template_id_3c7cc266_staticRenderFns,
+  listBlocksvue_type_template_id_3d11377d_render,
+  listBlocksvue_type_template_id_3d11377d_staticRenderFns,
   false,
   null,
   null,
@@ -723,11 +721,6 @@ var listBlocks_component = Object(componentNormalizer["a" /* default */])(
 //
 //
 //
-//
-//
-//
-//import axios from "axios";
- //import utilities from "./Utilities";
 
 
 
@@ -747,7 +740,7 @@ var listBlocks_component = Object(componentNormalizer["a" /* default */])(
     return {
       totalRows: 0,
       isBusy: false,
-      perPage: 20
+      perPage: 8
     };
   },
   watch: {
@@ -755,9 +748,11 @@ var listBlocks_component = Object(componentNormalizer["a" /* default */])(
       this.datasBdOrLocalStorage();
     }
   },
-  mounted: function mounted() {//
+  mounted: function mounted() {
+    this.loadDatas();
+    this.getTotalRows();
   },
-  computed: Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])({}, Object(vuex_esm["c" /* mapState */])(["traitementId"])), Object(vuex_esm["b" /* mapGetters */])(["traitementFormItems", "form", "uid"])), {}, {
+  computed: Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])({}, Object(vuex_esm["c" /* mapState */])(["traitementId", "form", "traitementItems"])), Object(vuex_esm["b" /* mapGetters */])(["traitementFormItems"])), {}, {
     ListeFieldsDisplay: function ListeFieldsDisplay() {
       var fieldsDisplay = [{
         label: "Date",
@@ -766,6 +761,14 @@ var listBlocks_component = Object(componentNormalizer["a" /* default */])(
           return config["a" /* default */].getMysqlDateToFrench(val);
         }
       }, {
+        label: "Que souhaitez vous faire",
+        key: "action",
+        stickyColumn: true,
+        thStyle: {
+          minWidth: "170px"
+        },
+        tdClass: ["bg-light"]
+      }, {
         label: "Status",
         key: "status",
         thStyle: {
@@ -773,11 +776,19 @@ var listBlocks_component = Object(componentNormalizer["a" /* default */])(
         }
       }, {
         label: "Prix",
-        key: "price"
+        key: "price",
+        thStyle: {
+          minWidth: "120px"
+        },
+        formatter: function formatter(value) {
+          return value + " €";
+        }
       }, {
-        label: "Que souhaitez vous faire",
-        key: "action",
-        stickyColumn: true
+        label: "Utilisateur",
+        key: "uid",
+        thStyle: {
+          minWidth: "220px"
+        }
       }];
 
       for (var i in this.form.forms) {
@@ -789,7 +800,10 @@ var listBlocks_component = Object(componentNormalizer["a" /* default */])(
           if (field.display_field) {
             fieldsDisplay.push({
               label: field.label,
-              key: field.name
+              key: field.name,
+              thStyle: {
+                minWidth: "220px"
+              }
             });
           }
         }
@@ -806,14 +820,10 @@ var listBlocks_component = Object(componentNormalizer["a" /* default */])(
 
       return lists;
     },
-    checkUid: function checkUid() {
-      if (this.uid) {
-        this.loadDatas();
-        this.getTotalRows();
-        return true;
-      }
-
-      return false;
+    titreDevis: function titreDevis() {
+      if (this.traitementItems.length) {
+        return this.traitementItems[0].name;
+      } else return "";
     }
   }),
   methods: {
@@ -831,8 +841,6 @@ var listBlocks_component = Object(componentNormalizer["a" /* default */])(
       }
     },
     saveToLocal: function saveToLocal() {
-      //var self = this;
-      //var datas = this.form;
       config["a" /* default */].prepareDatasToSave(this.form).then(function (val) {
         config["a" /* default */].saveForm(val).then(function () {//
         });
@@ -841,62 +849,75 @@ var listBlocks_component = Object(componentNormalizer["a" /* default */])(
     resetValue: function resetValue() {
       this.$store.getters.formDatas.selected = "";
       this.$store.getters.formDatas.value = [];
-      console.log("prev");
-    },
-    resetModal: function resetModal() {//   this.formDatas.info.title = "";
-      //   this.titleState = null;
-      //   this.headerTitle = "";
-      //   this.headerState = null;
     },
     handleOk: function handleOk(bvModalEvt) {
-      // Prevent modal from closing
-      bvModalEvt.preventDefault(); // Trigger submit handler
-
+      bvModalEvt.preventDefault();
       this.handleSubmit();
     },
     handleSubmit: function handleSubmit(event) {
       var _this = this;
 
-      event.preventDefault(); // Exit when the form isn't valid
-
-      this.demo = true;
+      event.preventDefault();
       this.$nextTick(function () {
         _this.$bvModal.hide("modal-prevent-closing");
       });
     },
-    loadDatas: function loadDatas() {
+    getTotalRows: function getTotalRows() {
       var _this2 = this;
+
+      var payload = {
+        beginSql: " select count(*) as nombres from `appformmanager_datas` ",
+        filters: {
+          AND: [],
+          OR: []
+        }
+      };
+      payload.filters.AND.push({
+        column: "appformmanager_forms",
+        value: this.id
+      });
+      config["a" /* default */].bPost("/appformmanager/count-devis-own", payload, {}, false).then(function (resp) {
+        if (resp.data[0] && resp.data[0].nombres) {
+          _this2.totalRows = parseInt(resp.data[0].nombres);
+        }
+      });
+    },
+    loadDatas: function loadDatas() {
+      var _this3 = this;
 
       var pagination = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
       this.isBusy = true;
-      var pag = null;
-      if (pagination) pag = (pagination - 1) * this.perPage;
-      this.$store.dispatch("loadTraitementDatas", {
-        id: this.id,
-        pagination: pag,
-        uid: this.uid
-      }).then(function () {
-        _this2.$store.dispatch("setTraitId", _this2.id);
+      var payload = {
+        filters: {
+          AND: [],
+          OR: []
+        }
+      };
+      payload.filters.AND.push({
+        column: "appformmanager_forms",
+        value: this.id,
+        preffix: "dv"
+      });
+      payload.filters.AND.push({
+        column: "order",
+        value: 0,
+        preffix: "st"
+      });
+      config["a" /* default */].bPost("/appformmanager/getdevis-own/" + pagination + "/" + this.perPage, payload, {}, false).then(function (resp) {
+        _this3.$store.state.traitementItems = resp.data;
 
-        _this2.$store.dispatch("setFormId", _this2.id);
+        _this3.$store.dispatch("setTraitId", _this3.id);
 
-        _this2.isBusy = false;
+        _this3.$store.dispatch("setFormId", _this3.id);
+
+        _this3.isBusy = false;
+      }).catch(function (error) {
+        console.log("error", error);
+        _this3.isBusy = false;
       });
     },
     ChangePagination: function ChangePagination(val) {
-      this.loadDatas(val);
-    },
-    getTotalRows: function getTotalRows() {
-      var _this3 = this;
-
-      var datas = "select count(*) as nombres from `appformmanager_datas` where `appformmanager_forms` = " + this.id + " and `uid` = " + this.uid;
-      config["a" /* default */].getData(datas).then(function (resp) {
-        if (resp.data[0] && resp.data[0].nombres) {
-          _this3.totalRows = parseInt(resp.data[0].nombres);
-        }
-
-        console.log("resp[0].nombres : ", resp.data[0]);
-      });
+      this.loadDatas(val - 1);
     }
   }
 });

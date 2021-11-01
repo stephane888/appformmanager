@@ -7,12 +7,12 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/TraitementMyOwn.vue?vue&type=template&id=bd36de3a&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('b-container',{attrs:{"fluid":"lg"}},[_c('div',{attrs:{"checkUid":_vm.checkUid}},[_c('title-bar',{attrs:{"conf":{ col: true, text: 'Mes Devis' },"id":_vm.id,"showDevis":false}})],1),_c('div',{staticClass:"appfom-container"},[_c('b-row',{attrs:{"align-h":"center"}},[_c('b-col',{attrs:{"cols":"12"}},[_c('listBlocks',{attrs:{"liste_fields_check":_vm.ListeFieldsCheck,"liste_fields_display":_vm.ListeFieldsDisplay,"totalRows":_vm.totalRows,"isBusy":_vm.isBusy,"perPage":_vm.perPage},on:{"ev-change-pagination":_vm.ChangePagination}})],1)],1)],1)])],1)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/TraitementMyOwn.vue?vue&type=template&id=044326f8&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('b-container',{attrs:{"fluid":"md"}},[_c('div',[_c('title-bar',{attrs:{"conf":{ col: true, text: 'Mes Devis : ' + _vm.titreDevis },"id":_vm.id,"showDevis":false}})],1),_c('div',{staticClass:"appfom-container"},[_c('b-row',{attrs:{"align-h":"center"}},[_c('b-col',{attrs:{"cols":"12"}},[_c('listBlocks',{attrs:{"liste_fields_check":_vm.ListeFieldsCheck,"liste_fields_display":_vm.ListeFieldsDisplay,"totalRows":_vm.totalRows,"isBusy":_vm.isBusy,"perPage":_vm.perPage},on:{"ev-change-pagination":_vm.ChangePagination}})],1)],1)],1)])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/traitement/TraitementMyOwn.vue?vue&type=template&id=bd36de3a&
+// CONCATENATED MODULE: ./src/App/traitement/TraitementMyOwn.vue?vue&type=template&id=044326f8&
 
 // EXTERNAL MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js + 1 modules
 var objectSpread2 = __webpack_require__("f3f3");
@@ -23,11 +23,11 @@ var es_function_name = __webpack_require__("b0c0");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.splice.js
 var es_array_splice = __webpack_require__("a434");
 
-// EXTERNAL MODULE: ./src/App/config/config.js
-var config = __webpack_require__("f158");
-
 // EXTERNAL MODULE: ./src/App/components/TitleBar.vue + 4 modules
 var TitleBar = __webpack_require__("63c9");
+
+// EXTERNAL MODULE: ./src/App/config/config.js
+var config = __webpack_require__("f158");
 
 // EXTERNAL MODULE: ./node_modules/vuex/dist/vuex.esm.js
 var vuex_esm = __webpack_require__("2f62");
@@ -65,11 +65,6 @@ var listBlocks = __webpack_require__("8bba");
 //
 //
 //
-//
-//
-//
-//import axios from "axios";
- //import utilities from "./Utilities";
 
 
 
@@ -89,7 +84,7 @@ var listBlocks = __webpack_require__("8bba");
     return {
       totalRows: 0,
       isBusy: false,
-      perPage: 20
+      perPage: 8
     };
   },
   watch: {
@@ -97,9 +92,11 @@ var listBlocks = __webpack_require__("8bba");
       this.datasBdOrLocalStorage();
     }
   },
-  mounted: function mounted() {//
+  mounted: function mounted() {
+    this.loadDatas();
+    this.getTotalRows();
   },
-  computed: Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])({}, Object(vuex_esm["c" /* mapState */])(["traitementId"])), Object(vuex_esm["b" /* mapGetters */])(["traitementFormItems", "form", "uid"])), {}, {
+  computed: Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])({}, Object(vuex_esm["c" /* mapState */])(["traitementId", "form", "traitementItems"])), Object(vuex_esm["b" /* mapGetters */])(["traitementFormItems"])), {}, {
     ListeFieldsDisplay: function ListeFieldsDisplay() {
       var fieldsDisplay = [{
         label: "Date",
@@ -108,6 +105,14 @@ var listBlocks = __webpack_require__("8bba");
           return config["a" /* default */].getMysqlDateToFrench(val);
         }
       }, {
+        label: "Que souhaitez vous faire",
+        key: "action",
+        stickyColumn: true,
+        thStyle: {
+          minWidth: "170px"
+        },
+        tdClass: ["bg-light"]
+      }, {
         label: "Status",
         key: "status",
         thStyle: {
@@ -115,11 +120,19 @@ var listBlocks = __webpack_require__("8bba");
         }
       }, {
         label: "Prix",
-        key: "price"
+        key: "price",
+        thStyle: {
+          minWidth: "120px"
+        },
+        formatter: function formatter(value) {
+          return value + " €";
+        }
       }, {
-        label: "Que souhaitez vous faire",
-        key: "action",
-        stickyColumn: true
+        label: "Utilisateur",
+        key: "uid",
+        thStyle: {
+          minWidth: "220px"
+        }
       }];
 
       for (var i in this.form.forms) {
@@ -131,7 +144,10 @@ var listBlocks = __webpack_require__("8bba");
           if (field.display_field) {
             fieldsDisplay.push({
               label: field.label,
-              key: field.name
+              key: field.name,
+              thStyle: {
+                minWidth: "220px"
+              }
             });
           }
         }
@@ -148,14 +164,10 @@ var listBlocks = __webpack_require__("8bba");
 
       return lists;
     },
-    checkUid: function checkUid() {
-      if (this.uid) {
-        this.loadDatas();
-        this.getTotalRows();
-        return true;
-      }
-
-      return false;
+    titreDevis: function titreDevis() {
+      if (this.traitementItems.length) {
+        return this.traitementItems[0].name;
+      } else return "";
     }
   }),
   methods: {
@@ -173,8 +185,6 @@ var listBlocks = __webpack_require__("8bba");
       }
     },
     saveToLocal: function saveToLocal() {
-      //var self = this;
-      //var datas = this.form;
       config["a" /* default */].prepareDatasToSave(this.form).then(function (val) {
         config["a" /* default */].saveForm(val).then(function () {//
         });
@@ -183,62 +193,75 @@ var listBlocks = __webpack_require__("8bba");
     resetValue: function resetValue() {
       this.$store.getters.formDatas.selected = "";
       this.$store.getters.formDatas.value = [];
-      console.log("prev");
-    },
-    resetModal: function resetModal() {//   this.formDatas.info.title = "";
-      //   this.titleState = null;
-      //   this.headerTitle = "";
-      //   this.headerState = null;
     },
     handleOk: function handleOk(bvModalEvt) {
-      // Prevent modal from closing
-      bvModalEvt.preventDefault(); // Trigger submit handler
-
+      bvModalEvt.preventDefault();
       this.handleSubmit();
     },
     handleSubmit: function handleSubmit(event) {
       var _this = this;
 
-      event.preventDefault(); // Exit when the form isn't valid
-
-      this.demo = true;
+      event.preventDefault();
       this.$nextTick(function () {
         _this.$bvModal.hide("modal-prevent-closing");
       });
     },
-    loadDatas: function loadDatas() {
+    getTotalRows: function getTotalRows() {
       var _this2 = this;
+
+      var payload = {
+        beginSql: " select count(*) as nombres from `appformmanager_datas` ",
+        filters: {
+          AND: [],
+          OR: []
+        }
+      };
+      payload.filters.AND.push({
+        column: "appformmanager_forms",
+        value: this.id
+      });
+      config["a" /* default */].bPost("/appformmanager/count-devis-own", payload, {}, false).then(function (resp) {
+        if (resp.data[0] && resp.data[0].nombres) {
+          _this2.totalRows = parseInt(resp.data[0].nombres);
+        }
+      });
+    },
+    loadDatas: function loadDatas() {
+      var _this3 = this;
 
       var pagination = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
       this.isBusy = true;
-      var pag = null;
-      if (pagination) pag = (pagination - 1) * this.perPage;
-      this.$store.dispatch("loadTraitementDatas", {
-        id: this.id,
-        pagination: pag,
-        uid: this.uid
-      }).then(function () {
-        _this2.$store.dispatch("setTraitId", _this2.id);
+      var payload = {
+        filters: {
+          AND: [],
+          OR: []
+        }
+      };
+      payload.filters.AND.push({
+        column: "appformmanager_forms",
+        value: this.id,
+        preffix: "dv"
+      });
+      payload.filters.AND.push({
+        column: "order",
+        value: 0,
+        preffix: "st"
+      });
+      config["a" /* default */].bPost("/appformmanager/getdevis-own/" + pagination + "/" + this.perPage, payload, {}, false).then(function (resp) {
+        _this3.$store.state.traitementItems = resp.data;
 
-        _this2.$store.dispatch("setFormId", _this2.id);
+        _this3.$store.dispatch("setTraitId", _this3.id);
 
-        _this2.isBusy = false;
+        _this3.$store.dispatch("setFormId", _this3.id);
+
+        _this3.isBusy = false;
+      }).catch(function (error) {
+        console.log("error", error);
+        _this3.isBusy = false;
       });
     },
     ChangePagination: function ChangePagination(val) {
-      this.loadDatas(val);
-    },
-    getTotalRows: function getTotalRows() {
-      var _this3 = this;
-
-      var datas = "select count(*) as nombres from `appformmanager_datas` where `appformmanager_forms` = " + this.id + " and `uid` = " + this.uid;
-      config["a" /* default */].getData(datas).then(function (resp) {
-        if (resp.data[0] && resp.data[0].nombres) {
-          _this3.totalRows = parseInt(resp.data[0].nombres);
-        }
-
-        console.log("resp[0].nombres : ", resp.data[0]);
-      });
+      this.loadDatas(val - 1);
     }
   }
 });

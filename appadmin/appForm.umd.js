@@ -96,7 +96,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "css/" + ({}[chunkId]||chunkId) + "." + {"0":"5347cc27","1":"f4f07acd","2":"dd816768","3":"31d6cfe0","4":"1485a7b2","5":"dcbc2f5a","6":"31d6cfe0","7":"42efe657","9":"31d6cfe0","10":"e332f2ab","11":"442b78dd","12":"5f515804","13":"3def3390","14":"b2742065","15":"63248bb6","16":"dd3fcea7","17":"e5f1a246","18":"31d6cfe0","19":"31d6cfe0","20":"dc3d54c9","21":"5451517c","22":"dd36f6dd","23":"31d6cfe0","24":"ac5b10c9","25":"42efe657","26":"31d6cfe0","27":"31d6cfe0","28":"31d6cfe0","29":"36d2244c","30":"36d2244c","31":"2c4b7940","32":"31d6cfe0","33":"31d6cfe0","34":"31d6cfe0","35":"31d6cfe0","36":"31d6cfe0","37":"31d6cfe0","38":"31d6cfe0","39":"31d6cfe0","40":"31d6cfe0","41":"31d6cfe0","42":"31d6cfe0","43":"31d6cfe0"}[chunkId] + ".css";
+/******/ 				var href = "css/" + ({}[chunkId]||chunkId) + "." + {"0":"5347cc27","1":"f4f07acd","2":"dd816768","3":"31d6cfe0","4":"1485a7b2","5":"945cb5cb","6":"31d6cfe0","7":"42efe657","9":"31d6cfe0","10":"e332f2ab","11":"442b78dd","12":"5f515804","13":"3def3390","14":"b2742065","15":"63248bb6","16":"dd3fcea7","17":"e5f1a246","18":"31d6cfe0","19":"31d6cfe0","20":"dc3d54c9","21":"5451517c","22":"dd36f6dd","23":"31d6cfe0","24":"ac5b10c9","25":"42efe657","26":"31d6cfe0","27":"31d6cfe0","28":"31d6cfe0","29":"36d2244c","30":"36d2244c","31":"642d4926","32":"31d6cfe0","33":"31d6cfe0","34":"31d6cfe0","35":"31d6cfe0","36":"31d6cfe0","37":"31d6cfe0","38":"31d6cfe0","39":"31d6cfe0","40":"31d6cfe0","41":"31d6cfe0","42":"31d6cfe0","43":"31d6cfe0"}[chunkId] + ".css";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
@@ -62325,8 +62325,7 @@ module.exports = function buildFullPath(baseURL, requestedURL) {
 
 vue__WEBPACK_IMPORTED_MODULE_14___default.a.use(bootstrap_vue__WEBPACK_IMPORTED_MODULE_13__[/* BVToastPlugin */ "a"]);
 /* harmony default export */ __webpack_exports__["a"] = (Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({}, wbuutilities__WEBPACK_IMPORTED_MODULE_11__[/* AjaxToastBootStrap */ "b"]), {}, {
-  TestDomain: "http://v2lesroisdelareno.kksa",
-  //"http://lesroisdelareno.habeuk.com",
+  //TestDomain: "http://v2lesroisdelareno.kksa", //"http://lesroisdelareno.habeuk.com",
   typeSelection: ["radio", "select", "checkbox"],
 
   /**
@@ -63316,9 +63315,9 @@ var config = __webpack_require__("f158");
 
 
 
-external_commonjs_vue_commonjs2_vue_root_Vue_default.a.use(vuex_esm["a" /* default */]);
-drupal_vuejs["a" /* drupalUtilities */].TestDomain = "http://v2lesroisdelareno.kksa";
-drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
+external_commonjs_vue_commonjs2_vue_root_Vue_default.a.use(vuex_esm["a" /* default */]); //drupalUtilities.TestDomain = "http://v2lesroisdelareno.kksa";
+//users.TestDomain = "http://v2lesroisdelareno.kksa";
+
 /* harmony default export */ var store = (new vuex_esm["a" /* default */].Store({
   state: {
     /* contient les information de la page d'afficha des formulaires */
@@ -63905,26 +63904,28 @@ drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
     /**
      * Recupere les formulaires soumis en BD.
      */
-    loadTraitementDatas: function loadTraitementDatas(_ref14, payload) {
-      var commit = _ref14.commit;
-      commit("SET_TRAITEMENT_ITEMS", []);
-      return new Promise(function (resolv, reject) {
-        var url = "/appformmanager/getdevis/0";
-        config["a" /* default */].getData(payload, false, url).then(function (reponse) {
-          console.log("get traitement Items: ", reponse);
-          commit("SET_TRAITEMENT_ITEMS", reponse.data);
-          resolv(reponse.data);
-        }).catch(function (error) {
-          reject(error);
-        });
-      });
-    },
+    // loadTraitementDatas({ commit }, payload) {
+    //   commit("SET_TRAITEMENT_ITEMS", []);
+    //   return new Promise((resolv, reject) => {
+    //     var url = "/appformmanager/getdevis/0";
+    //     config
+    //       .getData(payload, false, url)
+    //       .then((reponse) => {
+    //         console.log("get traitement Items: ", reponse);
+    //         commit("SET_TRAITEMENT_ITEMS", reponse.data);
+    //         resolv(reponse.data);
+    //       })
+    //       .catch((error) => {
+    //         reject(error);
+    //       });
+    //   });
+    // },
 
     /**
      * charge de maniere progressive les etapes d'un devis.
      */
-    loadAllStepOfDevis: function loadAllStepOfDevis(_ref15, payload) {
-      var state = _ref15.state;
+    loadAllStepOfDevis: function loadAllStepOfDevis(_ref14, payload) {
+      var state = _ref14.state;
       return new Promise(function (resolv, reject) {
         var url = "/appformmanager/getdevis-steps/0";
         config["a" /* default */].getData(payload, false, url).then(function (reponse) {
@@ -63940,71 +63941,74 @@ drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
     /**
      * Recupere les formulaires soumis en BD.
      */
-    loadTraitementDatas00: function loadTraitementDatas00(_ref16, payload) {
-      var commit = _ref16.commit;
-      commit("SET_TRAITEMENT_ITEMS", []);
-      return new Promise(function (resolv, reject) {
-        var uid = payload.uid ? payload.uid : null;
-        var id = payload.id ? payload.id : null;
-        var pagination = payload.pagination ? payload.pagination : 0; //console.log("loadTraitementDatas uid : ", uid, " id : ", id);
-
-        var sqlrequest = " select dv.price, dv.status, dv.domaineid, dv.created, dv.uid, st.step from `appformmanager_datas`";
-        sqlrequest += " inner join appformmanager_datas_steps as st ON st.datasid = dv.id ";
-        sqlrequest += " where dv.appformmanager_forms= " + id;
-        sqlrequest += " and st.order=0 ";
-
-        if (uid) {
-          sqlrequest += " AND dv.`uid` = " + uid;
-        }
-
-        if (pagination) sqlrequest += " order by id DESC limit 20 OFFSET " + pagination;else sqlrequest += " order by id DESC limit 20";
-        config["a" /* default */].getData(sqlrequest).then(function (reponse) {
-          //console.log("get traitement Items: ", reponse);
-          //commit("SET_TRAITEMENT_ITEMS", reponse.data);
-          resolv(reponse.data);
-        }).catch(function (error) {
-          //console.log("get error ", error);
-          reject(error);
-        });
-      });
-    },
+    // loadTraitementDatas00({ commit }, payload) {
+    //   commit("SET_TRAITEMENT_ITEMS", []);
+    //   return new Promise((resolv, reject) => {
+    //     var uid = payload.uid ? payload.uid : null;
+    //     var id = payload.id ? payload.id : null;
+    //     var pagination = payload.pagination ? payload.pagination : 0;
+    //     var sqlrequest =
+    //       " select dv.price, dv.status, dv.domaineid, dv.created, dv.uid, st.step from `appformmanager_datas`";
+    //     sqlrequest +=
+    //       " inner join appformmanager_datas_steps as st ON st.datasid = dv.id ";
+    //     sqlrequest += " where dv.appformmanager_forms= " + id;
+    //     sqlrequest += " and st.order=0 ";
+    //     if (uid) {
+    //       sqlrequest += " AND dv.`uid` = " + uid;
+    //     }
+    //     if (pagination)
+    //       sqlrequest += " order by id DESC limit 20 OFFSET " + pagination;
+    //     else sqlrequest += " order by id DESC limit 20";
+    //     config
+    //       .getData(sqlrequest)
+    //       .then((reponse) => {
+    //         //console.log("get traitement Items: ", reponse);
+    //         //commit("SET_TRAITEMENT_ITEMS", reponse.data);
+    //         resolv(reponse.data);
+    //       })
+    //       .catch((error) => {
+    //         //console.log("get error ", error);
+    //         reject(error);
+    //       });
+    //   });
+    // },
 
     /**
      * Permet de modifier la structure du formulaire.
      */
-    setItems: function setItems(_ref17, payload) {
-      var commit = _ref17.commit;
+    setItems: function setItems(_ref15, payload) {
+      var commit = _ref15.commit;
       commit("SET_ITEMS", payload);
     },
 
     /**
      *  --
      */
-    setFormDatasValidate: function setFormDatasValidate(_ref18, payload) {
-      var commit = _ref18.commit;
+    setFormDatasValidate: function setFormDatasValidate(_ref16, payload) {
+      var commit = _ref16.commit;
       commit("SET_FORM_DATAS_VALIDATE", payload);
     },
 
     /**
      *  --
      */
-    setStepsIndexs: function setStepsIndexs(_ref19, payload) {
-      var commit = _ref19.commit;
+    setStepsIndexs: function setStepsIndexs(_ref17, payload) {
+      var commit = _ref17.commit;
       commit("SET_STEPS_INDEXS", payload);
     },
 
     /**
      *  --
      */
-    setStatusStepsIndex: function setStatusStepsIndex(_ref20, payload) {
-      var commit = _ref20.commit;
+    setStatusStepsIndex: function setStatusStepsIndex(_ref18, payload) {
+      var commit = _ref18.commit;
       commit("SET_STATUS_STEPS_INDEX", payload);
     },
 
     /**
      * Enregistre les données et cree le compte utilisateur.
      */
-    saveDatasUser: function saveDatasUser(_ref21) {
+    saveDatasUser: function saveDatasUser(_ref19) {
       var _arguments = arguments,
           _this = this;
 
@@ -64014,7 +64018,7 @@ drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                state = _ref21.state, getters = _ref21.getters;
+                state = _ref19.state, getters = _ref19.getters;
                 status = _arguments.length > 1 && _arguments[1] !== undefined ? _arguments[1] : 0;
                 self = _this, datas = [], url = null, msg = "";
                 /**
@@ -64188,10 +64192,10 @@ drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
         }, _callee3);
       }))();
     },
-    saveDatas: function saveDatas(_ref22) {
-      var commit = _ref22.commit,
-          state = _ref22.state,
-          getters = _ref22.getters;
+    saveDatas: function saveDatas(_ref20) {
+      var commit = _ref20.commit,
+          state = _ref20.state,
+          getters = _ref20.getters;
       var uid = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
 
       if (!uid) {
@@ -64205,18 +64209,18 @@ drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
         }
       });
     },
-    getCurrentUser: function getCurrentUser(_ref23) {
-      var commit = _ref23.commit;
+    getCurrentUser: function getCurrentUser(_ref21) {
+      var commit = _ref21.commit;
       return drupal_vuejs["e" /* users */].getCurrentUser().then(function (resp) {
         commit("SET_USER", resp);
       });
     },
-    setCurrentUser: function setCurrentUser(_ref24, user) {
-      var commit = _ref24.commit;
+    setCurrentUser: function setCurrentUser(_ref22, user) {
+      var commit = _ref22.commit;
       commit("SET_USER", user);
     },
-    setCachesUser: function setCachesUser(_ref25, user) {
-      var commit = _ref25.commit;
+    setCachesUser: function setCachesUser(_ref23, user) {
+      var commit = _ref23.commit;
       commit("SET_CACHEUSER", user);
     },
 
@@ -64224,9 +64228,9 @@ drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
      * Recupere les champs.
      * @param {*} param0
      */
-    GetFields: function GetFields(_ref26) {
-      var commit = _ref26.commit,
-          state = _ref26.state;
+    GetFields: function GetFields(_ref24) {
+      var commit = _ref24.commit,
+          state = _ref24.state;
       var payload = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "";
       state.loaders.GestionField = true;
       var datas = " select * from `appformmanager_fields` as f ";
@@ -67539,16 +67543,16 @@ var Listesfomes_header_component = Object(componentNormalizer["a" /* default */]
 )
 
 /* harmony default export */ var Listesfomes_header = (Listesfomes_header_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/Listesfomes--items.vue?vue&type=template&id=5fb88ca9&lang=html&
-var Listesfomes_itemsvue_type_template_id_5fb88ca9_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"w-100"},[_c('loaderIcon',{attrs:{"busy":_vm.busy}}),(!_vm.busy)?_c('div',{staticClass:"block-option"},[_vm._l((_vm.items),function(form,index){return _c('div',{key:index,staticClass:"block"},[_c('div',{staticClass:"form-stats",attrs:{"number":_vm.getStatisqueByNumber(form)}},[_c('div',{staticClass:"position-absolute"},[(form.onWaitNumber)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-danger",modifiers:{"hover":true,"v-danger":true}}],staticClass:"form-stats__btn form-stats__red",attrs:{"variant":"","title":"Projet en attente de rappel"}},[_c('span',[_vm._v(" "+_vm._s(form.onWaitNumber)+" ")])]):_vm._e(),(form.onSave)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-primary",modifiers:{"hover":true,"v-primary":true}}],staticClass:"form-stats__btn form-stats__bleu",attrs:{"variant":"","title":"Projet sauvegardé"}},[_c('span',[_vm._v(" "+_vm._s(form.onSave)+" ")])]):_vm._e(),(form.onCancel)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-secondary",modifiers:{"hover":true,"v-secondary":true}}],staticClass:"form-stats__btn form-stats__gris",attrs:{"variant":"","title":"Projet abandonné"}},[_c('span',[_vm._v(_vm._s(form.onCancel))])]):_vm._e()],1),_c('div',{staticClass:"block_img",on:{"click":function($event){!_vm.$store.state.mode
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/Listesfomes--items.vue?vue&type=template&id=6263923e&lang=html&
+var Listesfomes_itemsvue_type_template_id_6263923e_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"w-100"},[_c('loaderIcon',{attrs:{"busy":_vm.busy}}),(!_vm.busy)?_c('div',{staticClass:"block-option"},[_vm._l((_vm.items),function(form,index){return _c('div',{key:index,staticClass:"block"},[_c('div',{staticClass:"form-stats",attrs:{"number":_vm.getStatisqueByNumber(form)}},[_c('div',{staticClass:"position-absolute"},[(form.onWaitNumber)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-danger",modifiers:{"hover":true,"v-danger":true}}],staticClass:"form-stats__btn form-stats__red",attrs:{"variant":"","title":"Projet en attente de rappel"}},[_c('span',[_vm._v(" "+_vm._s(form.onWaitNumber)+" ")])]):_vm._e(),(form.onSave)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-primary",modifiers:{"hover":true,"v-primary":true}}],staticClass:"form-stats__btn form-stats__bleu",attrs:{"variant":"","title":"Projet sauvegardé"}},[_c('span',[_vm._v(" "+_vm._s(form.onSave)+" ")])]):_vm._e(),(form.onCancel)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-secondary",modifiers:{"hover":true,"v-secondary":true}}],staticClass:"form-stats__btn form-stats__gris",attrs:{"variant":"","title":"Projet abandonné"}},[_c('span',[_vm._v(_vm._s(form.onCancel))])]):_vm._e()],1),_c('div',{staticClass:"block_img",on:{"click":function($event){!_vm.$store.state.mode
               ? _vm.updateMyOwnForm(form.id)
               : _vm.showResult(form.id)}}},[_c('img',{attrs:{"src":_vm.findUrlImg(form)}})]),_c('div',{staticClass:"block_desc",on:{"click":function($event){!_vm.$store.state.mode
               ? _vm.updateMyOwnForm(form.id)
               : _vm.showResult(form.id)}}},[_c('span',[_vm._v(" "+_vm._s(form.name)+" ")])]),_c('b-button-group',{staticClass:"home-button"},[_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-primary",modifiers:{"hover":true,"v-primary":true}}],attrs:{"variant":"outline-primary","title":"Estimer mes travaux"},on:{"click":function($event){return _vm.voirForm(form.id)}}},[_c('b-icon',{attrs:{"icon":"eye"}})],1),_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-secondary",modifiers:{"hover":true,"v-secondary":true}}],attrs:{"variant":"outline-secondary","title":"voir mes devis"},on:{"click":function($event){return _vm.updateMyOwnForm(form.id)}}},[_c('b-icon',{attrs:{"icon":"newspaper"}})],1),(_vm.$store.state.mode)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-warning",modifiers:{"hover":true,"v-warning":true}}],attrs:{"variant":"outline-warning","title":"Modifier"},on:{"click":function($event){return _vm.updateForm(form.id)}}},[_c('b-icon',{attrs:{"icon":"pencil"}})],1):_vm._e(),(_vm.$store.state.mode)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-success",modifiers:{"hover":true,"v-success":true}}],attrs:{"variant":"outline-success","title":"Voir les soumissions"},on:{"click":function($event){return _vm.showResult(form.id)}}},[_c('b-icon',{attrs:{"icon":"server"}})],1):_vm._e(),(_vm.$store.state.mode)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-danger",modifiers:{"hover":true,"v-danger":true}}],attrs:{"variant":"outline-danger","title":"Supprimer le formulaire "},on:{"click":function($event){return _vm.deleteForm(form.id)}}},[_c('b-icon',{attrs:{"icon":"trash"}})],1):_vm._e()],1)],1)])}),(_vm.$store.state.mode)?_c('div',{staticClass:"block-plus",on:{"click":_vm.newForm}},[_c('div',{staticClass:"horiz"}),_c('div',{staticClass:"verti"}),_vm._m(0)]):_vm._e(),_c('AddEditForm')],2):_vm._e()],1)}
-var Listesfomes_itemsvue_type_template_id_5fb88ca9_lang_html_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"block_desc"},[_c('span',[_vm._v("Nouveau Formulaire")])])}]
+var Listesfomes_itemsvue_type_template_id_6263923e_lang_html_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"block_desc"},[_c('span',[_vm._v("Nouveau Formulaire")])])}]
 
 
-// CONCATENATED MODULE: ./src/App/Listesfomes--items.vue?vue&type=template&id=5fb88ca9&lang=html&
+// CONCATENATED MODULE: ./src/App/Listesfomes--items.vue?vue&type=template&id=6263923e&lang=html&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/ConfigsForms/AddEditForm.vue?vue&type=template&id=7f068a3c&scoped=true&lang=html&
 var AddEditFormvue_type_template_id_7f068a3c_scoped_true_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('b-modal',{ref:"modal",attrs:{"id":"add-edit-form","title":"Creer un nouveau formulaire","hide-footer":""},on:{"ok":_vm.handleOk}},[_c('form',{ref:"form",on:{"submit":_vm.handleSubmit}},[_c('b-row',{staticClass:"p-3"},[_c('b-col',{attrs:{"cols":"8"}},[_c('b-form-group',{attrs:{"label":"name","label-for":"name-input"}},[_c('b-form-input',{attrs:{"required":""},model:{value:(_vm.form.name),callback:function ($$v) {_vm.$set(_vm.form, "name", $$v)},expression:"form.name"}})],1)],1),_c('b-col',{attrs:{"cols":"8"}},[_c('b-form-group',{attrs:{"label":"Description","label-for":"description-input"}},[_c('b-form-textarea',{attrs:{"required":""},model:{value:(_vm.form.description),callback:function ($$v) {_vm.$set(_vm.form, "description", $$v)},expression:"form.description"}})],1)],1),_c('b-col',{attrs:{"cols":"12"}},[_c('b-form-group',{attrs:{"label":"image","label-for":"description-input"}},[_c('UploadImage',{attrs:{"field":_vm.form}})],1)],1)],1),_c('b-row',{attrs:{"align-h":"end"}},[_c('div',{staticClass:"mr-3"},[_c('b-button',{staticClass:"mr-2",attrs:{"type":"submit","variant":"primary"}},[_vm._v(" Ajouter ")])],1)])],1)])],1)}
@@ -67692,6 +67696,8 @@ var loaderIcon = __webpack_require__("021a");
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/Listesfomes--items.vue?vue&type=script&lang=js&
 
 
+
+
 //
 //
 //
@@ -67833,7 +67839,12 @@ var loaderIcon = __webpack_require__("021a");
         key: "action",
         thClass: ["th-action"]
       }],
-      busy: false
+      busy: false,
+
+      /**
+       * -- permet d'eviter l'envoit de plusiurs requette.
+       */
+      devisCount: []
     };
   },
   components: {
@@ -67870,16 +67881,39 @@ var loaderIcon = __webpack_require__("021a");
 
       return url;
     },
+
+    /**
+     * compte le nombre de devis.
+     */
     getStatisqueByNumber: function getStatisqueByNumber(form) {
       var _this2 = this;
 
+      if (this.devisCount.includes(form.id)) {
+        return;
+      } else {
+        this.devisCount.push(form.id);
+      }
+
       if (!this.$store.getters.uid) return;
-      var sql = "select count(*) as nombre, status from `appformmanager_datas` where appformmanager_forms = (select id from `appformmanager_fomrs` where id=" + form.id + ") group by status";
-      if (!this.$store.state.mode) sql = "select count(*) as nombre, status from `appformmanager_datas` where uid=" + this.$store.getters.uid + " and appformmanager_forms = (select id from `appformmanager_fomrs` where id=" + form.id + ") group by status";
-      config["a" /* default */].bPost("/query-ajax/select", sql, {}, false).then(function (resp) {
+      var payload = {
+        beginSql: " select count(*) as nombre, status from `appformmanager_datas` ",
+        filters: {
+          AND: [],
+          OR: []
+        },
+        endSql: " group by status "
+      };
+      payload.filters.AND.push({
+        column: "appformmanager_forms",
+        value: form.id
+      });
+      config["a" /* default */].bPost("/appformmanager/count-devis", payload, {}, false).then(function (resp) {
         if (resp.data.length) {
           //console.log("resp.data ", resp.data);
           resp.data.forEach(function (item) {
+            // this.$set(form, "onWaitNumber", 0);
+            // this.$set(form, "onSave", 0);
+            // this.$set(form, "onCancel", 0);
             if (item.status === "0") {
               _this2.$set(form, "onWaitNumber", item.nombre);
             } else if (item.status === "1") {
@@ -67935,8 +67969,8 @@ var loaderIcon = __webpack_require__("021a");
 
 var Listesfomes_items_component = Object(componentNormalizer["a" /* default */])(
   App_Listesfomes_itemsvue_type_script_lang_js_,
-  Listesfomes_itemsvue_type_template_id_5fb88ca9_lang_html_render,
-  Listesfomes_itemsvue_type_template_id_5fb88ca9_lang_html_staticRenderFns,
+  Listesfomes_itemsvue_type_template_id_6263923e_lang_html_render,
+  Listesfomes_itemsvue_type_template_id_6263923e_lang_html_staticRenderFns,
   false,
   null,
   null,

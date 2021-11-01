@@ -7,12 +7,12 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/Traitement.vue?vue&type=template&id=1832dbb8&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/Traitement.vue?vue&type=template&id=5b1755a0&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('b-container',{attrs:{"fluid":"md"}},[_c('div',[_c('title-bar',{attrs:{"conf":{ col: true, text: 'Traitement devis : ' + _vm.titreDevis },"id":_vm.id,"showDevis":false}})],1),_c('div',{staticClass:"appfom-container"},[_c('b-row',{attrs:{"align-h":"center"}},[_c('b-col',{attrs:{"cols":"12"}},[_c('listBlocks',{attrs:{"liste_fields_check":_vm.ListeFieldsCheck,"liste_fields_display":_vm.ListeFieldsDisplay,"totalRows":_vm.totalRows,"isBusy":_vm.isBusy,"perPage":_vm.perPage},on:{"ev-change-pagination":_vm.ChangePagination}})],1)],1)],1)])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/traitement/Traitement.vue?vue&type=template&id=1832dbb8&
+// CONCATENATED MODULE: ./src/App/traitement/Traitement.vue?vue&type=template&id=5b1755a0&
 
 // EXTERNAL MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js + 1 modules
 var objectSpread2 = __webpack_require__("f3f3");
@@ -84,7 +84,7 @@ var listBlocks = __webpack_require__("8bba");
     return {
       totalRows: 0,
       isBusy: false,
-      perPage: 20
+      perPage: 8
     };
   },
   watch: {
@@ -185,8 +185,6 @@ var listBlocks = __webpack_require__("8bba");
       }
     },
     saveToLocal: function saveToLocal() {
-      //var self = this;
-      //var datas = this.form;
       config["a" /* default */].prepareDatasToSave(this.form).then(function (val) {
         config["a" /* default */].saveForm(val).then(function () {//
         });
@@ -195,25 +193,15 @@ var listBlocks = __webpack_require__("8bba");
     resetValue: function resetValue() {
       this.$store.getters.formDatas.selected = "";
       this.$store.getters.formDatas.value = [];
-      console.log("prev");
-    },
-    resetModal: function resetModal() {//   this.formDatas.info.title = "";
-      //   this.titleState = null;
-      //   this.headerTitle = "";
-      //   this.headerState = null;
     },
     handleOk: function handleOk(bvModalEvt) {
-      // Prevent modal from closing
-      bvModalEvt.preventDefault(); // Trigger submit handler
-
+      bvModalEvt.preventDefault();
       this.handleSubmit();
     },
     handleSubmit: function handleSubmit(event) {
       var _this = this;
 
-      event.preventDefault(); // Exit when the form isn't valid
-
-      this.demo = true;
+      event.preventDefault();
       this.$nextTick(function () {
         _this.$bvModal.hide("modal-prevent-closing");
       });
@@ -221,13 +209,21 @@ var listBlocks = __webpack_require__("8bba");
     getTotalRows: function getTotalRows() {
       var _this2 = this;
 
-      var datas = "select count(*) as nombres from `appformmanager_datas` where `appformmanager_forms` = " + this.id;
-      config["a" /* default */].getData(datas).then(function (resp) {
+      var payload = {
+        beginSql: " select count(*) as nombres from `appformmanager_datas` ",
+        filters: {
+          AND: [],
+          OR: []
+        }
+      };
+      payload.filters.AND.push({
+        column: "appformmanager_forms",
+        value: this.id
+      });
+      config["a" /* default */].bPost("/appformmanager/count-devis", payload, {}, false).then(function (resp) {
         if (resp.data[0] && resp.data[0].nombres) {
           _this2.totalRows = parseInt(resp.data[0].nombres);
         }
-
-        console.log("resp[0].nombres : ", resp.data[0]);
       });
     },
     loadDatas: function loadDatas() {
@@ -235,21 +231,37 @@ var listBlocks = __webpack_require__("8bba");
 
       var pagination = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
       this.isBusy = true;
-      var pag = null;
-      if (pagination) pag = (pagination - 1) * this.perPage;
-      this.$store.dispatch("loadTraitementDatas", {
-        formId: this.id,
-        pagination: pag
-      }).then(function () {
+      var payload = {
+        filters: {
+          AND: [],
+          OR: []
+        }
+      };
+      payload.filters.AND.push({
+        column: "appformmanager_forms",
+        value: this.id,
+        preffix: "dv"
+      });
+      payload.filters.AND.push({
+        column: "order",
+        value: 0,
+        preffix: "st"
+      });
+      config["a" /* default */].bPost("/appformmanager/getdevis/" + pagination + "/" + this.perPage, payload, {}, false).then(function (resp) {
+        _this3.$store.state.traitementItems = resp.data;
+
         _this3.$store.dispatch("setTraitId", _this3.id);
 
         _this3.$store.dispatch("setFormId", _this3.id);
 
         _this3.isBusy = false;
+      }).catch(function (error) {
+        console.log("error", error);
+        _this3.isBusy = false;
       });
     },
     ChangePagination: function ChangePagination(val) {
-      this.loadDatas(val);
+      this.loadDatas(val - 1);
     }
   }
 });

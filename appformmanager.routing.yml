@@ -12,7 +12,23 @@ appformmanager.administer:
     _title: 'Travaux de renovations'
     _controller: '\Drupal\appformmanager\Controller\AppformmanagerController::manager'
   requirements:
-    _permission: 'administer modules'
+    _permission: 'appformmanager manage devis'
+
+appformmanager.count_devis:
+  path: '/appformmanager/count-devis'
+  defaults:
+    _title: 'Recuperer les devis en function domaine'
+    _controller: '\Drupal\appformmanager\Controller\AppformmanagerController::CountDevis'
+  requirements:
+    _permission: 'appformmanager manage devis'
+
+appformmanager.count_devis_own:
+  path: '/appformmanager/count-devis-own'
+  defaults:
+    _title: 'Recuperer les devis en function domaine'
+    _controller: '\Drupal\appformmanager\Controller\AppformmanagerController::CountDevisOwn'
+  requirements:
+    _role: 'authenticated'
 
 appformmanager.settings_form:
   path: '/admin/config/system/appformmanager'
@@ -58,12 +74,20 @@ appformmanager.getdevisStep:
 
 
 appformmanager.getdevis:
-  path: '/appformmanager/getdevis/{step}'
+  path: '/appformmanager/getdevis/{pagination}/{perpage}'
   defaults:
     _title: 'Travaux de renovations'
     _controller: '\Drupal\appformmanager\Controller\AppformmanagerController::getDevis'
   requirements:
-    _permission: 'access content'
+    _permission: 'appformmanager manage devis'
+
+appformmanager.getdevisOwn:
+  path: '/appformmanager/getdevis-own/{pagination}/{perpage}'
+  defaults:
+    _title: 'Travaux de renovations'
+    _controller: '\Drupal\appformmanager\Controller\AppformmanagerController::getDevisOwn'
+  requirements:
+    _role: 'authenticated'
 
 
 appformmanager.save_soumissions:
