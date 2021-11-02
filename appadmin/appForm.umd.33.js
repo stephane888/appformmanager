@@ -242,8 +242,7 @@ var config = __webpack_require__("f158");
         datas += " where f.defaultjson is not null and f.formid=" + state.filtre.formid + "  order by f.stepid ASC  ";
         return config["a" /* default */].getData(datas).then(function (r) {
           r.data.forEach(function (item) {
-            //test
-            if (state.fields.length < 50) state.fields.push(Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])({}, JSON.parse(item.defaultjson)), {}, {
+            state.fields.push(Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])({}, JSON.parse(item.defaultjson)), {}, {
               formid: state.filtre.formid
             }));
           });
