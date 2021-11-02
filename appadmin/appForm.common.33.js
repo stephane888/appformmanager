@@ -228,6 +228,9 @@ var config = __webpack_require__("f158");
           commit("SET_FIELDS", r.data);
           state.loaders.GestionField = false;
           dispatch("GetFieldsDefault");
+        }).catch(function () {
+          state.loaders.GestionField = false;
+          state.loaders.GestionFieldFiltre = false;
         });
       }
     },
@@ -244,6 +247,8 @@ var config = __webpack_require__("f158");
               formid: state.filtre.formid
             }));
           });
+          state.loaders.GestionFieldFiltre = false;
+        }).catch(function () {
           state.loaders.GestionFieldFiltre = false;
         });
       }
