@@ -92,11 +92,11 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"0":1,"1":1,"2":1,"4":1,"5":1,"7":1,"10":1,"11":1,"12":1,"13":1,"14":1,"15":1,"16":1,"17":1,"20":1,"21":1,"22":1,"24":1,"25":1,"29":1,"30":1,"31":1};
+/******/ 		var cssChunks = {"0":1,"1":1,"2":1,"4":1,"5":1,"7":1,"10":1,"11":1,"12":1,"13":1,"14":1,"15":1,"16":1,"17":1,"20":1,"21":1,"22":1,"23":1,"25":1,"26":1,"30":1,"31":1,"32":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "css/" + ({}[chunkId]||chunkId) + "." + {"0":"5347cc27","1":"f4f07acd","2":"dd816768","3":"31d6cfe0","4":"1485a7b2","5":"945cb5cb","6":"31d6cfe0","7":"42efe657","9":"31d6cfe0","10":"e332f2ab","11":"442b78dd","12":"5f515804","13":"3def3390","14":"b2742065","15":"63248bb6","16":"dd3fcea7","17":"e5f1a246","18":"31d6cfe0","19":"31d6cfe0","20":"dc3d54c9","21":"5451517c","22":"dd36f6dd","23":"31d6cfe0","24":"ac5b10c9","25":"42efe657","26":"31d6cfe0","27":"31d6cfe0","28":"31d6cfe0","29":"36d2244c","30":"36d2244c","31":"642d4926","32":"31d6cfe0","33":"31d6cfe0","34":"31d6cfe0","35":"31d6cfe0","36":"31d6cfe0","37":"31d6cfe0","38":"31d6cfe0","39":"31d6cfe0","40":"31d6cfe0","41":"31d6cfe0","42":"31d6cfe0","43":"31d6cfe0"}[chunkId] + ".css";
+/******/ 				var href = "css/" + ({}[chunkId]||chunkId) + "." + {"0":"f4f07acd","1":"dd816768","2":"5347cc27","3":"31d6cfe0","4":"1485a7b2","5":"945cb5cb","6":"31d6cfe0","7":"42efe657","9":"31d6cfe0","10":"e332f2ab","11":"442b78dd","12":"5f515804","13":"3def3390","14":"b2742065","15":"63248bb6","16":"dd3fcea7","17":"e5f1a246","18":"31d6cfe0","19":"31d6cfe0","20":"5451517c","21":"dd36f6dd","22":"dc3d54c9","23":"dc3d54c9","24":"31d6cfe0","25":"ac5b10c9","26":"42efe657","27":"31d6cfe0","28":"31d6cfe0","29":"31d6cfe0","30":"36d2244c","31":"36d2244c","32":"642d4926","33":"31d6cfe0","34":"31d6cfe0","35":"31d6cfe0","36":"31d6cfe0","37":"31d6cfe0","38":"31d6cfe0","39":"31d6cfe0","40":"31d6cfe0","41":"31d6cfe0","42":"31d6cfe0","43":"31d6cfe0","44":"31d6cfe0","45":"31d6cfe0"}[chunkId] + ".css";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
@@ -62467,6 +62467,7 @@ vue__WEBPACK_IMPORTED_MODULE_14___default.a.use(bootstrap_vue__WEBPACK_IMPORTED_
    */
   prepareFieldToSave: function prepareFieldToSave(field, uid) {
     return new Promise(function (resolv) {
+      var results = [];
       var table1 = {
         table: "appformmanager_fields",
         fields: {
@@ -62483,9 +62484,30 @@ vue__WEBPACK_IMPORTED_MODULE_14___default.a.use(bootstrap_vue__WEBPACK_IMPORTED_
           column: "id",
           value: field.id
         }];
+      } else {
+        // s'il nya pas de id, soit le champs est nouveau soit il provient du model par default
+
+        /**
+         * il faut vider les colonnes de appformmanager_steps_fields.defaultjson
+         */
+        results.push({
+          table: "appformmanager_steps_fields",
+          fields: {
+            defaultjson: null
+          },
+          action: "update",
+          where: [{
+            column: "formid",
+            value: field.formid
+          }, {
+            column: "machine_name",
+            value: field.name
+          }]
+        });
       }
 
-      resolv([table1]);
+      results.push(table1);
+      resolv(results);
     });
   },
 
@@ -63260,11 +63282,11 @@ var runtime = __webpack_require__("96cf");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.splice.js
 var es_array_splice = __webpack_require__("a434");
 
-// EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-collections.for-each.js
-var web_dom_collections_for_each = __webpack_require__("159b");
-
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
 var es_function_name = __webpack_require__("b0c0");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-collections.for-each.js
+var web_dom_collections_for_each = __webpack_require__("159b");
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.symbol.js
 var es_symbol = __webpack_require__("a4d3");
@@ -63435,25 +63457,6 @@ drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
       forms: "",
       description: "",
       name: ""
-    },
-
-    /**
-     * Contient la liste des champs.
-     */
-    fields: [],
-
-    /**
-     * Permet de filtrer les champs reçu.
-     */
-    filtre: {
-      formid: ""
-    },
-
-    /**
-     * - permet d'afficher un loader, si necessaire.
-     */
-    loaders: {
-      GestionField: false
     }
   },
   getters: {
@@ -63607,11 +63610,6 @@ drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
     },
     SET_CACHEUSER: function SET_CACHEUSER(state, user) {
       state.CachesUser["uid" + user.uid] = user.user;
-    },
-    SET_FIELDS: function SET_FIELDS(state, fields) {
-      fields.forEach(function (item) {
-        state.fields.push(item);
-      });
     }
   },
   actions: {
@@ -64223,33 +64221,6 @@ drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
     setCachesUser: function setCachesUser(_ref23, user) {
       var commit = _ref23.commit;
       commit("SET_CACHEUSER", user);
-    },
-
-    /**
-     * Recupere les champs.
-     * @param {*} param0
-     */
-    GetFields: function GetFields(_ref24) {
-      var commit = _ref24.commit,
-          state = _ref24.state;
-      var payload = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "";
-      state.loaders.GestionField = true;
-      var datas = " select * from `appformmanager_fields` as f ";
-
-      if (payload.id) {
-        datas += " where f.id='" + payload.id + "'";
-      } else {
-        state.fields = [];
-
-        if (state.filtre.formid.length > 0) {
-          datas += " where f.formid='" + state.filtre.formid + "'";
-        }
-      }
-
-      return config["a" /* default */].getData(datas).then(function (reponse) {
-        commit("SET_FIELDS", reponse.data);
-        state.loaders.GestionField = false;
-      });
     }
   },
   modules: {}
@@ -67621,7 +67592,7 @@ var AddEditFormvue_type_template_id_7f068a3c_scoped_true_lang_html_staticRenderF
   },
   components: {
     UploadImage: function UploadImage() {
-      return Promise.all(/* import() */[__webpack_require__.e(0), __webpack_require__.e(7)]).then(__webpack_require__.bind(null, "9353"));
+      return Promise.all(/* import() */[__webpack_require__.e(2), __webpack_require__.e(7)]).then(__webpack_require__.bind(null, "9353"));
     }
   },
   data: function data() {
@@ -68052,28 +68023,28 @@ var routes = [{
   name: "Gestion des formulaires",
   props: true,
   component: function component() {
-    return Promise.all(/* import() */[__webpack_require__.e(1), __webpack_require__.e(2), __webpack_require__.e(20)]).then(__webpack_require__.bind(null, "abee"));
+    return __webpack_require__.e(/* import() */ 33).then(__webpack_require__.bind(null, "abee"));
   }
 }, {
   path: "/estimation-devis/:id",
   name: "Estimation du devis",
   props: true,
   component: function component() {
-    return Promise.all(/* import() */[__webpack_require__.e(6), __webpack_require__.e(5), __webpack_require__.e(31)]).then(__webpack_require__.bind(null, "7817"));
+    return Promise.all(/* import() */[__webpack_require__.e(6), __webpack_require__.e(5), __webpack_require__.e(32)]).then(__webpack_require__.bind(null, "7817"));
   }
 }, {
   path: "/traitement/:id",
   name: "Traitement du devis",
   props: true,
   component: function component() {
-    return Promise.all(/* import() */[__webpack_require__.e(3), __webpack_require__.e(29)]).then(__webpack_require__.bind(null, "379c"));
+    return Promise.all(/* import() */[__webpack_require__.e(3), __webpack_require__.e(30)]).then(__webpack_require__.bind(null, "379c"));
   }
 }, {
   path: "/traitement-my-own/:id",
   name: "Traitement du devis",
   props: true,
   component: function component() {
-    return Promise.all(/* import() */[__webpack_require__.e(3), __webpack_require__.e(30)]).then(__webpack_require__.bind(null, "0690"));
+    return Promise.all(/* import() */[__webpack_require__.e(3), __webpack_require__.e(31)]).then(__webpack_require__.bind(null, "0690"));
   }
 }, {
   path: "/*",
@@ -68122,7 +68093,7 @@ function loadstyle(src) {
 
 
 var App = function App() {
-  return Promise.all(/* import() */[__webpack_require__.e(1), __webpack_require__.e(2), __webpack_require__.e(10)]).then(__webpack_require__.bind(null, "3dfd")).then(function (component) {
+  return Promise.all(/* import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(10)]).then(__webpack_require__.bind(null, "3dfd")).then(function (component) {
     return new Promise(function (resolv) {
       var callback = function callback() {
         resolv(component);

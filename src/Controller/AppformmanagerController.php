@@ -398,7 +398,7 @@ class AppformmanagerController extends ControllerBase {
         $results[$field['stepid']] = $field;
         $results[$field['stepid']]['step'] = [
           'info' => Json::decode($field['info']),
-          'states' => Json::decode($field['states']),
+          'states' => [], // Json::decode($field['states']),
           'fields' => []
         ];
 

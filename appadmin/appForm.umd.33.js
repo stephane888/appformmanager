@@ -1,44 +1,24 @@
 ((typeof self !== 'undefined' ? self : this)["webpackJsonpappForm"] = (typeof self !== 'undefined' ? self : this)["webpackJsonpappForm"] || []).push([[33],{
 
-/***/ "e248":
+/***/ "63c9":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/ConfigsForms/StepConfiguration.vue?vue&type=template&id=4c5361d0&scoped=true&lang=html&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('b-modal',{attrs:{"size":"lg","id":_vm.idModal,"title":"Configuration de l'etape","hide-footer":""},on:{"ok":_vm.handleOk},model:{value:(_vm.isOpen),callback:function ($$v) {_vm.isOpen=$$v},expression:"isOpen"}},[_c('form',{ref:"forme",on:{"submit":_vm.handleSubmit,"reset":_vm.resetModal,"hidden":_vm.resetModal}},[_c('b-form-group',{attrs:{"label":"Titre","invalid-feedback":"Name is required"}},[_c('b-input-group',[_c('b-form-input',{attrs:{"required":""},on:{"input":_vm.input},model:{value:(_vm.formDatas.info.title),callback:function ($$v) {_vm.$set(_vm.formDatas.info, "title", $$v)},expression:"formDatas.info.title"}}),_c('b-form-input',{attrs:{"required":"","readonly":_vm.readonly,"state":_vm.state_name},on:{"dblclick":_vm.toogleReadOnly},model:{value:(_vm.formDatas.info.name),callback:function ($$v) {_vm.$set(_vm.formDatas.info, "name", $$v)},expression:"formDatas.info.name"}})],1)],1),_c('b-form-group',{attrs:{"label":"Titre texte d'aide","invalid-feedback":"the header title is required"}},[_c('b-form-input',{model:{value:(_vm.formDatas.info.headerTitle),callback:function ($$v) {_vm.$set(_vm.formDatas.info, "headerTitle", $$v)},expression:"formDatas.info.headerTitle"}})],1),_c('b-form-group',{attrs:{"label":"Texte d'aide","invalid-feedback":"the header title is required"}},[_c('b-form-input',{model:{value:(_vm.formDatas.info.description),callback:function ($$v) {_vm.$set(_vm.formDatas.info, "description", $$v)},expression:"formDatas.info.description"}})],1),_c('ValidationEtapes',{attrs:{"currentFormDatas":_vm.formDatas}}),_c('hr'),_c('b-row',{attrs:{"align-h":"end"}},[_c('div',{staticClass:"mr-3"},[_c('b-button',{attrs:{"type":"submit","variant":"outline-info","size":"sm"}},[_c('b-icon',{attrs:{"icon":"plus"}}),_vm._v(" Mettre à jour ")],1)],1)])],1)])}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/components/TitleBar.vue?vue&type=template&id=0bb93234&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('b-row',{attrs:{"align-h":"center"}},[_c('b-col',{attrs:{"lg":_vm.conf.col ? '12' : '10',"cols":"12"}},[_c('div',{staticClass:"block-title pr-2"},[_c('div',{staticClass:"backButton",attrs:{"to":"/"},on:{"click":_vm.returnHome}},[_c('img',{attrs:{"src":__webpack_require__("6416"),"alt":"","width":"55px","height":"30px"}})]),_c('h5',{staticClass:"m-0"},[_vm._v(" "+_vm._s(_vm.conf.text)+" "),(_vm.form.name)?_c('span',{staticClass:"form-title"},[_vm._v(" : "+_vm._s(_vm.form.name))]):_vm._e()]),_c('div',[_c('h5',{directives:[{name:"show",rawName:"v-show",value:(_vm.showDevis),expression:"showDevis"}],staticClass:"m-0",class:_vm.uid ? 'title-right' : '',on:{"click":_vm.seeDevis}},[(_vm.uid)?_c('span',[_vm._v(" Voir mes devis")]):_vm._e()])])])])],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/ConfigsForms/StepConfiguration.vue?vue&type=template&id=4c5361d0&scoped=true&lang=html&
+// CONCATENATED MODULE: ./src/App/components/TitleBar.vue?vue&type=template&id=0bb93234&
 
 // EXTERNAL MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js + 1 modules
 var objectSpread2 = __webpack_require__("f3f3");
 
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
-var es_function_name = __webpack_require__("b0c0");
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.includes.js
-var es_array_includes = __webpack_require__("caad");
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.includes.js
-var es_string_includes = __webpack_require__("2532");
-
 // EXTERNAL MODULE: ./node_modules/vuex/dist/vuex.esm.js
 var vuex_esm = __webpack_require__("2f62");
 
-// EXTERNAL MODULE: ./node_modules/snake-case/dist.es2015/index.js + 5 modules
-var dist_es2015 = __webpack_require__("a4d6");
-
-// EXTERNAL MODULE: ./src/App/ConfigsForms/ValidationEtapes.vue + 4 modules
-var ValidationEtapes = __webpack_require__("b9f1");
-
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/ConfigsForms/StepConfiguration.vue?vue&type=script&lang=js&
-
-
-
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/components/TitleBar.vue?vue&type=script&lang=js&
 
 //
 //
@@ -71,112 +51,48 @@ var ValidationEtapes = __webpack_require__("b9f1");
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
-
-
-/* harmony default export */ var StepConfigurationvue_type_script_lang_js_ = ({
-  name: "StepConfiguration",
+/* harmony default export */ var TitleBarvue_type_script_lang_js_ = ({
   props: {
-    idModal: {
-      type: String,
-      default: "step-configuration"
+    showDevis: {
+      type: Boolean,
+      default: true
+    },
+    conf: {
+      type: Object,
+      default: function _default() {
+        return {
+          col: false,
+          text: "Estimation de devis"
+        };
+      }
     }
-  },
-  components: {
-    ValidationEtapes: ValidationEtapes["a" /* default */]
   },
   data: function data() {
     return {
-      isOpen: false,
-      readonly: true,
-      state_name: true
+      value: 1
     };
   },
-  mounted: function mounted() {//
-  },
-  watch: {//
-  },
-  computed: Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])({}, Object(vuex_esm["c" /* mapState */])(["mode", "form"])), Object(vuex_esm["b" /* mapGetters */])(["formDatas"])), {}, {
-    ListNameforms: function ListNameforms() {
-      var lists = [];
-
-      for (var i in this.form.forms) {
-        lists.push(this.form.forms[i].info.name);
-      }
-
-      return lists;
-    }
-  }),
+  computed: Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])({}, Object(vuex_esm["c" /* mapState */])(["stepsIndex", "form"])), Object(vuex_esm["b" /* mapGetters */])(["uid"])),
   methods: {
-    openPopUp: function openPopUp() {
-      this.isOpen = !this.isOpen;
-    },
-    handleOk: function handleOk(event) {
-      // Prevent modal from closing
-      event.preventDefault(); // Trigger submit handler
-
-      this.handleSubmit();
-    },
-    handleSubmit: function handleSubmit(event) {
-      var _this = this;
-
-      event.preventDefault(); // Hide the modal manually
-
-      this.$nextTick(function () {
-        _this.$bvModal.hide(_this.idModal);
+    returnHome: function returnHome() {
+      this.$router.push({
+        path: "/"
       });
     },
-    resetModal: function resetModal() {//this.type = null;
-    },
-    input: function input() {
-      if (this.readonly && this.formDatas.info.name.length <= 32) {
-        var valName = Object(dist_es2015["a" /* snakeCase */])(this.formDatas.info.title);
-
-        if (this.ListNameforms.includes(valName)) {
-          this.state_name = false;
-        } else {
-          this.state_name = true;
-        }
-
-        this.formDatas.info.name = valName;
-      }
-    },
-    toogleReadOnly: function toogleReadOnly() {
-      if (this.readonly) this.readonly = false;else this.readonly = true;
+    seeDevis: function seeDevis() {
+      this.$router.push({
+        path: "/traitement-my-own/".concat(this.id)
+      });
     }
   }
 });
-// CONCATENATED MODULE: ./src/App/ConfigsForms/StepConfiguration.vue?vue&type=script&lang=js&
- /* harmony default export */ var ConfigsForms_StepConfigurationvue_type_script_lang_js_ = (StepConfigurationvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/App/components/TitleBar.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_TitleBarvue_type_script_lang_js_ = (TitleBarvue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__("2877");
 
-// CONCATENATED MODULE: ./src/App/ConfigsForms/StepConfiguration.vue
+// CONCATENATED MODULE: ./src/App/components/TitleBar.vue
 
 
 
@@ -185,17 +101,241 @@ var componentNormalizer = __webpack_require__("2877");
 /* normalize component */
 
 var component = Object(componentNormalizer["a" /* default */])(
-  ConfigsForms_StepConfigurationvue_type_script_lang_js_,
+  components_TitleBarvue_type_script_lang_js_,
   render,
   staticRenderFns,
   false,
   null,
-  "4c5361d0",
+  null,
   null
   
 )
 
-/* harmony default export */ var StepConfiguration = __webpack_exports__["default"] = (component.exports);
+/* harmony default export */ var TitleBar = __webpack_exports__["a"] = (component.exports);
+
+/***/ }),
+
+/***/ "6416":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/long-arrow-alt-left-solid.d9d4427b.svg";
+
+/***/ }),
+
+/***/ "abee":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/GestionFields.vue?vue&type=template&id=11371a1f&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('title-bar',{attrs:{"conf":{ col: true, text: 'Gestion des champs' }}}),_c('Filtre',{attrs:{"listForms":_vm.listForms}}),_c('tableauChamps',{attrs:{"listForms":_vm.listForms}})],1)}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/App/GestionFields.vue?vue&type=template&id=11371a1f&
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.to-string.js
+var es_object_to_string = __webpack_require__("d3b7");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.promise.js
+var es_promise = __webpack_require__("e6cf");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.iterator.js
+var es_array_iterator = __webpack_require__("e260");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.iterator.js
+var es_string_iterator = __webpack_require__("3ca3");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-collections.iterator.js
+var web_dom_collections_iterator = __webpack_require__("ddb0");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-collections.for-each.js
+var web_dom_collections_for_each = __webpack_require__("159b");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
+var es_function_name = __webpack_require__("b0c0");
+
+// EXTERNAL MODULE: ./src/App/components/TitleBar.vue + 4 modules
+var TitleBar = __webpack_require__("63c9");
+
+// EXTERNAL MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js + 1 modules
+var objectSpread2 = __webpack_require__("f3f3");
+
+// EXTERNAL MODULE: ./src/App/config/config.js
+var config = __webpack_require__("f158");
+
+// CONCATENATED MODULE: ./src/App/gestions-chemps/store.js
+
+
+// mini store, utilisable uniquement dans l'espace de gestion des champs.
+
+/* harmony default export */ var store = ({
+  state: function state() {
+    return {
+      /**
+       * Contient la liste des champs utilisés par le gestionnaire de champs.
+       */
+      fields: [],
+
+      /**
+       * Permet de filtrer les champs reçu.
+       */
+      filtre: {
+        formid: ""
+      },
+
+      /**
+       * - permet d'afficher un loader, si necessaire.
+       */
+      loaders: {
+        GestionField: false,
+        GestionFieldFiltre: false
+      }
+    };
+  },
+  mutations: {
+    SET_FIELDS: function SET_FIELDS(state, fields) {
+      fields.forEach(function (item) {
+        state.fields.push(Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])({}, JSON.parse(item.jsonfield)), {}, {
+          id: item.id
+        }));
+      });
+    },
+    SET_FILTRE: function SET_FILTRE(state, filtre) {
+      state.filtre[filtre.key] = filtre.value;
+    }
+  },
+  actions: {
+    /**
+     * Recupere les champs
+     * @param {*} param0
+     */
+    GetFields: function GetFields(_ref) {
+      var commit = _ref.commit,
+          state = _ref.state,
+          dispatch = _ref.dispatch;
+      state.loaders.GestionField = true;
+      state.loaders.GestionFieldFiltre = true;
+      state.fields = [];
+      var datas = " select * from `appformmanager_fields` as f ";
+
+      if (state.filtre.formid) {
+        datas += " where f.formid='" + state.filtre.formid + "' order by f.id DESC ";
+        return config["a" /* default */].getData(datas).then(function (r) {
+          console.log("GetFields : ", r);
+          commit("SET_FIELDS", r.data);
+          state.loaders.GestionField = false;
+          dispatch("GetFieldsDefault");
+        });
+      }
+    },
+    GetFieldsDefault: function GetFieldsDefault(_ref2) {
+      var state = _ref2.state;
+      var datas = " select f.defaultjson from `appformmanager_steps_fields` as f ";
+
+      if (state.filtre.formid !== "") {
+        datas += " where f.defaultjson is not null and f.formid=" + state.filtre.formid + "  order by f.stepid ASC  ";
+        return config["a" /* default */].getData(datas).then(function (r) {
+          r.data.forEach(function (item) {
+            //test
+            if (state.fields.length < 50) state.fields.push(Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])({}, JSON.parse(item.defaultjson)), {}, {
+              formid: state.filtre.formid
+            }));
+          });
+          state.loaders.GestionFieldFiltre = false;
+        });
+      }
+    },
+    SetFiltre: function SetFiltre(_ref3, filtre) {
+      var commit = _ref3.commit;
+      commit("SET_FILTRE", filtre);
+    }
+  }
+});
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/GestionFields.vue?vue&type=script&lang=js&
+
+
+
+
+
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+ //import Filtre from "./gestions-chemps/filtres.vue";
+//import tableauChamps from "./gestions-chemps/tableauChamps.vue";
+
+
+/* harmony default export */ var GestionFieldsvue_type_script_lang_js_ = ({
+  name: "GestionFields",
+  components: {
+    TitleBar: TitleBar["a" /* default */],
+    // on doit charge le sous module vuex avant l'execution de ce dernier.
+    Filtre: function Filtre() {
+      return new Promise(function (resolv) {
+        resolv(Promise.all(/* import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(22)]).then(__webpack_require__.bind(null, "70f9")));
+      });
+    },
+    // on doit charge le sous module vuex avant l'execution de ce dernier.
+    tableauChamps: function tableauChamps() {
+      return new Promise(function (resolv) {
+        resolv(Promise.all(/* import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(23)]).then(__webpack_require__.bind(null, "f28f")));
+      });
+    }
+  },
+  data: function data() {
+    return {
+      listForms: []
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    console.log("chargement de gestion des champs.");
+    this.$store.registerModule("StoreGestionChamps", store);
+    this.$store.dispatch("loadFormsDatas").then(function () {
+      _this.$store.state.items.forEach(function (item) {
+        _this.listForms.push({
+          value: item.id,
+          text: item.name
+        });
+      });
+    });
+  }
+});
+// CONCATENATED MODULE: ./src/App/GestionFields.vue?vue&type=script&lang=js&
+ /* harmony default export */ var App_GestionFieldsvue_type_script_lang_js_ = (GestionFieldsvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__("2877");
+
+// CONCATENATED MODULE: ./src/App/GestionFields.vue
+
+
+
+
+
+/* normalize component */
+
+var component = Object(componentNormalizer["a" /* default */])(
+  App_GestionFieldsvue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var GestionFields = __webpack_exports__["default"] = (component.exports);
 
 /***/ })
 

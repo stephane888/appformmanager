@@ -469,7 +469,7 @@ var loaderIcon = __webpack_require__("021a");
     TitleBar: TitleBar["a" /* default */],
     loaderIcon: loaderIcon["a" /* default */],
     UploadImage: function UploadImage() {
-      return Promise.all(/* import() */[__webpack_require__.e(0), __webpack_require__.e(7)]).then(__webpack_require__.bind(null, "9353"));
+      return Promise.all(/* import() */[__webpack_require__.e(2), __webpack_require__.e(7)]).then(__webpack_require__.bind(null, "9353"));
     }
   },
   props: {
