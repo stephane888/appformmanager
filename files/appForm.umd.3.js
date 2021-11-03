@@ -7,12 +7,12 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/TraitementMyOwn.vue?vue&type=template&id=044326f8&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/TraitementMyOwn.vue?vue&type=template&id=74a40e92&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('b-container',{attrs:{"fluid":"md"}},[_c('div',[_c('title-bar',{attrs:{"conf":{ col: true, text: 'Mes Devis : ' + _vm.titreDevis },"id":_vm.id,"showDevis":false}})],1),_c('div',{staticClass:"appfom-container"},[_c('b-row',{attrs:{"align-h":"center"}},[_c('b-col',{attrs:{"cols":"12"}},[_c('listBlocks',{attrs:{"liste_fields_check":_vm.ListeFieldsCheck,"liste_fields_display":_vm.ListeFieldsDisplay,"totalRows":_vm.totalRows,"isBusy":_vm.isBusy,"perPage":_vm.perPage},on:{"ev-change-pagination":_vm.ChangePagination}})],1)],1)],1)])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/traitement/TraitementMyOwn.vue?vue&type=template&id=044326f8&
+// CONCATENATED MODULE: ./src/App/traitement/TraitementMyOwn.vue?vue&type=template&id=74a40e92&
 
 // EXTERNAL MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js + 1 modules
 var objectSpread2 = __webpack_require__("f3f3");
@@ -32,15 +32,15 @@ var config = __webpack_require__("f158");
 // EXTERNAL MODULE: ./node_modules/vuex/dist/vuex.esm.js
 var vuex_esm = __webpack_require__("2f62");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/blocks/listBlocks.vue?vue&type=template&id=0d6212c2&
-var listBlocksvue_type_template_id_0d6212c2_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('loader-icon',{attrs:{"busy":_vm.isBusy}}),(!_vm.isBusy)?_c('div',{staticClass:"titre-project-resume"},[_c('b-col',{staticClass:"notif",attrs:{"cols":"12","md":"5","lg":"3"}},[_c('span',{staticClass:"notif-alert notif-at"},[_vm._v(_vm._s(_vm.nombreStatus.rappel.length))]),_c('span',[_vm._v("projet en attente de rappel")])]),_c('b-col',{staticClass:"notif",attrs:{"cols":"12","md":"5","lg":"3"}},[_c('span',{staticClass:"notif-alert notif-sa"},[_vm._v(_vm._s(_vm.nombreStatus.save.length))]),_c('span',[_vm._v("projet sauvegardé,")])]),(_vm.$store.state.mode)?_c('b-col',{staticClass:"notif",attrs:{"cols":"12","md":"5","lg":"3"}},[_c('span',{staticClass:"notif-ab notif-alert"},[_vm._v(_vm._s(_vm.nombreStatus.loose.length))]),_c('span',[_vm._v("projet abandonné")])]):_vm._e()],1):_vm._e(),(!_vm.isBusy)?_c('b-row',{staticClass:"list-block",attrs:{"trigger_perfom":_vm.trigger_perfom}},_vm._l((_vm.traitementFormItemsDisplay),function(item,i){return _c('b-col',{key:i,attrs:{"md":"12"}},[_c('block',{attrs:{"item":item,"form":_vm.form,"traitementFormItems":_vm.traitementFormItems,"data-id":i},on:{"get-valide-stepe":_vm.getValideStepe,"form-traiter":_vm.formTraiter,"get-info-user":_vm.getInfoUser}})],1)}),1):_vm._e(),(_vm.totalRows > 20)?_c('b-pagination',{staticClass:"pt-5 pb-5 mt-5 mb-0",attrs:{"total-rows":_vm.totalRows,"per-page":_vm.perPage,"align":"fill","size":"sm"},on:{"change":_vm.changePagination},model:{value:(_vm.currentPage),callback:function ($$v) {_vm.currentPage=$$v},expression:"currentPage"}}):_vm._e(),_c('b-modal',{ref:"modal",staticClass:"super-hover",attrs:{"id":"modal--closing","size":"lg","title":'Résultat du formulaire ...',"scrollable":"","cancelTitle":"Quitter","okTitle":"Me rappeler"},scopedSlots:_vm._u([{key:"modal-footer",fn:function(){return [_c('div',{staticClass:"d-flex"},[_c('div',{staticClass:"w-100"},[_c('b-button',{staticClass:"mr-3",attrs:{"variant":"primary","size":"sm"},on:{"click":function($event){return _vm.$bvModal.hide('modal--closing')}}},[_vm._v(" Quitter ")]),(
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/blocks/listBlocks.vue?vue&type=template&id=52b46150&
+var listBlocksvue_type_template_id_52b46150_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('loader-icon',{attrs:{"busy":_vm.isBusy}}),(!_vm.isBusy)?_c('div',{staticClass:"titre-project-resume"},[_c('b-col',{staticClass:"notif",attrs:{"cols":"12","md":"5","lg":"3"}},[_c('span',{staticClass:"notif-alert notif-at"},[_vm._v(_vm._s(_vm.nombreStatus.rappel.length))]),_c('span',[_vm._v("projet en attente de rappel")])]),_c('b-col',{staticClass:"notif",attrs:{"cols":"12","md":"5","lg":"3"}},[_c('span',{staticClass:"notif-alert notif-sa"},[_vm._v(_vm._s(_vm.nombreStatus.save.length))]),_c('span',[_vm._v("projet sauvegardé,")])]),(_vm.$store.state.mode)?_c('b-col',{staticClass:"notif",attrs:{"cols":"12","md":"5","lg":"3"}},[_c('span',{staticClass:"notif-ab notif-alert"},[_vm._v(_vm._s(_vm.nombreStatus.loose.length))]),_c('span',[_vm._v("projet abandonné")])]):_vm._e()],1):_vm._e(),(!_vm.isBusy)?_c('b-row',{staticClass:"list-block",attrs:{"trigger_perfom":_vm.trigger_perfom}},_vm._l((_vm.traitementFormItemsDisplay),function(item,i){return _c('b-col',{key:i,attrs:{"md":"12"}},[_c('block',{attrs:{"item":item,"form":_vm.form,"traitementFormItems":_vm.traitementFormItems,"data-id":i},on:{"get-valide-stepe":_vm.getValideStepe,"form-traiter":_vm.formTraiter,"get-info-user":_vm.getInfoUser}})],1)}),1):_vm._e(),(_vm.totalRows > 20)?_c('b-pagination',{staticClass:"pt-5 pb-5 mt-5 mb-0",attrs:{"total-rows":_vm.totalRows,"per-page":_vm.perPage,"align":"fill","size":"sm"},on:{"change":_vm.changePagination},model:{value:(_vm.currentPage),callback:function ($$v) {_vm.currentPage=$$v},expression:"currentPage"}}):_vm._e(),_c('b-modal',{ref:"modal",staticClass:"super-hover",attrs:{"id":"modal--closing","size":"lg","title":'Résultat du formulaire ...',"scrollable":"","cancelTitle":"Quitter","okTitle":"Me rappeler"},scopedSlots:_vm._u([{key:"modal-footer",fn:function(){return [_c('div',{staticClass:"d-flex"},[_c('div',{staticClass:"w-100"},[_c('b-button',{staticClass:"mr-3",attrs:{"variant":"primary","size":"sm"},on:{"click":function($event){return _vm.$bvModal.hide('modal--closing')}}},[_vm._v(" Quitter ")]),(
               (_vm.currentDevis.status === '1' || _vm.currentDevis.status === 1) &&
               _vm.currentDevis.uid.includes(_vm.$store.getters.uid)
             )?_c('b-button',{attrs:{"variant":"primary","size":"sm"},on:{"click":function($event){return _vm.updateStatus()}}},[_vm._v(" Me rappeler ")]):_vm._e()],1)])]},proxy:true}]),model:{value:(_vm.showModal),callback:function ($$v) {_vm.showModal=$$v},expression:"showModal"}},[(_vm.traitementFormItems.length)?_c('b-row',{attrs:{"align-h":"center"}},_vm._l((_vm.validSteps2),function(steps,i){return _c('b-col',{key:i,staticClass:"mb-4",attrs:{"sm":"12"}},[(steps !== undefined)?_c('b-card',{staticClass:"mb-1",attrs:{"no-body":""}},[_c('b-card-header',{staticClass:"p-1",attrs:{"header-tag":"header","role":"tab"}},[_c('b-button',{attrs:{"block":"","variant":"dark","disabled":""}},[_vm._v(" "+_vm._s(steps.info.title)+" ")])],1),_c('b-collapse',{attrs:{"id":"accordion-option","accordion":"my-accordion","role":"tabpanel","visible":""}},[_c('b-card-body',{staticClass:"p-2"},[_c('b-row',{staticClass:"d-flex flex-wrap"},_vm._l((steps.fields),function(field,index){return _c('b-col',{key:index,attrs:{"cols":"12"}},[(field.status === undefined || field.status)?_c('type-displays',{staticClass:"mb-2",attrs:{"field":field,"currentDevis":_vm.currentDevis}}):_vm._e()],1)}),1)],1)],1)],1):_vm._e()],1)}),1):_vm._e()],1)],1)}
-var listBlocksvue_type_template_id_0d6212c2_staticRenderFns = []
+var listBlocksvue_type_template_id_52b46150_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/traitement/blocks/listBlocks.vue?vue&type=template&id=0d6212c2&
+// CONCATENATED MODULE: ./src/App/traitement/blocks/listBlocks.vue?vue&type=template&id=52b46150&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.number.constructor.js
 var es_number_constructor = __webpack_require__("a9e3");
@@ -502,7 +502,7 @@ var loaderIcon = __webpack_require__("021a");
           var stape = rowData.datas[s];
 
           for (var f in stape.fields) {
-            var field = stape.fields[f]; //console.log("field.name : ", field.name);
+            var field = stape.fields[f];
 
             if (this.liste_fields_check.includes(field.name)) {
               row[field.name] = field;
@@ -631,7 +631,6 @@ var loaderIcon = __webpack_require__("021a");
       this.currentDataId = this.traitementFormItems[id].id;
       this.currentDevis = this.traitementFormItems[id];
       this.validSteps2 = this.traitementFormItems[id].datas;
-      console.log("id : ", this.currentDataId);
 
       if (!this.traitementFormItems[id]["all-steps-loaded"]) {
         this.$store.dispatch("loadAllStepOfDevis", {
@@ -642,25 +641,7 @@ var loaderIcon = __webpack_require__("021a");
           });
         });
         this.traitementFormItems[id]["all-steps-loaded"] = true;
-      } // this.validSteps2.push(forms[0]);
-      // function execution(i) {
-      //   const loop = function (i) {
-      //     return new Promise((resolv) => {
-      //       Utilities.selectNextState(forms, i).then((rep) => {
-      //         resolv(rep);
-      //       });
-      //     });
-      //   };
-      //   loop(i).then((kk) => {
-      //     if (kk && kk < 250) {
-      //       self.validSteps2.push(forms[kk]);
-      //       // Console.log("kk : ", kk);
-      //       execution(kk);
-      //     }
-      //   });
-      // }
-      // execution(0);
-
+      }
     }
   }
 });
@@ -676,8 +657,8 @@ var loaderIcon = __webpack_require__("021a");
 
 var listBlocks_component = Object(componentNormalizer["a" /* default */])(
   blocks_listBlocksvue_type_script_lang_js_,
-  listBlocksvue_type_template_id_0d6212c2_render,
-  listBlocksvue_type_template_id_0d6212c2_staticRenderFns,
+  listBlocksvue_type_template_id_52b46150_render,
+  listBlocksvue_type_template_id_52b46150_staticRenderFns,
   false,
   null,
   null,
@@ -787,10 +768,10 @@ var listBlocks_component = Object(componentNormalizer["a" /* default */])(
       }];
 
       for (var i in this.form.forms) {
-        var form = this.form.forms[i]; // console.log("etate : ", form.info.name, "\n\n");
+        var form = this.form.forms[i];
 
         for (var f in form.fields) {
-          var field = form.fields[f]; // console.log(field);
+          var field = form.fields[f];
 
           if (field.display_field) {
             fieldsDisplay.push({
@@ -822,16 +803,14 @@ var listBlocks_component = Object(componentNormalizer["a" /* default */])(
     }
   }),
   methods: {
-    deleteSteps: function deleteSteps(datas) {
+    deleteSteps: function deleteSteps() {
       var all = this.$store.state.allStepsDatas;
       var r = all.indexOf(this.formDatas);
       this.$emit("index-to-delete", r);
-      console.log("de", datas);
 
       for (var i = all.length - 1; i >= 0; i--) {
         if (i === r) {
           all.splice(i, 1);
-          console.log("iiippp");
         }
       }
     },
@@ -906,8 +885,7 @@ var listBlocks_component = Object(componentNormalizer["a" /* default */])(
         _this3.$store.dispatch("setFormId", _this3.id);
 
         _this3.isBusy = false;
-      }).catch(function (error) {
-        console.log("error", error);
+      }).catch(function () {
         _this3.isBusy = false;
       });
     },

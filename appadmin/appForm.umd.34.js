@@ -95,7 +95,6 @@ var validationRessource = {
           var state = currentField.states[j]; // si le champs n'est pas definit on retourne false;
 
           if (formDatasValidate[state.name] === undefined) {
-            //console.log("Validation non forunit : ", formDatasValidate);
             return null;
           }
 
@@ -103,14 +102,6 @@ var validationRessource = {
             // visible
             if (state.action === "visible") {
               if (field.value === "" && state.operator === "not_empty") return false;else if (field.value !== "" && state.operator === "empty") return false;else if (state.operator === "validated" && formDatasValidate[field.name]) return formDatasValidate[field.name].valid;else if (state.operator === "egal") {
-                /*
-                console.log(
-                  "Valeur requise : ",
-                  state.value,
-                  " :: Valeur du parent",
-                  field.value
-                );
-                /**/
                 if (field.value) {
                   if (_config_js__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"].typeSelection.includes(field.type) && field.value.includes) {
                     return field.value.includes(state.value) ? true : false;
@@ -147,7 +138,6 @@ var validationRessource = {
     var etapes = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
 
     if (form && form.forms.length > 1) {
-      //console.log("listesEtapes ");
       for (var i in form.forms) {
         var currentForm = form.forms[i];
 
@@ -196,7 +186,6 @@ var ValidationInstance = /*#__PURE__*/function () {
         var currentForm = validationRessource.getFormStateByName(condition.state_name, form.forms);
 
         if (currentForm !== undefined) {
-          //console.log("listeDesChamps ", currentForm);
           for (var i in currentForm.fields) {
             var field = currentForm.fields[i];
 
@@ -230,12 +219,12 @@ var ValidationInstance = /*#__PURE__*/function () {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/input/Autocomplete.vue?vue&type=template&id=7fff9966&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/input/Autocomplete.vue?vue&type=template&id=f34bff90&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:!_vm.validationField && _vm.mode ? 'mb-5' : ''},[(_vm.validationField)?_c('transition',{attrs:{"name":"fade"}},[_c('div',{staticClass:"choice-section min-height"},[_c('ValidationProvider',{staticClass:"col-12 p-0",attrs:{"rules":_vm.field.require,"name":_vm.field.name},scopedSlots:_vm._u([{key:"default",fn:function(v){return [_c('div',{staticClass:"autocomplete"},[_c('multiselect',{attrs:{"options":_vm.options,"custom-label":_vm.nameWithLang,"placeholder":"","label":"text","track-by":"text","show-no-results":false,"showLabels":false,"loading":_vm.isLoading},on:{"search-change":_vm.asyncFind},model:{value:(_vm.field.value),callback:function ($$v) {_vm.$set(_vm.field, "value", $$v)},expression:"field.value"}},[_c('template',{slot:"noResult"},[_c('span',{staticClass:"option__titl d-none"},[_vm._v(" Aucun contenu ")])]),_c('template',{slot:"placeholder"},[_c('span',{staticClass:"option__title"},[_vm._v(" Code postal ou nom de la ville ")])]),_c('template',{slot:"noOptions"},[_c('span',{staticClass:"option__title"},[_vm._v(" Saisir un code postal ou le nom d'une ville ")])])],2),_c('div',{staticClass:"text-danger"},_vm._l((v.errors),function(error,ii){return _c('small',{key:ii,staticClass:"d-block"},[_vm._v(" "+_vm._s(error)+" ")])}),0)],1)]}}],null,false,3155301819)})],1)]):_vm._e()],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/input/Autocomplete.vue?vue&type=template&id=7fff9966&
+// CONCATENATED MODULE: ./src/App/input/Autocomplete.vue?vue&type=template&id=f34bff90&
 
 // EXTERNAL MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js + 1 modules
 var objectSpread2 = __webpack_require__("f3f3");
@@ -360,14 +349,12 @@ var drupal_vuejs = __webpack_require__("e674");
     asyncFind: function asyncFind(search) {
       var _this = this;
 
-      //console.log("search : ", search);
       if (search.length > 2) {
-        var terms = new drupal_vuejs["d" /* termsTaxo */]("departements"); //console.log("find");
-
+        var terms = new drupal_vuejs["d" /* termsTaxo */]("departements");
         this.isLoading = true;
         terms.getSearch(search).then(function () {
           _this.options = terms.getOptions();
-          _this.isLoading = false; //console.log("this.options : ", this.options);
+          _this.isLoading = false;
         });
       }
     }

@@ -1010,7 +1010,6 @@ var validationRessource = {
           var state = currentField.states[j]; // si le champs n'est pas definit on retourne false;
 
           if (formDatasValidate[state.name] === undefined) {
-            //console.log("Validation non forunit : ", formDatasValidate);
             return null;
           }
 
@@ -1018,14 +1017,6 @@ var validationRessource = {
             // visible
             if (state.action === "visible") {
               if (field.value === "" && state.operator === "not_empty") return false;else if (field.value !== "" && state.operator === "empty") return false;else if (state.operator === "validated" && formDatasValidate[field.name]) return formDatasValidate[field.name].valid;else if (state.operator === "egal") {
-                /*
-                console.log(
-                  "Valeur requise : ",
-                  state.value,
-                  " :: Valeur du parent",
-                  field.value
-                );
-                /**/
                 if (field.value) {
                   if (_config_js__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"].typeSelection.includes(field.type) && field.value.includes) {
                     return field.value.includes(state.value) ? true : false;
@@ -1062,7 +1053,6 @@ var validationRessource = {
     var etapes = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
 
     if (form && form.forms.length > 1) {
-      //console.log("listesEtapes ");
       for (var i in form.forms) {
         var currentForm = form.forms[i];
 
@@ -1111,7 +1101,6 @@ var ValidationInstance = /*#__PURE__*/function () {
         var currentForm = validationRessource.getFormStateByName(condition.state_name, form.forms);
 
         if (currentForm !== undefined) {
-          //console.log("listeDesChamps ", currentForm);
           for (var i in currentForm.fields) {
             var field = currentForm.fields[i];
 

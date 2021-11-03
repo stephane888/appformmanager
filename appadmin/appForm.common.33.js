@@ -129,12 +129,12 @@ module.exports = __webpack_require__.p + "img/long-arrow-alt-left-solid.d9d4427b
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/GestionFields.vue?vue&type=template&id=11371a1f&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/GestionFields.vue?vue&type=template&id=04b68272&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('title-bar',{attrs:{"conf":{ col: true, text: 'Gestion des champs' }}}),_c('Filtre',{attrs:{"listForms":_vm.listForms}}),_c('tableauChamps',{attrs:{"listForms":_vm.listForms}})],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/GestionFields.vue?vue&type=template&id=11371a1f&
+// CONCATENATED MODULE: ./src/App/GestionFields.vue?vue&type=template&id=04b68272&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.to-string.js
 var es_object_to_string = __webpack_require__("d3b7");
@@ -224,7 +224,6 @@ var config = __webpack_require__("f158");
       if (state.filtre.formid) {
         datas += " where f.formid='" + state.filtre.formid + "' order by f.id DESC ";
         return config["a" /* default */].getData(datas).then(function (r) {
-          console.log("GetFields : ", r);
           commit("SET_FIELDS", r.data);
           state.loaders.GestionField = false;
           dispatch("GetFieldsDefault");
@@ -303,7 +302,6 @@ var config = __webpack_require__("f158");
   mounted: function mounted() {
     var _this = this;
 
-    console.log("chargement de gestion des champs.");
     this.$store.registerModule("StoreGestionChamps", store);
     this.$store.dispatch("loadFormsDatas").then(function () {
       _this.$store.state.items.forEach(function (item) {

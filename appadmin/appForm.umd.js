@@ -96,7 +96,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "css/" + ({}[chunkId]||chunkId) + "." + {"0":"f4f07acd","1":"dd816768","2":"5347cc27","3":"31d6cfe0","4":"9c63d77e","5":"945cb5cb","6":"31d6cfe0","7":"42efe657","9":"31d6cfe0","10":"e332f2ab","11":"442b78dd","12":"5f515804","13":"3def3390","14":"b2742065","15":"63248bb6","16":"dd3fcea7","17":"e5f1a246","18":"31d6cfe0","19":"31d6cfe0","20":"5451517c","21":"dd36f6dd","22":"dc3d54c9","23":"dc3d54c9","24":"31d6cfe0","25":"ac5b10c9","26":"42efe657","27":"31d6cfe0","28":"31d6cfe0","29":"31d6cfe0","30":"36d2244c","31":"36d2244c","32":"642d4926","33":"31d6cfe0","34":"31d6cfe0","35":"31d6cfe0","36":"31d6cfe0","37":"31d6cfe0","38":"31d6cfe0","39":"31d6cfe0","40":"31d6cfe0","41":"31d6cfe0","42":"31d6cfe0","43":"31d6cfe0","44":"31d6cfe0","45":"31d6cfe0"}[chunkId] + ".css";
+/******/ 				var href = "css/" + ({}[chunkId]||chunkId) + "." + {"0":"f4f07acd","1":"ac327bf7","2":"5347cc27","3":"31d6cfe0","4":"ef8763e1","5":"945cb5cb","6":"31d6cfe0","7":"42efe657","9":"31d6cfe0","10":"e332f2ab","11":"442b78dd","12":"5f515804","13":"3def3390","14":"b2742065","15":"63248bb6","16":"dd3fcea7","17":"e5f1a246","18":"31d6cfe0","19":"31d6cfe0","20":"5451517c","21":"dd36f6dd","22":"dc3d54c9","23":"dc3d54c9","24":"31d6cfe0","25":"ac5b10c9","26":"42efe657","27":"31d6cfe0","28":"31d6cfe0","29":"31d6cfe0","30":"36d2244c","31":"36d2244c","32":"642d4926","33":"31d6cfe0","34":"31d6cfe0","35":"31d6cfe0","36":"31d6cfe0","37":"31d6cfe0","38":"31d6cfe0","39":"31d6cfe0","40":"31d6cfe0","41":"31d6cfe0","42":"31d6cfe0","43":"31d6cfe0","44":"31d6cfe0","45":"31d6cfe0"}[chunkId] + ".css";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
@@ -4958,7 +4958,6 @@ var Utilities = {
    */
   settingForm: function settingForm(datas) {
     return new Promise(function (resolv) {
-      //console.log("fdate : ", datas);
       var value = "";
       value = JSON.stringify(datas.value);
       var result = [];
@@ -62548,8 +62547,7 @@ vue__WEBPACK_IMPORTED_MODULE_14___default.a.use(bootstrap_vue__WEBPACK_IMPORTED_
     return new Promise(function (resolv) {
       var datas = state.form;
       var id = state.idSoumission;
-      var price = state.price; // console.log("saveStepsDatas : ", datas);
-
+      var price = state.price;
       var result = [];
 
       if (datas != "") {
@@ -62647,7 +62645,6 @@ vue__WEBPACK_IMPORTED_MODULE_14___default.a.use(bootstrap_vue__WEBPACK_IMPORTED_
   deleteFormTraitement: function deleteFormTraitement(id, status) {
     var mode = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
     var result = [];
-    console.log("ress", id, status);
     var table1 = {
       table: "appformmanager_datas",
       fields: {
@@ -63265,11 +63262,6 @@ var bootstrap = __webpack_require__("6a84");
 
 external_commonjs_vue_commonjs2_vue_root_Vue_default.a.use(esm["a" /* BootstrapVue */]);
 external_commonjs_vue_commonjs2_vue_root_Vue_default.a.use(icons_plugin["a" /* IconsPlugin */]);
-/*
-Vue.use(BVToastPlugin);
-const vm = new Vue();
-console.log("log Vue :  ", vm, "\n $bvToast : ", vm.$bvToast);
-*/
 // EXTERNAL MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js
 var asyncToGenerator = __webpack_require__("c964");
 
@@ -63282,11 +63274,11 @@ var runtime = __webpack_require__("96cf");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.splice.js
 var es_array_splice = __webpack_require__("a434");
 
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
-var es_function_name = __webpack_require__("b0c0");
-
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-collections.for-each.js
 var web_dom_collections_for_each = __webpack_require__("159b");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
+var es_function_name = __webpack_require__("b0c0");
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.symbol.js
 var es_symbol = __webpack_require__("a4d3");
@@ -63531,7 +63523,6 @@ drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
     },
     SET_ITEMS: function SET_ITEMS(state, payload) {
       state.items = payload;
-      console.log("payload : ", payload);
     },
     SET_CURRRENT_FORM: function SET_CURRRENT_FORM(state, payload) {
       state.form = payload;
@@ -63565,18 +63556,15 @@ drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
       state.stepsIndex = i;
     },
     SET_FORM_DATAS_VALIDATE: function SET_FORM_DATAS_VALIDATE(state, value) {
-      //console.log(" MAJ de SET_FORM_DATAS_VALIDATE ");
       state.formDatasValidate = value;
     },
     SET_STEPS_INDEXS: function SET_STEPS_INDEXS(state, value) {
       state.stepsIndexs = value;
     },
     ADD_STEPS_INDEXS: function ADD_STEPS_INDEXS(state, value) {
-      console.log("state.stepsIndexs : ", state.stepsIndexs, "\n :: ", value);
       state.stepsIndexs.push(value);
     },
     REMOVE_STEPS_INDEXS: function REMOVE_STEPS_INDEXS(state) {
-      console.log("remove stepIndex in array ");
       if (state.stepsIndexs.length) state.stepsIndexs.splice(-1, 1);
     },
 
@@ -63720,7 +63708,6 @@ drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
                 price = _context2.sent;
 
                 if (price > 0) {
-                  console.log("Retranche prix : ", price);
                   commit("REMOVE_PRIX_STEPS", price);
                 } //remove price states aide
 
@@ -63730,14 +63717,12 @@ drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
 
               case 14:
                 priceAide = _context2.sent;
-                console.log("back stape ", getters.formDatas.info.name, "\n priceAide - ", priceAide);
 
                 if (priceAide > 0) {
-                  console.log("Retranche l'aide financiere : ", priceAide);
                   commit("REMOVE_PRIX_AIDE_STEPS", priceAide);
                 }
 
-              case 17:
+              case 16:
               case "end":
                 return _context2.stop();
             }
@@ -63777,7 +63762,7 @@ drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
     loadFormsDatas: function loadFormsDatas(_ref10) {
       var commit = _ref10.commit;
       commit("SET_ITEMS", []);
-      var datas = "select f.id,f.name,f.description,f.img,f.forms from `appformmanager_fomrs` as f ";
+      var datas = "select f.id,f.name,f.description,f.img from `appformmanager_fomrs` as f ";
       return config["a" /* default */].getData(datas).then(function (reponse) {
         commit("SET_ITEMS", reponse.data);
       });
@@ -63829,185 +63814,64 @@ drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
 
       return loadProgressiveDate();
     },
-    loadStepsDatas00: function loadStepsDatas00(_ref12, payload) {
-      var commit = _ref12.commit,
-          state = _ref12.state;
-      commit("SET_CURRRENT_FORM", {});
-      var nbreItems = 10;
-
-      var loadProgressiveDate = function loadProgressiveDate() {
-        var pagination = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-        return new Promise(function (resolv) {
-          var datas = " select f.id,f.name,f.description,f.img,f.forms, st.step from `appformmanager_fomrs` as f ";
-          datas += " left join appformmanager_fomrs_steps as st ON st.formid = f.id ";
-          datas += " where f.id='" + payload.formId + "'";
-          datas += " order by st.order ASC limit " + nbreItems + " OFFSET " + pagination;
-          config["a" /* default */].getData(datas).then(function (rep) {
-            if (rep.data[0] && rep.data[0].id) {
-              // Ce bloc est à supprimer.
-              rep.data[0].forms = JSON.parse(rep.data[0].forms);
-
-              if (rep.data[0] && rep.data[0].forms && rep.data[0].forms.length > 0) {
-                alert("not clen");
-                commit("SET_CURRRENT_FORM", rep.data[0]);
-                resolv("null");
-                return false;
-              } //si cest le premier passage, on met en place le formulaire avec quelques champs.
-
-
-              if (!pagination) {
-                var steps = [];
-                rep.data.forEach(function (step) {
-                  steps.push(JSON.parse(step.step));
-                });
-                var result = {
-                  id: rep.data[0].id,
-                  name: rep.data[0].name,
-                  description: rep.data[0].description,
-                  img: rep.data[0].img,
-                  forms: steps
-                };
-                commit("SET_CURRRENT_FORM", result);
-              } else {
-                console.log("Autre requet : ", rep.data);
-                rep.data.forEach(function (step) {
-                  state.form.forms.push(JSON.parse(step.step));
-                });
-              } // Si le resultat est egal au nombre d'element il est possible que des données existe encore.
-
-
-              if (nbreItems === rep.data.length) {
-                pagination += nbreItems;
-                resolv(loadProgressiveDate(pagination));
-              } else resolv(null);
-            } else resolv(null);
-          });
-        });
-      };
-
-      return loadProgressiveDate();
-    },
 
     /**
      * Recupere les paramètres de la page d'entrée.
      */
-    loadPageInfo: function loadPageInfo(_ref13) {
-      var commit = _ref13.commit;
+    loadPageInfo: function loadPageInfo(_ref12) {
+      var commit = _ref12.commit;
       var datas = "select * from `appformmanager_config`";
       config["a" /* default */].getData(datas).then(function (reponse) {
-        console.log("get pageInfo: ", reponse);
         commit("SET_PAGE_INFO", reponse.data);
       });
     },
 
     /**
-     * Recupere les formulaires soumis en BD.
-     */
-    // loadTraitementDatas({ commit }, payload) {
-    //   commit("SET_TRAITEMENT_ITEMS", []);
-    //   return new Promise((resolv, reject) => {
-    //     var url = "/appformmanager/getdevis/0";
-    //     config
-    //       .getData(payload, false, url)
-    //       .then((reponse) => {
-    //         console.log("get traitement Items: ", reponse);
-    //         commit("SET_TRAITEMENT_ITEMS", reponse.data);
-    //         resolv(reponse.data);
-    //       })
-    //       .catch((error) => {
-    //         reject(error);
-    //       });
-    //   });
-    // },
-
-    /**
      * charge de maniere progressive les etapes d'un devis.
      */
-    loadAllStepOfDevis: function loadAllStepOfDevis(_ref14, payload) {
-      var state = _ref14.state;
+    loadAllStepOfDevis: function loadAllStepOfDevis(payload) {
       return new Promise(function (resolv, reject) {
         var url = "/appformmanager/getdevis-steps/0";
         config["a" /* default */].getData(payload, false, url).then(function (reponse) {
-          console.log("all step of devis : ", reponse);
-          console.log("state.traitementItems : ", state.traitementItems);
           resolv(reponse.data);
         }).catch(function (error) {
           reject(error);
         });
       });
     },
-
-    /**
-     * Recupere les formulaires soumis en BD.
-     */
-    // loadTraitementDatas00({ commit }, payload) {
-    //   commit("SET_TRAITEMENT_ITEMS", []);
-    //   return new Promise((resolv, reject) => {
-    //     var uid = payload.uid ? payload.uid : null;
-    //     var id = payload.id ? payload.id : null;
-    //     var pagination = payload.pagination ? payload.pagination : 0;
-    //     var sqlrequest =
-    //       " select dv.price, dv.status, dv.domaineid, dv.created, dv.uid, st.step from `appformmanager_datas`";
-    //     sqlrequest +=
-    //       " inner join appformmanager_datas_steps as st ON st.datasid = dv.id ";
-    //     sqlrequest += " where dv.appformmanager_forms= " + id;
-    //     sqlrequest += " and st.order=0 ";
-    //     if (uid) {
-    //       sqlrequest += " AND dv.`uid` = " + uid;
-    //     }
-    //     if (pagination)
-    //       sqlrequest += " order by id DESC limit 20 OFFSET " + pagination;
-    //     else sqlrequest += " order by id DESC limit 20";
-    //     config
-    //       .getData(sqlrequest)
-    //       .then((reponse) => {
-    //         //console.log("get traitement Items: ", reponse);
-    //         //commit("SET_TRAITEMENT_ITEMS", reponse.data);
-    //         resolv(reponse.data);
-    //       })
-    //       .catch((error) => {
-    //         //console.log("get error ", error);
-    //         reject(error);
-    //       });
-    //   });
-    // },
-
-    /**
-     * Permet de modifier la structure du formulaire.
-     */
-    setItems: function setItems(_ref15, payload) {
-      var commit = _ref15.commit;
+    setItems: function setItems(_ref13, payload) {
+      var commit = _ref13.commit;
       commit("SET_ITEMS", payload);
     },
 
     /**
      *  --
      */
-    setFormDatasValidate: function setFormDatasValidate(_ref16, payload) {
-      var commit = _ref16.commit;
+    setFormDatasValidate: function setFormDatasValidate(_ref14, payload) {
+      var commit = _ref14.commit;
       commit("SET_FORM_DATAS_VALIDATE", payload);
     },
 
     /**
      *  --
      */
-    setStepsIndexs: function setStepsIndexs(_ref17, payload) {
-      var commit = _ref17.commit;
+    setStepsIndexs: function setStepsIndexs(_ref15, payload) {
+      var commit = _ref15.commit;
       commit("SET_STEPS_INDEXS", payload);
     },
 
     /**
      *  --
      */
-    setStatusStepsIndex: function setStatusStepsIndex(_ref18, payload) {
-      var commit = _ref18.commit;
+    setStatusStepsIndex: function setStatusStepsIndex(_ref16, payload) {
+      var commit = _ref16.commit;
       commit("SET_STATUS_STEPS_INDEX", payload);
     },
 
     /**
      * Enregistre les données et cree le compte utilisateur.
      */
-    saveDatasUser: function saveDatasUser(_ref19) {
+    saveDatasUser: function saveDatasUser(_ref17) {
       var _arguments = arguments,
           _this = this;
 
@@ -64017,7 +63881,7 @@ drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                state = _ref19.state, getters = _ref19.getters;
+                state = _ref17.state, getters = _ref17.getters;
                 status = _arguments.length > 1 && _arguments[1] !== undefined ? _arguments[1] : 0;
                 self = _this, datas = [], url = null, msg = "";
                 /**
@@ -64139,7 +64003,6 @@ drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
                     //On verifie s'il y'a eut redirection.
                     if (resp.reponse && resp.reponse.config.url !== resp.reponse.request.responseURL) {
                       drupal_vuejs["e" /* users */].getCurrentUser().then(function (userData) {
-                        console.log(" Utilisateur : ", userData);
                         if (userData.uid && userData.uid[0].value) utilities["a" /* default */].saveDatas(state, userData.uid[0].value, status).then(function () {
                           displayMsg(msg);
                         });else {
@@ -64155,8 +64018,7 @@ drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
                     }
                   }).catch(function (errors) {
                     msg = msgCreate([errors.error && errors.error && errors.error.statusText ? "<strong>" + errors.error.statusText + "</strong>" : "Une erreur s'est produite"]);
-                    if (!url.includes("register")) displayMsg(msg, "Erreur de connexion", false);
-                    console.log("errors.response ", errors, "\n", errors.error); //On verifie s'il y'a eut redirection.
+                    if (!url.includes("register")) displayMsg(msg, "Erreur de connexion", false); //On verifie s'il y'a eut redirection.
 
                     if (errors.response && errors.response.config && errors.response.request && errors.response.config.url !== errors.response.request.responseURL) {//
                     } else if (errors.error && errors.error.data && errors.error.data.errors) {
@@ -64191,10 +64053,10 @@ drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
         }, _callee3);
       }))();
     },
-    saveDatas: function saveDatas(_ref20) {
-      var commit = _ref20.commit,
-          state = _ref20.state,
-          getters = _ref20.getters;
+    saveDatas: function saveDatas(_ref18) {
+      var commit = _ref18.commit,
+          state = _ref18.state,
+          getters = _ref18.getters;
       var uid = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
 
       if (!uid) {
@@ -64202,24 +64064,23 @@ drupal_vuejs["e" /* users */].TestDomain = "http://v2lesroisdelareno.kksa";
       }
 
       utilities["a" /* default */].saveDatas(state, uid).then(function (response) {
-        // console.log("Données stocké du store", response);
         if (state.idSoumission === null) {
           commit("SET_ID_SOUMISSION", response.data[0].result);
         }
       });
     },
-    getCurrentUser: function getCurrentUser(_ref21) {
-      var commit = _ref21.commit;
+    getCurrentUser: function getCurrentUser(_ref19) {
+      var commit = _ref19.commit;
       return drupal_vuejs["e" /* users */].getCurrentUser().then(function (resp) {
         commit("SET_USER", resp);
       });
     },
-    setCurrentUser: function setCurrentUser(_ref22, user) {
-      var commit = _ref22.commit;
+    setCurrentUser: function setCurrentUser(_ref20, user) {
+      var commit = _ref20.commit;
       commit("SET_USER", user);
     },
-    setCachesUser: function setCachesUser(_ref23, user) {
-      var commit = _ref23.commit;
+    setCachesUser: function setCachesUser(_ref21, user) {
+      var commit = _ref21.commit;
       commit("SET_CACHEUSER", user);
     }
   },
@@ -67265,12 +67126,12 @@ var Listesfomes_headervue_type_template_id_0453cdff_lang_html_staticRenderFns = 
 // EXTERNAL MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js + 1 modules
 var objectSpread2 = __webpack_require__("f3f3");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/ConfigsForms/SettingForm.vue?vue&type=template&id=50c4c8b4&scoped=true&lang=html&
-var SettingFormvue_type_template_id_50c4c8b4_scoped_true_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('b-modal',{ref:"modal",attrs:{"id":"setting-form","title":"Configuration de la page","hide-footer":""},on:{"ok":_vm.handleOk}},[_c('form',{ref:"form",staticClass:"p-3",on:{"submit":_vm.handleSubmit}},[_c('b-row',{staticClass:"shadow-sm"},[_c('b-col',{attrs:{"cols":"8"}},[_c('b-form-group',{attrs:{"label":"Titre de la page","label-for":"name-input"}},[_c('b-form-input',{attrs:{"required":""},model:{value:(_vm.pageInfo.title),callback:function ($$v) {_vm.$set(_vm.pageInfo, "title", $$v)},expression:"pageInfo.title"}})],1)],1),_c('b-col',{attrs:{"cols":"10"}},[_c('b-form-group',{attrs:{"label":"Description","label-for":"description-input"}},[_c('ckeditor',{attrs:{"editor":_vm.editor,"config":_vm.editorConfig},model:{value:(_vm.pageInfo.description),callback:function ($$v) {_vm.$set(_vm.pageInfo, "description", $$v)},expression:"pageInfo.description"}})],1)],1),_c('b-col',{attrs:{"cols":"12"}},[_c('b-form-group',{attrs:{"label":"vidéo ","label-for":"description-input"}},[_c('b-form-input',{model:{value:(_vm.pageInfo.video),callback:function ($$v) {_vm.$set(_vm.pageInfo, "video", $$v)},expression:"pageInfo.video"}})],1)],1)],1),_c('b-row',{attrs:{"align-h":"end"}},[_c('div',{staticClass:"mr-3"},[_c('b-button',{staticClass:"mr-2",attrs:{"type":"submit","variant":"primary"}},[_vm._v(" Ajouter ")])],1)])],1)])],1)}
-var SettingFormvue_type_template_id_50c4c8b4_scoped_true_lang_html_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/ConfigsForms/SettingForm.vue?vue&type=template&id=7572199e&scoped=true&lang=html&
+var SettingFormvue_type_template_id_7572199e_scoped_true_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('b-modal',{ref:"modal",attrs:{"id":"setting-form","title":"Configuration de la page","hide-footer":""},on:{"ok":_vm.handleOk}},[_c('form',{ref:"form",staticClass:"p-3",on:{"submit":_vm.handleSubmit}},[_c('b-row',{staticClass:"shadow-sm"},[_c('b-col',{attrs:{"cols":"8"}},[_c('b-form-group',{attrs:{"label":"Titre de la page","label-for":"name-input"}},[_c('b-form-input',{attrs:{"required":""},model:{value:(_vm.pageInfo.title),callback:function ($$v) {_vm.$set(_vm.pageInfo, "title", $$v)},expression:"pageInfo.title"}})],1)],1),_c('b-col',{attrs:{"cols":"10"}},[_c('b-form-group',{attrs:{"label":"Description","label-for":"description-input"}},[_c('ckeditor',{attrs:{"editor":_vm.editor,"config":_vm.editorConfig},model:{value:(_vm.pageInfo.description),callback:function ($$v) {_vm.$set(_vm.pageInfo, "description", $$v)},expression:"pageInfo.description"}})],1)],1),_c('b-col',{attrs:{"cols":"12"}},[_c('b-form-group',{attrs:{"label":"vidéo ","label-for":"description-input"}},[_c('b-form-input',{model:{value:(_vm.pageInfo.video),callback:function ($$v) {_vm.$set(_vm.pageInfo, "video", $$v)},expression:"pageInfo.video"}})],1)],1)],1),_c('b-row',{attrs:{"align-h":"end"}},[_c('div',{staticClass:"mr-3"},[_c('b-button',{staticClass:"mr-2",attrs:{"type":"submit","variant":"primary"}},[_vm._v(" Ajouter ")])],1)])],1)])],1)}
+var SettingFormvue_type_template_id_7572199e_scoped_true_lang_html_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/ConfigsForms/SettingForm.vue?vue&type=template&id=50c4c8b4&scoped=true&lang=html&
+// CONCATENATED MODULE: ./src/App/ConfigsForms/SettingForm.vue?vue&type=template&id=7572199e&scoped=true&lang=html&
 
 // EXTERNAL MODULE: ./node_modules/@ckeditor/ckeditor5-vue2/dist/ckeditor.js
 var ckeditor = __webpack_require__("6930");
@@ -67361,8 +67222,6 @@ var build_ckeditor_default = /*#__PURE__*/__webpack_require__.n(build_ckeditor);
       this.$store.dispatch("loadPageInfo");
     },
     ev_manage_images_img: function ev_manage_images_img(data, form) {
-      console.log("file", data);
-
       if (data.url) {
         form.img = data.url;
       }
@@ -67408,11 +67267,11 @@ var componentNormalizer = __webpack_require__("2877");
 
 var component = Object(componentNormalizer["a" /* default */])(
   ConfigsForms_SettingFormvue_type_script_lang_js_,
-  SettingFormvue_type_template_id_50c4c8b4_scoped_true_lang_html_render,
-  SettingFormvue_type_template_id_50c4c8b4_scoped_true_lang_html_staticRenderFns,
+  SettingFormvue_type_template_id_7572199e_scoped_true_lang_html_render,
+  SettingFormvue_type_template_id_7572199e_scoped_true_lang_html_staticRenderFns,
   false,
   null,
-  "50c4c8b4",
+  "7572199e",
   null
   
 )
@@ -67520,23 +67379,23 @@ var Listesfomes_header_component = Object(componentNormalizer["a" /* default */]
 )
 
 /* harmony default export */ var Listesfomes_header = (Listesfomes_header_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/Listesfomes--items.vue?vue&type=template&id=6263923e&lang=html&
-var Listesfomes_itemsvue_type_template_id_6263923e_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"w-100"},[_c('loaderIcon',{attrs:{"busy":_vm.busy}}),(!_vm.busy)?_c('div',{staticClass:"block-option"},[_vm._l((_vm.items),function(form,index){return _c('div',{key:index,staticClass:"block"},[_c('div',{staticClass:"form-stats",attrs:{"number":_vm.getStatisqueByNumber(form)}},[_c('div',{staticClass:"position-absolute"},[(form.onWaitNumber)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-danger",modifiers:{"hover":true,"v-danger":true}}],staticClass:"form-stats__btn form-stats__red",attrs:{"variant":"","title":"Projet en attente de rappel"}},[_c('span',[_vm._v(" "+_vm._s(form.onWaitNumber)+" ")])]):_vm._e(),(form.onSave)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-primary",modifiers:{"hover":true,"v-primary":true}}],staticClass:"form-stats__btn form-stats__bleu",attrs:{"variant":"","title":"Projet sauvegardé"}},[_c('span',[_vm._v(" "+_vm._s(form.onSave)+" ")])]):_vm._e(),(form.onCancel)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-secondary",modifiers:{"hover":true,"v-secondary":true}}],staticClass:"form-stats__btn form-stats__gris",attrs:{"variant":"","title":"Projet abandonné"}},[_c('span',[_vm._v(_vm._s(form.onCancel))])]):_vm._e()],1),_c('div',{staticClass:"block_img",on:{"click":function($event){!_vm.$store.state.mode
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/Listesfomes--items.vue?vue&type=template&id=0f6f0264&lang=html&
+var Listesfomes_itemsvue_type_template_id_0f6f0264_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"w-100"},[_c('loaderIcon',{attrs:{"busy":_vm.busy}}),(!_vm.busy)?_c('div',{staticClass:"block-option"},[_vm._l((_vm.items),function(form,index){return _c('div',{key:index,staticClass:"block"},[_c('div',{staticClass:"form-stats",attrs:{"number":_vm.getStatisqueByNumber(form)}},[_c('div',{staticClass:"position-absolute"},[(form.onWaitNumber)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-danger",modifiers:{"hover":true,"v-danger":true}}],staticClass:"form-stats__btn form-stats__red",attrs:{"variant":"","title":"Projet en attente de rappel"}},[_c('span',[_vm._v(" "+_vm._s(form.onWaitNumber)+" ")])]):_vm._e(),(form.onSave)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-primary",modifiers:{"hover":true,"v-primary":true}}],staticClass:"form-stats__btn form-stats__bleu",attrs:{"variant":"","title":"Projet sauvegardé"}},[_c('span',[_vm._v(" "+_vm._s(form.onSave)+" ")])]):_vm._e(),(form.onCancel)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-secondary",modifiers:{"hover":true,"v-secondary":true}}],staticClass:"form-stats__btn form-stats__gris",attrs:{"variant":"","title":"Projet abandonné"}},[_c('span',[_vm._v(_vm._s(form.onCancel))])]):_vm._e()],1),_c('div',{staticClass:"block_img",on:{"click":function($event){!_vm.$store.state.mode
               ? _vm.updateMyOwnForm(form.id)
               : _vm.showResult(form.id)}}},[_c('img',{attrs:{"src":_vm.findUrlImg(form)}})]),_c('div',{staticClass:"block_desc",on:{"click":function($event){!_vm.$store.state.mode
               ? _vm.updateMyOwnForm(form.id)
               : _vm.showResult(form.id)}}},[_c('span',[_vm._v(" "+_vm._s(form.name)+" ")])]),_c('b-button-group',{staticClass:"home-button"},[_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-primary",modifiers:{"hover":true,"v-primary":true}}],attrs:{"variant":"outline-primary","title":"Estimer mes travaux"},on:{"click":function($event){return _vm.voirForm(form.id)}}},[_c('b-icon',{attrs:{"icon":"eye"}})],1),_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-secondary",modifiers:{"hover":true,"v-secondary":true}}],attrs:{"variant":"outline-secondary","title":"voir mes devis"},on:{"click":function($event){return _vm.updateMyOwnForm(form.id)}}},[_c('b-icon',{attrs:{"icon":"newspaper"}})],1),(_vm.$store.state.mode)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-warning",modifiers:{"hover":true,"v-warning":true}}],attrs:{"variant":"outline-warning","title":"Modifier"},on:{"click":function($event){return _vm.updateForm(form.id)}}},[_c('b-icon',{attrs:{"icon":"pencil"}})],1):_vm._e(),(_vm.$store.state.mode)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-success",modifiers:{"hover":true,"v-success":true}}],attrs:{"variant":"outline-success","title":"Voir les soumissions"},on:{"click":function($event){return _vm.showResult(form.id)}}},[_c('b-icon',{attrs:{"icon":"server"}})],1):_vm._e(),(_vm.$store.state.mode)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-danger",modifiers:{"hover":true,"v-danger":true}}],attrs:{"variant":"outline-danger","title":"Supprimer le formulaire "},on:{"click":function($event){return _vm.deleteForm(form.id)}}},[_c('b-icon',{attrs:{"icon":"trash"}})],1):_vm._e()],1)],1)])}),(_vm.$store.state.mode)?_c('div',{staticClass:"block-plus",on:{"click":_vm.newForm}},[_c('div',{staticClass:"horiz"}),_c('div',{staticClass:"verti"}),_vm._m(0)]):_vm._e(),_c('AddEditForm')],2):_vm._e()],1)}
-var Listesfomes_itemsvue_type_template_id_6263923e_lang_html_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"block_desc"},[_c('span',[_vm._v("Nouveau Formulaire")])])}]
+var Listesfomes_itemsvue_type_template_id_0f6f0264_lang_html_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"block_desc"},[_c('span',[_vm._v("Nouveau Formulaire")])])}]
 
 
-// CONCATENATED MODULE: ./src/App/Listesfomes--items.vue?vue&type=template&id=6263923e&lang=html&
+// CONCATENATED MODULE: ./src/App/Listesfomes--items.vue?vue&type=template&id=0f6f0264&lang=html&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/ConfigsForms/AddEditForm.vue?vue&type=template&id=7f068a3c&scoped=true&lang=html&
-var AddEditFormvue_type_template_id_7f068a3c_scoped_true_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('b-modal',{ref:"modal",attrs:{"id":"add-edit-form","title":"Creer un nouveau formulaire","hide-footer":""},on:{"ok":_vm.handleOk}},[_c('form',{ref:"form",on:{"submit":_vm.handleSubmit}},[_c('b-row',{staticClass:"p-3"},[_c('b-col',{attrs:{"cols":"8"}},[_c('b-form-group',{attrs:{"label":"name","label-for":"name-input"}},[_c('b-form-input',{attrs:{"required":""},model:{value:(_vm.form.name),callback:function ($$v) {_vm.$set(_vm.form, "name", $$v)},expression:"form.name"}})],1)],1),_c('b-col',{attrs:{"cols":"8"}},[_c('b-form-group',{attrs:{"label":"Description","label-for":"description-input"}},[_c('b-form-textarea',{attrs:{"required":""},model:{value:(_vm.form.description),callback:function ($$v) {_vm.$set(_vm.form, "description", $$v)},expression:"form.description"}})],1)],1),_c('b-col',{attrs:{"cols":"12"}},[_c('b-form-group',{attrs:{"label":"image","label-for":"description-input"}},[_c('UploadImage',{attrs:{"field":_vm.form}})],1)],1)],1),_c('b-row',{attrs:{"align-h":"end"}},[_c('div',{staticClass:"mr-3"},[_c('b-button',{staticClass:"mr-2",attrs:{"type":"submit","variant":"primary"}},[_vm._v(" Ajouter ")])],1)])],1)])],1)}
-var AddEditFormvue_type_template_id_7f068a3c_scoped_true_lang_html_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/ConfigsForms/AddEditForm.vue?vue&type=template&id=7e18874a&scoped=true&lang=html&
+var AddEditFormvue_type_template_id_7e18874a_scoped_true_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('b-modal',{ref:"modal",attrs:{"id":"add-edit-form","title":"Creer un nouveau formulaire","hide-footer":""},on:{"ok":_vm.handleOk}},[_c('form',{ref:"form",on:{"submit":_vm.handleSubmit}},[_c('b-row',{staticClass:"p-3"},[_c('b-col',{attrs:{"cols":"8"}},[_c('b-form-group',{attrs:{"label":"name","label-for":"name-input"}},[_c('b-form-input',{attrs:{"required":""},model:{value:(_vm.form.name),callback:function ($$v) {_vm.$set(_vm.form, "name", $$v)},expression:"form.name"}})],1)],1),_c('b-col',{attrs:{"cols":"8"}},[_c('b-form-group',{attrs:{"label":"Description","label-for":"description-input"}},[_c('b-form-textarea',{attrs:{"required":""},model:{value:(_vm.form.description),callback:function ($$v) {_vm.$set(_vm.form, "description", $$v)},expression:"form.description"}})],1)],1),_c('b-col',{attrs:{"cols":"12"}},[_c('b-form-group',{attrs:{"label":"image","label-for":"description-input"}},[_c('UploadImage',{attrs:{"field":_vm.form}})],1)],1)],1),_c('b-row',{attrs:{"align-h":"end"}},[_c('div',{staticClass:"mr-3"},[_c('b-button',{staticClass:"mr-2",attrs:{"type":"submit","variant":"primary"}},[_vm._v(" Ajouter ")])],1)])],1)])],1)}
+var AddEditFormvue_type_template_id_7e18874a_scoped_true_lang_html_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/ConfigsForms/AddEditForm.vue?vue&type=template&id=7f068a3c&scoped=true&lang=html&
+// CONCATENATED MODULE: ./src/App/ConfigsForms/AddEditForm.vue?vue&type=template&id=7e18874a&scoped=true&lang=html&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/ConfigsForms/AddEditForm.vue?vue&type=script&lang=js&
 
@@ -67617,8 +67476,6 @@ var AddEditFormvue_type_template_id_7f068a3c_scoped_true_lang_html_staticRenderF
   computed: {},
   methods: {
     ev_manage_images_img: function ev_manage_images_img(data, form) {
-      console.log("file", data);
-
       if (data.url) {
         form.img = data.url;
       }
@@ -67657,11 +67514,11 @@ var AddEditFormvue_type_template_id_7f068a3c_scoped_true_lang_html_staticRenderF
 
 var AddEditForm_component = Object(componentNormalizer["a" /* default */])(
   ConfigsForms_AddEditFormvue_type_script_lang_js_,
-  AddEditFormvue_type_template_id_7f068a3c_scoped_true_lang_html_render,
-  AddEditFormvue_type_template_id_7f068a3c_scoped_true_lang_html_staticRenderFns,
+  AddEditFormvue_type_template_id_7e18874a_scoped_true_lang_html_render,
+  AddEditFormvue_type_template_id_7e18874a_scoped_true_lang_html_staticRenderFns,
   false,
   null,
-  "7f068a3c",
+  "7e18874a",
   null
   
 )
@@ -67886,11 +67743,7 @@ var loaderIcon = __webpack_require__("021a");
       });
       config["a" /* default */].bPost("/appformmanager/count-devis", payload, {}, false).then(function (resp) {
         if (resp.data.length) {
-          //console.log("resp.data ", resp.data);
           resp.data.forEach(function (item) {
-            // this.$set(form, "onWaitNumber", 0);
-            // this.$set(form, "onSave", 0);
-            // this.$set(form, "onCancel", 0);
             if (item.status === "0") {
               _this2.$set(form, "onWaitNumber", item.nombre);
             } else if (item.status === "1") {
@@ -67923,7 +67776,6 @@ var loaderIcon = __webpack_require__("021a");
       });
     },
     deleteForm: function deleteForm(id) {
-      console.log("object", id);
       config["a" /* default */].modalConfirmDelete().then(function (value) {
         if (value) {
           config["a" /* default */].deleteForm(id).then(function () {
@@ -67946,8 +67798,8 @@ var loaderIcon = __webpack_require__("021a");
 
 var Listesfomes_items_component = Object(componentNormalizer["a" /* default */])(
   App_Listesfomes_itemsvue_type_script_lang_js_,
-  Listesfomes_itemsvue_type_template_id_6263923e_lang_html_render,
-  Listesfomes_itemsvue_type_template_id_6263923e_lang_html_staticRenderFns,
+  Listesfomes_itemsvue_type_template_id_0f6f0264_lang_html_render,
+  Listesfomes_itemsvue_type_template_id_0f6f0264_lang_html_staticRenderFns,
   false,
   null,
   null,
@@ -68084,7 +67936,6 @@ function loadstyle(src) {
     s.setAttribute("href", src);
 
     s.onload = function () {
-      console.log("Chargement du Style ok : ", src);
       resolv(true);
     };
 
@@ -68278,39 +68129,6 @@ module.exports = fails(function () {
   forms: [],
 
   /**
-   * Selectionne la prochaine etape valide.
-   * @param forms array etape du formualire;
-   * @param i indice de letape encours.
-   */
-
-  /*
-  selectNextStateOld(forms, i) {
-    var j = i + 1;
-    this.forms = forms;
-    return new Promise(resolv => {
-      for (const k in this.forms) {
-        let kk = parseInt(k);
-        if (kk >= j) {
-          const form = this.forms[k];
-           this.validateState(form.states).then(rep => {
-            console.log("selectNextState : ", kk, " response : ", rep);
-            if (rep) resolv(kk);
-          });
-        }
-        var ii = kk + 1;
-        if (this.forms.length === ii) {
-          console.log("selectNextState END : ", kk);
-          resolv(null);
-        }
-      }
-      if (!forms) {
-        resolv(null);
-      }
-    });
-  },
-  /**/
-
-  /**
    * Selectionne l'indice de la prochaine etape valide.
    * @param forms array etape du formualire;
    * @param i indice de letape encours.
@@ -68327,7 +68145,6 @@ module.exports = fails(function () {
           }
 
           self.validateState(forms[j].states).then(function (rep) {
-            //console.log("selectNextState : ", j, " response : ", rep);
             if (rep) {
               resolv(j);
             } else {
@@ -68364,7 +68181,6 @@ module.exports = fails(function () {
                 if (field.name === state.name) {
                   // action à verifier
                   if (state.operator === "egal") {
-                    //console.log("state :: ", state.value, "\n", field.value);
                     if (field.value) {
                       resolv(field.value.includes(state.value) ? true : false);
                     } else {
@@ -68426,7 +68242,7 @@ module.exports = fails(function () {
 
             case 5:
               if ((_context.t1 = _context.t0()).done) {
-                _context.next = 30;
+                _context.next = 29;
                 break;
               }
 
@@ -68434,7 +68250,7 @@ module.exports = fails(function () {
               field = formDatas.fields[i];
 
               if (!field.prix) {
-                _context.next = 28;
+                _context.next = 27;
                 break;
               }
 
@@ -68466,17 +68282,17 @@ module.exports = fails(function () {
               }
 
             case 19:
-              _context.next = 28;
+              _context.next = 27;
               break;
 
             case 21:
               if (!(field.prix.complex_logique && field.prix.action === type_cout)) {
-                _context.next = 28;
+                _context.next = 27;
                 break;
               }
 
               if (!self) {
-                _context.next = 28;
+                _context.next = 27;
                 break;
               }
 
@@ -68485,17 +68301,16 @@ module.exports = fails(function () {
 
             case 25:
               datas_logique = _context.sent;
-              console.log(" Field.prix : ", datas_logique);
               price += parseInt(datas_logique);
 
-            case 28:
+            case 27:
               _context.next = 5;
               break;
 
-            case 30:
+            case 29:
               return _context.abrupt("return", price);
 
-            case 31:
+            case 30:
             case "end":
               return _context.stop();
           }
@@ -68584,8 +68399,7 @@ module.exports = fails(function () {
         var price = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
         return new Promise(function (resolv) {
           if (field.prix && (field.prix.action === type_cout || use) && field.status) {
-            var typeDatas = Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(field.value); //console.log("getPriceForField field : ", typeDatas);
-            // Cas des champs type selection.
+            var typeDatas = Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(field.value); // Cas des champs type selection.
 
 
             if (_App_config_config_js__WEBPACK_IMPORTED_MODULE_10__[/* default */ "a"].typeSelection.includes(field.type)) {
@@ -68618,8 +68432,6 @@ module.exports = fails(function () {
       execution().then(function (priceField) {
         if (!isNaN(priceField)) {
           priceFinal += priceField;
-        } else {
-          console.log("%c error du processus de calcul : " + field.name, "background: #222; color: #F00; font-size:15px;");
         }
 
         resolvParent(priceFinal);

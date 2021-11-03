@@ -58,12 +58,12 @@ module.exports = function from(arrayLike /* , mapfn = undefined, thisArg = undef
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/affichage/typeDisplays.vue?vue&type=template&id=e875de84&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/affichage/typeDisplays.vue?vue&type=template&id=31f1ca17&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"simple-champ",class:_vm.field.type},[_c('div',{staticClass:"label-title"},[_vm._v(_vm._s(_vm.field.label))]),(_vm.field.value)?_c('div',{staticClass:"label-title flex-wrap"},[_c(_vm.getTemplatesFiles(),{tag:"component",staticClass:"content-field",attrs:{"field":_vm.field,"currentDevis":_vm.currentDevis}})],1):_vm._e()])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/traitement/affichage/typeDisplays.vue?vue&type=template&id=e875de84&
+// CONCATENATED MODULE: ./src/App/traitement/affichage/typeDisplays.vue?vue&type=template&id=31f1ca17&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.symbol.js
 var es_symbol = __webpack_require__("a4d3");
@@ -218,7 +218,6 @@ var traitement_display = __webpack_require__("5784");
 
       for (var i = 0; i < option.length; i++) {
         if (typeValue == "object" && val !== null) {
-          //console.log("object", val);
           if (val.includes(option[i].value)) {
             valeur.push(option[i].text);
           }

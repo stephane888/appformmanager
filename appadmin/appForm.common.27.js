@@ -777,12 +777,12 @@ var double = {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/input/Checkbox.vue?vue&type=template&id=431ffb16&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/input/Checkbox.vue?vue&type=template&id=4f219d2e&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:!_vm.validationField && _vm.mode ? 'mb-5' : ''},[(_vm.validationField)?_c('transition',{attrs:{"name":"fade"}},[_c('div',{staticClass:"choice-section min-height"},[_c('b-row',[(!_vm.field.label_hidden === true)?_c('b-col',{staticClass:"text-left",attrs:{"cols":"12"}},[_c('p',{staticClass:"page-label"},[_vm._v(_vm._s(_vm.field.label))])]):_vm._e(),_c('ValidationProvider',{staticClass:"col-12 p-0",attrs:{"rules":_vm.field.require,"name":_vm.field.name},scopedSlots:_vm._u([{key:"default",fn:function(v){return [_c('b-form-checkbox-group',{attrs:{"name":_vm.field.name},on:{"change":_vm.changeValue},model:{value:(_vm.field.value),callback:function ($$v) {_vm.$set(_vm.field, "value", $$v)},expression:"field.value"}},_vm._l((_vm.field.options),function(item,i){return _c('b-col',{key:i,attrs:{"cols":"12"}},[_c('div',{staticClass:"input-list"},[_c('b-col',{staticClass:"\n                    input-list__label\n                    d-flex\n                    align-items-start\n                    flex-column\n                  ",attrs:{"sm":"11"}},[_c('label',{staticClass:"m-0 w-100",attrs:{"for":("checkbox-a" + (_vm.field.name) + i)}},[_vm._v(" "+_vm._s(item.text)+" ")])]),_c('b-col',{staticClass:"input-list__input"},[_c('b-form-checkbox',{attrs:{"id":("checkbox-a" + (_vm.field.name) + i),"size":"lg","value":item.value}})],1)],1)])}),1),_c('div',{staticClass:"text-danger"},_vm._l((v.errors),function(error,ii){return _c('small',{key:ii,staticClass:"d-block"},[_vm._v(" "+_vm._s(error)+" ")])}),0)]}}],null,false,460908928)})],1)],1)]):_vm._e()],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/input/Checkbox.vue?vue&type=template&id=431ffb16&
+// CONCATENATED MODULE: ./src/App/input/Checkbox.vue?vue&type=template&id=4f219d2e&
 
 // EXTERNAL MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js + 1 modules
 var objectSpread2 = __webpack_require__("f3f3");
@@ -890,8 +890,7 @@ var vee_validate_custom = __webpack_require__("b6d1");
       var status = true;
 
       if (this.field.states.length) {
-        status = validation["b" /* validationRessource */].computedValidation(this.formDatas, this.field, this.formDatasValidate); //console.log("update status : ", status);
-
+        status = validation["b" /* validationRessource */].computedValidation(this.formDatas, this.field, this.formDatasValidate);
         if (status === undefined || status === null) status = this.field.status !== undefined ? this.field.status : false;
         this.setStatus(status);
         return status;
@@ -1033,7 +1032,6 @@ var validationRessource = {
           var state = currentField.states[j]; // si le champs n'est pas definit on retourne false;
 
           if (formDatasValidate[state.name] === undefined) {
-            //console.log("Validation non forunit : ", formDatasValidate);
             return null;
           }
 
@@ -1041,14 +1039,6 @@ var validationRessource = {
             // visible
             if (state.action === "visible") {
               if (field.value === "" && state.operator === "not_empty") return false;else if (field.value !== "" && state.operator === "empty") return false;else if (state.operator === "validated" && formDatasValidate[field.name]) return formDatasValidate[field.name].valid;else if (state.operator === "egal") {
-                /*
-                console.log(
-                  "Valeur requise : ",
-                  state.value,
-                  " :: Valeur du parent",
-                  field.value
-                );
-                /**/
                 if (field.value) {
                   if (_config_js__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"].typeSelection.includes(field.type) && field.value.includes) {
                     return field.value.includes(state.value) ? true : false;
@@ -1085,7 +1075,6 @@ var validationRessource = {
     var etapes = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
 
     if (form && form.forms.length > 1) {
-      //console.log("listesEtapes ");
       for (var i in form.forms) {
         var currentForm = form.forms[i];
 
@@ -1134,7 +1123,6 @@ var ValidationInstance = /*#__PURE__*/function () {
         var currentForm = validationRessource.getFormStateByName(condition.state_name, form.forms);
 
         if (currentForm !== undefined) {
-          //console.log("listeDesChamps ", currentForm);
           for (var i in currentForm.fields) {
             var field = currentForm.fields[i];
 

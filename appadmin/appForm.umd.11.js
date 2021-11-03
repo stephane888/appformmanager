@@ -7,12 +7,12 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/EditFormDevis.vue?vue&type=template&id=1cee1594&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/EditFormDevis.vue?vue&type=template&id=3407c782&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('b-row',{attrs:{"align-h":"center"}},[(_vm.formDatas && _vm.formDatas.info)?_c('b-col',{attrs:{"cols":"12","lg":"12"}},[_c('div',[_c('title-bar',{attrs:{"conf":{ col: true, text: 'Configuration du formulaire' },"id":_vm.id}}),_c('nav-line',{attrs:{"taille":_vm.id}}),_c('loaderIcon',{attrs:{"busy":_vm.isComplete}}),(!_vm.isComplete)?_c('FormStep'):_vm._e()],1)]):_vm._e(),(_vm.$store.state.mode)?_c('b-col',{attrs:{"cols":"12","lg":"2"}},[_c('div',{staticClass:"block-button"},[_c('b-button',{directives:[{name:"b-modal",rawName:"v-b-modal.modal-prevent-closing",modifiers:{"modal-prevent-closing":true}}],staticClass:"shadow-md d-block w-100",attrs:{"variant":"light","squared":""}},[_vm._v(" Configuration ")]),_c('b-button',{staticClass:"shadow-md d-block w-100",attrs:{"squared":"","variant":"light"},on:{"click":_vm.clearFormDatas}},[_vm._v(" Ajouter une etape ")]),_c('b-button',{directives:[{name:"b-modal",rawName:"v-b-modal.re-order-stepes",modifiers:{"re-order-stepes":true}}],staticClass:"shadow-md d-block w-100",attrs:{"squared":"","variant":"light"}},[_vm._v(" Re-ordonner les etapes ")]),_c('b-button',{staticClass:"shadow-md d-block w-100",attrs:{"squared":"","variant":"secondary"},on:{"click":_vm.resetValue}},[_vm._v(" Reset value ")]),_c('b-button',{staticClass:"shadow-md d-block w-100",attrs:{"squared":"","variant":"success"},on:{"click":_vm.saveToLocal}},[_vm._v(" Enregistrer ")]),_c('b-button',{staticClass:"shadow-md d-block w-100",attrs:{"squared":"","variant":"dark"},on:{"click":_vm.exportJson}},[_vm._v(" Export to json ")]),_c('b-modal',{ref:"modal",attrs:{"id":"modal-prevent-closing","title":"Edition du formulaire","hide-footer":""},on:{"show":_vm.resetModal,"hidden":_vm.resetModal,"ok":_vm.handleOk}},[(_vm.formDatas && _vm.formDatas.info)?_c('form',{ref:"form",on:{"submit":_vm.handleSubmit,"reset":_vm.resetModal}},[_c('b-row',[_c('b-col',{attrs:{"cols":"8"}},[_c('b-form-group',{attrs:{"label":"name","label-for":"name-input"}},[_c('b-form-input',{attrs:{"id":"db-input","required":""},model:{value:(_vm.form.name),callback:function ($$v) {_vm.$set(_vm.form, "name", $$v)},expression:"form.name"}})],1)],1),_c('b-col',{attrs:{"cols":"8"}},[_c('b-form-group',{attrs:{"label":"Id","label-for":"description-input"}},[_c('b-form-input',{attrs:{"id":"desc-input-id"},model:{value:(_vm.form.id),callback:function ($$v) {_vm.$set(_vm.form, "id", $$v)},expression:"form.id"}})],1)],1),_c('b-col',{attrs:{"cols":"8"}},[_c('b-form-group',{attrs:{"label":"Description","label-for":"description-input"}},[_c('b-form-textarea',{attrs:{"id":"desc-input","required":""},model:{value:(_vm.form.description),callback:function ($$v) {_vm.$set(_vm.form, "description", $$v)},expression:"form.description"}})],1)],1),_c('b-col',{attrs:{"cols":"12"}},[_c('b-form-group',{attrs:{"label":"image","label-for":"description-input"}},[_c('UploadImage',{attrs:{"field":_vm.form}})],1)],1)],1),_c('hr',{staticClass:"my-3"}),_c('b-row',{attrs:{"align-h":"end"}},[_c('div',{staticClass:"mr-3"},[_c('b-button',{staticClass:"mr-2"},[_vm._v(" export ")]),_c('b-button',{staticClass:"mr-2",attrs:{"type":"submit","variant":"primary"}},[_vm._v(" Mise à jour ")])],1)])],1):_vm._e()])],1)]):_vm._e()],1),_c('reOrderStepes')],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/EditFormDevis.vue?vue&type=template&id=1cee1594&
+// CONCATENATED MODULE: ./src/App/EditFormDevis.vue?vue&type=template&id=3407c782&
 
 // EXTERNAL MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js + 1 modules
 var objectSpread2 = __webpack_require__("f3f3");
@@ -517,7 +517,7 @@ var loaderIcon = __webpack_require__("021a");
   computed: Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])({}, Object(vuex_esm["c" /* mapState */])(["stepsIndex", "allStepsDatas", "fields", "price", "mode", "priceAide", "items", "form"])), Object(vuex_esm["b" /* mapGetters */])(["formDatas"])), {}, {
     currentSteps: function currentSteps() {
       var local = localStorage.getItem("allo");
-      var recap = JSON.parse(local); //console.log("lo", recap);
+      var recap = JSON.parse(local);
 
       if (recap != null && recap.length) {
         return recap[this.stepsIndex];
@@ -527,7 +527,6 @@ var loaderIcon = __webpack_require__("021a");
       var so = this.datasBd;
 
       if (this.datasBd.length) {
-        console.log("object io", so[this.stepsId - 1]);
         return so[this.stepsId - 1];
       } else return "vide";
     },
@@ -543,32 +542,27 @@ var loaderIcon = __webpack_require__("021a");
     }
   }),
   methods: {
-    deleteSteps: function deleteSteps(datas) {
+    deleteSteps: function deleteSteps() {
       var all = this.$store.state.allStepsDatas;
       var r = all.indexOf(this.formDatas);
       this.$emit("index-to-delete", r);
-      console.log("de", datas);
 
       for (var i = all.length - 1; i >= 0; i--) {
         if (i === r) {
           all.splice(i, 1);
-          console.log("iiippp");
         }
       }
     },
     datasBdOrLocalStorage: function datasBdOrLocalStorage() {
       var local = localStorage.getItem("allo");
       var recap = JSON.parse(local);
-      console.log("loaaaa", recap);
 
       if (this.stepsDatas != "vide") {
         this.datasBase = this.stepsDatas;
-        console.log("aaa", this.datasBase);
         var rep = JSON.parse(this.datasBase.forms);
         this.$store.state.allStepsDatas = rep;
         this.$store.state.formDatas = this.allStepsDatas[this.stepsIndex];
       } else if (recap != null && recap.length) {
-        console.log("appppaaa", recap);
         this.$store.state.allStepsDatas = recap;
         this.$store.state.formDatas = this.allStepsDatas[this.stepsIndex];
       } else if (this.stepsDatas == "vide") {
@@ -588,8 +582,7 @@ var loaderIcon = __webpack_require__("021a");
       });
     },
     exportJson: function exportJson() {
-      var nameFile = window.prompt("Veuillez renseigner le nom du fichier", "test").toLowerCase(); // Console.log("name", nameFile + ".json");
-
+      var nameFile = window.prompt("Veuillez renseigner le nom du fichier", "test").toLowerCase();
       var data = JSON.stringify(this.form);
       var blob = new Blob([data], {
         type: "text/plain"

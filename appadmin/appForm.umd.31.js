@@ -7,12 +7,12 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/TraitementMyOwn.vue?vue&type=template&id=044326f8&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/TraitementMyOwn.vue?vue&type=template&id=74a40e92&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('b-container',{attrs:{"fluid":"md"}},[_c('div',[_c('title-bar',{attrs:{"conf":{ col: true, text: 'Mes Devis : ' + _vm.titreDevis },"id":_vm.id,"showDevis":false}})],1),_c('div',{staticClass:"appfom-container"},[_c('b-row',{attrs:{"align-h":"center"}},[_c('b-col',{attrs:{"cols":"12"}},[_c('listBlocks',{attrs:{"liste_fields_check":_vm.ListeFieldsCheck,"liste_fields_display":_vm.ListeFieldsDisplay,"totalRows":_vm.totalRows,"isBusy":_vm.isBusy,"perPage":_vm.perPage},on:{"ev-change-pagination":_vm.ChangePagination}})],1)],1)],1)])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/traitement/TraitementMyOwn.vue?vue&type=template&id=044326f8&
+// CONCATENATED MODULE: ./src/App/traitement/TraitementMyOwn.vue?vue&type=template&id=74a40e92&
 
 // EXTERNAL MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js + 1 modules
 var objectSpread2 = __webpack_require__("f3f3");
@@ -136,10 +136,10 @@ var listBlocks = __webpack_require__("8bba");
       }];
 
       for (var i in this.form.forms) {
-        var form = this.form.forms[i]; // console.log("etate : ", form.info.name, "\n\n");
+        var form = this.form.forms[i];
 
         for (var f in form.fields) {
-          var field = form.fields[f]; // console.log(field);
+          var field = form.fields[f];
 
           if (field.display_field) {
             fieldsDisplay.push({
@@ -171,16 +171,14 @@ var listBlocks = __webpack_require__("8bba");
     }
   }),
   methods: {
-    deleteSteps: function deleteSteps(datas) {
+    deleteSteps: function deleteSteps() {
       var all = this.$store.state.allStepsDatas;
       var r = all.indexOf(this.formDatas);
       this.$emit("index-to-delete", r);
-      console.log("de", datas);
 
       for (var i = all.length - 1; i >= 0; i--) {
         if (i === r) {
           all.splice(i, 1);
-          console.log("iiippp");
         }
       }
     },
@@ -255,8 +253,7 @@ var listBlocks = __webpack_require__("8bba");
         _this3.$store.dispatch("setFormId", _this3.id);
 
         _this3.isBusy = false;
-      }).catch(function (error) {
-        console.log("error", error);
+      }).catch(function () {
         _this3.isBusy = false;
       });
     },
