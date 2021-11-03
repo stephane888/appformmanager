@@ -87,7 +87,7 @@ module.exports =
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "css/" + ({}[chunkId]||chunkId) + "." + {"0":"f4f07acd","1":"dd816768","2":"5347cc27","3":"31d6cfe0","4":"1485a7b2","5":"945cb5cb","6":"31d6cfe0","7":"42efe657","9":"31d6cfe0","10":"e332f2ab","11":"442b78dd","12":"5f515804","13":"3def3390","14":"b2742065","15":"63248bb6","16":"dd3fcea7","17":"e5f1a246","18":"31d6cfe0","19":"31d6cfe0","20":"5451517c","21":"dd36f6dd","22":"dc3d54c9","23":"dc3d54c9","24":"31d6cfe0","25":"ac5b10c9","26":"42efe657","27":"31d6cfe0","28":"31d6cfe0","29":"31d6cfe0","30":"36d2244c","31":"36d2244c","32":"642d4926","33":"31d6cfe0","34":"31d6cfe0","35":"31d6cfe0","36":"31d6cfe0","37":"31d6cfe0","38":"31d6cfe0","39":"31d6cfe0","40":"31d6cfe0","41":"31d6cfe0","42":"31d6cfe0","43":"31d6cfe0","44":"31d6cfe0","45":"31d6cfe0"}[chunkId] + ".css";
+/******/ 				var href = "css/" + ({}[chunkId]||chunkId) + "." + {"0":"f4f07acd","1":"dd816768","2":"5347cc27","3":"31d6cfe0","4":"9c63d77e","5":"945cb5cb","6":"31d6cfe0","7":"42efe657","9":"31d6cfe0","10":"e332f2ab","11":"442b78dd","12":"5f515804","13":"3def3390","14":"b2742065","15":"63248bb6","16":"dd3fcea7","17":"e5f1a246","18":"31d6cfe0","19":"31d6cfe0","20":"5451517c","21":"dd36f6dd","22":"dc3d54c9","23":"dc3d54c9","24":"31d6cfe0","25":"ac5b10c9","26":"42efe657","27":"31d6cfe0","28":"31d6cfe0","29":"31d6cfe0","30":"36d2244c","31":"36d2244c","32":"642d4926","33":"31d6cfe0","34":"31d6cfe0","35":"31d6cfe0","36":"31d6cfe0","37":"31d6cfe0","38":"31d6cfe0","39":"31d6cfe0","40":"31d6cfe0","41":"31d6cfe0","42":"31d6cfe0","43":"31d6cfe0","44":"31d6cfe0","45":"31d6cfe0"}[chunkId] + ".css";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
@@ -67246,12 +67246,12 @@ var staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/App/Listesfomes.vue?vue&type=template&id=4d212df3&lang=html&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/Listesfomes--header.vue?vue&type=template&id=29f51adc&lang=html&
-var Listesfomes_headervue_type_template_id_29f51adc_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"block-header"},[_c('div',{staticClass:"config"},[(_vm.$store.state.mode)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-dark",modifiers:{"hover":true,"v-dark":true}}],staticClass:"config-btn",attrs:{"title":"Setting"},on:{"click":_vm.settingform}},[_c('b-icon',{staticClass:"setting-icon",attrs:{"icon":"gear"}})],1):_vm._e()],1),_c('div',{staticClass:"content"},[_c('h1',[_vm._v(_vm._s(_vm.pageInfo.title))]),(_vm.pageInfo.description && _vm.pageInfo.description !== '')?_c('p',{domProps:{"innerHTML":_vm._s(_vm.pageInfo.description)}}):_vm._e(),(_vm.pageInfo.video && _vm.pageInfo.video !== '')?_c('div',{staticClass:"link",on:{"click":_vm.showHideVideo}},[_c('span',{staticClass:"button-link",attrs:{"href":"#"}},[_c('span',[_vm._v(" Comment sa marche ? ")]),_c('b-icon',{staticClass:"ml-2 setting-icon",attrs:{"icon":_vm.pageInfo.showVideo ? 'arrow-up' : 'arrow-down'}})],1)]):_vm._e()]),_c('SettingForm')],1)}
-var Listesfomes_headervue_type_template_id_29f51adc_lang_html_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/Listesfomes--header.vue?vue&type=template&id=0453cdff&lang=html&
+var Listesfomes_headervue_type_template_id_0453cdff_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"block-header"},[_c('div',{staticClass:"config"},[_c('b-dropdown',{staticClass:"m-md-2",attrs:{"id":"dropdown-1","text":"Dashbord","right":""}},[_c('b-dropdown-item',[_c('router-link',{attrs:{"to":"/gestion-fields"}},[_vm._v(" Gestion des Champs ")])],1)],1),(_vm.$store.state.mode)?_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-dark",modifiers:{"hover":true,"v-dark":true}}],staticClass:"config-btn",attrs:{"title":"Setting"},on:{"click":_vm.settingform}},[_c('b-icon',{staticClass:"setting-icon",attrs:{"icon":"gear"}})],1):_vm._e()],1),_c('div',{staticClass:"content"},[_c('h1',[_vm._v(_vm._s(_vm.pageInfo.title))]),(_vm.pageInfo.description && _vm.pageInfo.description !== '')?_c('p',{domProps:{"innerHTML":_vm._s(_vm.pageInfo.description)}}):_vm._e(),(_vm.pageInfo.video && _vm.pageInfo.video !== '')?_c('div',{staticClass:"link",on:{"click":_vm.showHideVideo}},[_c('span',{staticClass:"button-link",attrs:{"href":"#"}},[_c('span',[_vm._v(" Comment sa marche ? ")]),_c('b-icon',{staticClass:"ml-2 setting-icon",attrs:{"icon":_vm.pageInfo.showVideo ? 'arrow-up' : 'arrow-down'}})],1)]):_vm._e()]),_c('SettingForm')],1)}
+var Listesfomes_headervue_type_template_id_0453cdff_lang_html_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/Listesfomes--header.vue?vue&type=template&id=29f51adc&lang=html&
+// CONCATENATED MODULE: ./src/App/Listesfomes--header.vue?vue&type=template&id=0453cdff&lang=html&
 
 // EXTERNAL MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js + 1 modules
 var objectSpread2 = __webpack_require__("f3f3");
@@ -67449,6 +67449,11 @@ var component = Object(componentNormalizer["a" /* default */])(
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ var Listesfomes_headervue_type_script_lang_js_ = ({
@@ -67496,8 +67501,8 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 var Listesfomes_header_component = Object(componentNormalizer["a" /* default */])(
   App_Listesfomes_headervue_type_script_lang_js_,
-  Listesfomes_headervue_type_template_id_29f51adc_lang_html_render,
-  Listesfomes_headervue_type_template_id_29f51adc_lang_html_staticRenderFns,
+  Listesfomes_headervue_type_template_id_0453cdff_lang_html_render,
+  Listesfomes_headervue_type_template_id_0453cdff_lang_html_staticRenderFns,
   false,
   null,
   null,
@@ -68011,7 +68016,7 @@ var routes = [{
   }
 }, {
   path: "/gestion-fields",
-  name: "Gestion des formulaires",
+  name: "Gestion des Champs",
   props: true,
   component: function component() {
     return __webpack_require__.e(/* import() */ 33).then(__webpack_require__.bind(null, "abee"));

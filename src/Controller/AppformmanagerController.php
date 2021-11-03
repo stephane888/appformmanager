@@ -140,7 +140,7 @@ class AppformmanagerController extends ControllerBase {
     // $formId = 13;
     $nbreSteps = 10;
     try {
-      $param = " select f.id,f.name,f.description, st.info,st.states,stf.defaultjson,stf.stepid,stf.label, af.jsonfield from `appformmanager_fomrs` as f ";
+      $param = " select f.id,f.name,f.description, st.info, st.states, stf.defaultjson,stf.stepid,stf.label, af.jsonfield from `appformmanager_fomrs` as f ";
       $param .= " inner join appformmanager_steps as st ON st.formid = f.id ";
       $param .= " inner join appformmanager_steps_fields as stf ON (stf.formid = f.id and st.stepid = stf.stepid) ";
       $param .= " left join appformmanager_fields as af ON (af.formid = f.id and af.machine_name = stf.machine_name) ";
@@ -398,7 +398,7 @@ class AppformmanagerController extends ControllerBase {
         $results[$field['stepid']] = $field;
         $results[$field['stepid']]['step'] = [
           'info' => Json::decode($field['info']),
-          'states' => [], // Json::decode($field['states']),
+          'states' => Json::decode($field['states']),
           'fields' => []
         ];
 
