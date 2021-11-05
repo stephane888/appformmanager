@@ -12,7 +12,7 @@ class Appformmanager {
    * @param array $filters
    * @throws \Exception
    */
-  public static function AddFilterByDomain(array &$filters = [], $columnDomain = 'domaineid', $preffix = null) {
+  static public function AddFilterByDomain(array &$filters = [], $columnDomain = 'domaineid', $preffix = null) {
     $account = \Drupal::currentUser();
     $roles = $account->getRoles();
     //
@@ -46,7 +46,7 @@ class Appformmanager {
    * @param array $filters
    * @throws \Exception
    */
-  public static function AddFilterByDomainOwn(array &$filters = [], $columnDomain = 'domaineid', $preffix = null) {
+  static public function AddFilterByDomainOwn(array &$filters = [], $columnDomain = 'domaineid', $preffix = null) {
     $account = \Drupal::currentUser();
     //
     $activeDomain = self::getActiveDomain();
@@ -69,7 +69,7 @@ class Appformmanager {
    *
    * @return NULL|string|number
    */
-  public static function getActiveDomain() {
+  static public function getActiveDomain() {
     // get current domaine id
     /** @var \Drupal\domain\Entity\Domain $active */
     $active = \Drupal::service('domain.negotiator')->getActiveDomain();
