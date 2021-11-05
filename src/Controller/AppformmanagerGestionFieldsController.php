@@ -35,6 +35,11 @@ class AppformmanagerGestionFieldsController extends ControllerBase {
     return new static($container->get('database'), $container->get('domain.element_manager'));
   }
 
+  /**
+   *
+   * @param Request $Request
+   * @return \Symfony\Component\HttpFoundation\JsonResponse
+   */
   function LoadFields(Request $Request) {
     $body = JSON::decode($Request->getContent());
     try {
@@ -58,6 +63,11 @@ class AppformmanagerGestionFieldsController extends ControllerBase {
     return $this->reponse($configs);
   }
 
+  /**
+   *
+   * @param Request $Request
+   * @return \Symfony\Component\HttpFoundation\JsonResponse
+   */
   function LoadFieldsDefault(Request $Request) {
     $body = JSON::decode($Request->getContent());
     try {

@@ -12,12 +12,12 @@ class Appformmanager {
    * @param array $filters
    * @throws \Exception
    */
-  public function AddFilterByDomain(array &$filters = [], $columnDomain = 'domaineid', $preffix = null) {
+  public static function AddFilterByDomain(array &$filters = [], $columnDomain = 'domaineid', $preffix = null) {
     $account = \Drupal::currentUser();
     $roles = $account->getRoles();
     //
     $activeDomain = self::getActiveDomain();
-    // si l'uilisateur administrateur il voit les devis en fonctions du domaine.
+    // Si l'uilisateur administrateur il voit les devis en fonctions du domaine.
     if (in_array('administrator', $roles)) {
       $filters['AND'][] = [
         'column' => $columnDomain,
@@ -35,7 +35,7 @@ class Appformmanager {
           'preffix' => $preffix
         ];
       } else {
-        throw new \Exception("Vous ne disposez pas de droit suffisant pour acceder à ces données ");
+        throw new \Exception(" Vous ne disposez pas de droit suffisant pour acceder à ces données ");
       }
     }
   }
@@ -46,7 +46,7 @@ class Appformmanager {
    * @param array $filters
    * @throws \Exception
    */
-  public function AddFilterByDomainOwn(array &$filters = [], $columnDomain = 'domaineid', $preffix = null) {
+  public static function AddFilterByDomainOwn(array &$filters = [], $columnDomain = 'domaineid', $preffix = null) {
     $account = \Drupal::currentUser();
     //
     $activeDomain = self::getActiveDomain();
