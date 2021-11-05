@@ -81,6 +81,23 @@ appformmanager.getdevis:
   requirements:
     _permission: 'appformmanager manage devis'
 
+#Recupere les champs pour gestion-fields
+appformmanager.getfields:
+  path: '/appformmanager/load-fields'
+  defaults:
+    _title: 'Travaux de renovations'
+    _controller: '\Drupal\appformmanager\Controller\AppformmanagerGestionFieldsController::LoadFields'
+  requirements:
+    _permission: 'access content'
+
+appformmanager.getfieldsDefault:
+  path: '/appformmanager/load-fields-default'
+  defaults:
+    _title: 'Travaux de renovations'
+    _controller: '\Drupal\appformmanager\Controller\AppformmanagerGestionFieldsController::LoadFieldsDefault'
+  requirements:
+    _permission: 'access content'
+
 appformmanager.getdevisOwn:
   path: '/appformmanager/getdevis-own/{pagination}/{perpage}'
   defaults:

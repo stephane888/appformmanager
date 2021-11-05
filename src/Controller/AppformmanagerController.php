@@ -11,8 +11,8 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Database\Connection;
 use Drupal\query_ajax\Services\InsertUpdate;
 use Query\Repositories\Utility as QueryUtility;
-use Drupal\domain\DomainInterface;
 use Drupal\domain\DomainElementManager;
+use Drupal\appformmanager\Appformmanager;
 
 /**
  * Returns responses for AppFormManager routes.
@@ -168,7 +168,7 @@ class AppformmanagerController extends ControllerBase {
       if (! empty($body['filters'])) {
         $filters = $body['filters'];
       }
-      $this->AddFilterByDomain($filters, "domaineid", "dv");
+      Appformmanager::AddFilterByDomain($filters, "domaineid", "dv");
       $param .= " where ";
       $param .= QueryUtility::buildFilterSql($filters);
       $param .= " order by dv.id DESC limit " . $perpage . " OFFSET " . $pagination * $perpage;
@@ -194,7 +194,7 @@ class AppformmanagerController extends ControllerBase {
       if (! empty($body['filters'])) {
         $filters = $body['filters'];
       }
-      $this->AddFilterByDomainOwn($filters, "domaineid", "dv");
+      Appformmanager::AddFilterByDomainOwn($filters, "domaineid", "dv");
       $param .= " where ";
       $param .= QueryUtility::buildFilterSql($filters);
       $param .= " order by dv.id DESC limit " . $perpage . " OFFSET " . $pagination * $perpage;
@@ -242,7 +242,7 @@ class AppformmanagerController extends ControllerBase {
       if (! empty($body['filters'])) {
         $filters = $body['filters'];
       }
-      $this->AddFilterByDomain($filters);
+      Appformmanager::AddFilterByDomain($filters);
       $filtersString = QueryUtility::buildFilterSql($filters);
       if (! empty($filtersString)) {
         $param .= " where ";
@@ -272,7 +272,7 @@ class AppformmanagerController extends ControllerBase {
       if (! empty($body['filters'])) {
         $filters = $body['filters'];
       }
-      $this->AddFilterByDomainOwn($filters);
+      Appformmanager::AddFilterByDomainOwn($filters);
       $filtersString = QueryUtility::buildFilterSql($filters);
       if (! empty($filtersString)) {
         $param .= " where ";
@@ -286,64 +286,6 @@ class AppformmanagerController extends ControllerBase {
       return $this->reponse($param, 409, urlencode($e->getMessage()));
     }
     return $this->reponse($configs);
-  }
-
-  /**
-   * Permet de se rassurer que l'utilisateur a le droit de voir les données de ce domaine.
-   *
-   * @param array $filters
-   * @throws \Exception
-   */
-  protected function AddFilterByDomain(array &$filters = [], $columnDomain = 'domaineid', $preffix = null) {
-    $account = \Drupal::currentUser();
-    $roles = $account->getRoles();
-    //
-    $activeDomain = $this->getActiveDomain();
-    // si l'uilisateur administrateur il voit les devis en fonctions du domaine.
-    if (in_array('administrator', $roles)) {
-      $filters['AND'][] = [
-        'column' => $columnDomain,
-        'value' => $activeDomain,
-        'preffix' => $preffix
-      ];
-    } // L'utilisateur doit etre membre du Domain administrator(field_domain_admin).
-    else {
-      $user = \Drupal\user\Entity\User::load($account->id());
-      $allowed = $this->DomainElementManager->getFieldValues($user, DomainInterface::DOMAIN_ADMIN_FIELD);
-      if (! empty($allowed[$activeDomain])) {
-        $filters['AND'][] = [
-          'column' => $columnDomain,
-          'value' => $activeDomain,
-          'preffix' => $preffix
-        ];
-      } else {
-        throw new \Exception("Vous ne disposez pas de droit suffisant pour acceder à ces données ");
-      }
-    }
-  }
-
-  /**
-   * Permet de se rassurer que l'utilisateur a le droit de voir les données de ce domaine.
-   *
-   * @param array $filters
-   * @throws \Exception
-   */
-  protected function AddFilterByDomainOwn(array &$filters = [], $columnDomain = 'domaineid', $preffix = null) {
-    $account = \Drupal::currentUser();
-    //
-    $activeDomain = $this->getActiveDomain();
-    // les données doivent appartenir au domaine encours.
-    $filters['AND'][] = [
-      'column' => $columnDomain,
-      'value' => $activeDomain,
-      'preffix' => $preffix
-    ];
-    // les données doivent appartenir à l'utilisateur connecté.
-    $filters['AND'][] = [
-      'column' => 'uid',
-      'value' => $account->id(),
-      'preffix' => $preffix
-    ];
   }
 
   /**
@@ -365,30 +307,11 @@ class AppformmanagerController extends ControllerBase {
        * On ajoute les informations du domaine actif;
        */
       if ($table['table'] == "appformmanager_datas") {
-        $payLoad[$key]['fields']['domaineid'] = $this->getActiveDomain();
+        $payLoad[$key]['fields']['domaineid'] = Appformmanager::getActiveDomain();
       }
     }
     $configs = $this->InsertUpdate->buildInserts($payLoad);
     return $this->reponse($configs, $this->InsertUpdate->AjaxStatus->getCode(), $this->InsertUpdate->AjaxStatus->getMessage());
-  }
-
-  /**
-   * Recupere l'id du domaine actif.
-   *
-   * @return NULL|string|number
-   */
-  protected function getActiveDomain() {
-
-    // get current domaine id
-    /** @var \Drupal\domain\Entity\Domain $active */
-    $active = \Drupal::service('domain.negotiator')->getActiveDomain();
-    $id = null;
-    if (empty($active)) {
-      $active = \Drupal::entityTypeManager()->getStorage('domain')->loadDefaultDomain();
-    }
-    if (! empty($active))
-      $id = $active->id();
-    return $id;
   }
 
   protected function retrieveDatas(array $fields) {

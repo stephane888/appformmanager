@@ -198,8 +198,9 @@ var config = __webpack_require__("f158");
   mutations: {
     SET_FIELDS: function SET_FIELDS(state, fields) {
       fields.forEach(function (item) {
-        state.fields.push(Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])({}, JSON.parse(item.jsonfield)), {}, {
-          id: item.id
+        state.fields.push(Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])({}, item.jsonfield), {}, {
+          id: item.id,
+          stepes: item.stepes
         }));
       });
     },
@@ -218,12 +219,27 @@ var config = __webpack_require__("f158");
           dispatch = _ref.dispatch;
       state.loaders.GestionField = true;
       state.loaders.GestionFieldFiltre = true;
-      state.fields = [];
-      var datas = " select * from `appformmanager_fields` as f ";
+      state.fields = []; // var datas =
+      //   " select f.id, f.machine_name, f.formid, f.jsonfield, f.uid, aps.info  from `appformmanager_fields` as f ";
+      // datas +=
+      //   " left join `appformmanager_steps_fields` as apsf ON apsf.formid = f.formid and apsf.machine_name = f.machine_name ";
+      // datas +=
+      //   " left join `appformmanager_steps` as aps ON aps.stepid = apsf.stepid ";
 
       if (state.filtre.formid) {
-        datas += " where f.formid='" + state.filtre.formid + "' order by f.id DESC ";
-        return config["a" /* default */].getData(datas).then(function (r) {
+        // datas +=
+        //   " where f.formid='" + state.filtre.formid + "' order by f.id DESC ";
+        var payload = {
+          filters: {
+            AND: []
+          }
+        };
+        payload.filters.AND.push({
+          column: "formid",
+          value: state.filtre.formid,
+          preffix: "f"
+        });
+        return config["a" /* default */].bPost("/appformmanager/load-fields", payload).then(function (r) {
           commit("SET_FIELDS", r.data);
           state.loaders.GestionField = false;
           dispatch("GetFieldsDefault");
@@ -235,14 +251,29 @@ var config = __webpack_require__("f158");
     },
     GetFieldsDefault: function GetFieldsDefault(_ref2) {
       var state = _ref2.state;
-      var datas = " select f.defaultjson from `appformmanager_steps_fields` as f ";
 
+      // var datas =
+      //   " select f.defaultjson from `appformmanager_steps_fields` as f ";
       if (state.filtre.formid !== "") {
-        datas += " where f.defaultjson is not null and f.formid=" + state.filtre.formid + "  order by f.stepid ASC  ";
-        return config["a" /* default */].getData(datas).then(function (r) {
+        // datas +=
+        //   " where f.defaultjson is not null and f.formid=" +
+        //   state.filtre.formid +
+        //   "  order by f.stepid ASC  ";
+        var payload = {
+          filters: {
+            AND: []
+          }
+        };
+        payload.filters.AND.push({
+          column: "formid",
+          value: state.filtre.formid,
+          preffix: "f"
+        });
+        return config["a" /* default */].bPost("/appformmanager/load-fields-default", payload).then(function (r) {
           r.data.forEach(function (item) {
-            state.fields.push(Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])({}, JSON.parse(item.defaultjson)), {}, {
-              formid: state.filtre.formid
+            state.fields.push(Object(objectSpread2["a" /* default */])(Object(objectSpread2["a" /* default */])({}, item.defaultjson), {}, {
+              formid: state.filtre.formid,
+              stepes: item.stepes
             }));
           });
           state.loaders.GestionFieldFiltre = false;
@@ -284,13 +315,13 @@ var config = __webpack_require__("f158");
     // on doit charge le sous module vuex avant l'execution de ce dernier.
     Filtre: function Filtre() {
       return new Promise(function (resolv) {
-        resolv(Promise.all(/* import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(22)]).then(__webpack_require__.bind(null, "70f9")));
+        resolv(Promise.all(/* import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(23)]).then(__webpack_require__.bind(null, "70f9")));
       });
     },
     // on doit charge le sous module vuex avant l'execution de ce dernier.
     tableauChamps: function tableauChamps() {
       return new Promise(function (resolv) {
-        resolv(Promise.all(/* import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(23)]).then(__webpack_require__.bind(null, "f28f")));
+        resolv(Promise.all(/* import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(9)]).then(__webpack_require__.bind(null, "f28f")));
       });
     }
   },
