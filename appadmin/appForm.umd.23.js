@@ -16,12 +16,12 @@
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/gestions-chemps/Addfield.vue?vue&type=template&id=fe9413d8&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/gestions-chemps/Addfield.vue?vue&type=template&id=616b48e3&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('b-modal',{attrs:{"size":"lg","id":'modal-addForm--' + _vm.idModal,"title":"Ajouter un champs dans le gestionnaire de champs","hide-footer":"","content-class":['mange-add-field']},on:{"ok":_vm.handleOk}},[_c('loaderIcon',{attrs:{"busy":_vm.busy}}),_c('form',{ref:"forme",on:{"submit":_vm.handleSubmit,"reset":_vm.resetModal,"hidden":_vm.resetModal}},[_c('b-row',[_c('b-col',{attrs:{"cols":"6"}},[_c('b-form-group',{attrs:{"label":"Sélectionner un model de base","label-for":"type-input","invalid-feedback":"type is required"}},[_c('b-form-select',{attrs:{"options":_vm.typeOptions,"id":"type-input","required":""},model:{value:(_vm.field.type),callback:function ($$v) {_vm.$set(_vm.field, "type", $$v)},expression:"field.type"}})],1)],1),_c('b-col',{attrs:{"cols":"6"}},[_c('b-form-group',{attrs:{"label":"Accosier à un formulaire","label-for":"type-input","invalid-feedback":"type is required","description":"Cela permet de grouper ce champs avec le formulaire selectionné"}},[_c('b-form-select',{attrs:{"options":_vm.listForms,"disabled":_vm.defaultFormid !== '' ? true : false,"id":"type-input-2","required":""},model:{value:(_vm.field.formid),callback:function ($$v) {_vm.$set(_vm.field, "formid", $$v)},expression:"field.formid"}})],1)],1)],1),_c('input-option-form',{staticClass:"content-config-field",attrs:{"type":_vm.field.type,"field":_vm.field}}),_c('b-row',{attrs:{"align-h":"end"}},[_c('div',{staticClass:"mt-3 mx-3"},[_c('b-button',{staticClass:"mr-2",attrs:{"type":"submit","variant":"primary","disabled":_vm.field.name.length > 2 ? false : true}},[_vm._v(" "+_vm._s(_vm.nameButtonOk)+" ")])],1)])],1),_c('pre',[_vm._v(" field : "+_vm._s(_vm.field)+" ")])],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/gestions-chemps/Addfield.vue?vue&type=template&id=fe9413d8&
+// CONCATENATED MODULE: ./src/App/gestions-chemps/Addfield.vue?vue&type=template&id=616b48e3&
 
 // EXTERNAL MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js + 1 modules
 var objectSpread2 = __webpack_require__("f3f3");
@@ -208,7 +208,6 @@ var config = __webpack_require__("f158");
       event.preventDefault();
       config["a" /* default */].prepareFieldToSave(this.field, this.uid).then(function (datas) {
         config["a" /* default */].saveForm(datas).then(function (resp) {
-          console.log("resp : ", resp, " \n datas : ", datas);
           datas.forEach(function (tb) {
             if (tb.table == "appformmanager_fields") {
               if (!tb.where) {

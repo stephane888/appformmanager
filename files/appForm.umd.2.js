@@ -149,12 +149,12 @@ var objectSpread2 = __webpack_require__("f3f3");
 // EXTERNAL MODULE: ./node_modules/vuex/dist/vuex.esm.js
 var vuex_esm = __webpack_require__("2f62");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/FormStep.vue?vue&type=template&id=39c617e4&
-var FormStepvue_type_template_id_39c617e4_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"element-center full-block"},[_c('div',{staticClass:"choice-section text-right"},[_c('b-row',{attrs:{"align-h":"end"}},[_c('b-col',[_c('p',{staticClass:"button-travaux"},[_c('a',{attrs:{"href":"/node/52"}},[_vm._v("Tous les travaux")])])])],1),(_vm.mode)?_c('b-button-group',{staticClass:"boutton-absolute"},[_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-info",modifiers:{"hover":true,"v-info":true}}],attrs:{"variant":"outline-info","size":"md","title":"Ajouter un champs"},on:{"click":_vm.addFormField}},[_c('b-icon',{staticStyle:{"font-size":"1.5rem"},attrs:{"icon":"plus"}})],1),_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-success",modifiers:{"hover":true,"v-success":true}}],attrs:{"variant":"outline-success","size":"md","title":"Editer le formulaire"},on:{"click":_vm.configSteps}},[_c('b-icon',{attrs:{"icon":"pencil"}})],1),_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-danger",modifiers:{"hover":true,"v-danger":true}}],attrs:{"variant":"outline-danger","size":"md","title":"Suprimer le formulaire"},on:{"click":_vm.deleteSteps}},[_c('b-icon',{attrs:{"icon":"trash"}})],1),_c('b-button',{directives:[{name:"b-modal",rawName:"v-b-modal.clone-current-stepe",modifiers:{"clone-current-stepe":true}},{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-secondary",modifiers:{"hover":true,"v-secondary":true}}],attrs:{"variant":"outline-secondary","size":"md","title":"cloner l'etape"}},[_c('b-icon',{attrs:{"icon":"clipboard-plus"}})],1)],1):_vm._e()],1),_c('forms'),(_vm.mode)?_c('div',[_c('add-form-field',{attrs:{"isOpen":_vm.modalFormFieldIsOpen,"nouveau":true,"id-modal":'form-step',"field":_vm.field},on:{"update_current_field":_vm.update_current_field}}),_c('StepConfiguration',{ref:"StepConfiguration"}),_c('cloneCurrentStepe')],1):_vm._e()],1)}
-var FormStepvue_type_template_id_39c617e4_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/FormStep.vue?vue&type=template&id=1d398994&
+var FormStepvue_type_template_id_1d398994_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"element-center full-block"},[_c('div',{staticClass:"choice-section text-right"},[_c('b-row',{attrs:{"align-h":"end"}},[_c('b-col',[_c('p',{staticClass:"button-travaux"},[_c('a',{attrs:{"href":"/node/52"}},[_vm._v("Tous les travaux")])])])],1),(_vm.mode)?_c('b-button-group',{staticClass:"boutton-absolute"},[_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-info",modifiers:{"hover":true,"v-info":true}}],attrs:{"variant":"outline-info","size":"md","title":"Ajouter un champs"},on:{"click":_vm.addFormField}},[_c('b-icon',{staticStyle:{"font-size":"1.5rem"},attrs:{"icon":"plus"}})],1),_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-success",modifiers:{"hover":true,"v-success":true}}],attrs:{"variant":"outline-success","size":"md","title":"Editer le formulaire"},on:{"click":_vm.configSteps}},[_c('b-icon',{attrs:{"icon":"pencil"}})],1),_c('b-button',{directives:[{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-danger",modifiers:{"hover":true,"v-danger":true}}],attrs:{"variant":"outline-danger","size":"md","title":"Suprimer le formulaire"},on:{"click":_vm.deleteSteps}},[_c('b-icon',{attrs:{"icon":"trash"}})],1),_c('b-button',{directives:[{name:"b-modal",rawName:"v-b-modal.clone-current-stepe",modifiers:{"clone-current-stepe":true}},{name:"b-tooltip",rawName:"v-b-tooltip.hover.v-secondary",modifiers:{"hover":true,"v-secondary":true}}],attrs:{"variant":"outline-secondary","size":"md","title":"cloner l'etape"}},[_c('b-icon',{attrs:{"icon":"clipboard-plus"}})],1)],1):_vm._e()],1),_c('forms'),_c('pre',[_vm._v(" price : "+_vm._s(_vm.$store.state.price)+" ")]),(_vm.mode)?_c('div',[_c('add-form-field',{attrs:{"isOpen":_vm.modalFormFieldIsOpen,"nouveau":true,"id-modal":'form-step',"field":_vm.field},on:{"update_current_field":_vm.update_current_field}}),_c('StepConfiguration',{ref:"StepConfiguration"}),_c('cloneCurrentStepe')],1):_vm._e()],1)}
+var FormStepvue_type_template_id_1d398994_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/FormStep.vue?vue&type=template&id=39c617e4&
+// CONCATENATED MODULE: ./src/App/FormStep.vue?vue&type=template&id=1d398994&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.iterator.js
 var es_array_iterator = __webpack_require__("e260");
@@ -173,6 +173,12 @@ var web_dom_collections_iterator = __webpack_require__("ddb0");
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.splice.js
 var es_array_splice = __webpack_require__("a434");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
+var es_function_name = __webpack_require__("b0c0");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-collections.for-each.js
+var web_dom_collections_for_each = __webpack_require__("159b");
 
 // EXTERNAL MODULE: ./src/App/Utilities.js
 var Utilities = __webpack_require__("2c10");
@@ -362,17 +368,17 @@ var es_number_constructor = __webpack_require__("a9e3");
 /* harmony default export */ var displayFieldsvue_type_script_lang_js_ = ({
   components: {
     ImageCheck: function ImageCheck() {
-      return __webpack_require__.e(/* import() */ 4).then(__webpack_require__.bind(null, "820b"));
+      return __webpack_require__.e(/* import() */ 5).then(__webpack_require__.bind(null, "820b"));
     },
     IncrementNumber: function IncrementNumber() {
-      return __webpack_require__.e(/* import() */ 5).then(__webpack_require__.bind(null, "1ad8"));
+      return __webpack_require__.e(/* import() */ 6).then(__webpack_require__.bind(null, "1ad8"));
     },
     //InputText: () => import("./input/InputText.vue"),
     autocomplete: function autocomplete() {
       return Promise.all(/* import() */[__webpack_require__.e(15), __webpack_require__.e(22)]).then(__webpack_require__.bind(null, "fd80"));
     },
     Radio: function Radio() {
-      return __webpack_require__.e(/* import() */ 10).then(__webpack_require__.bind(null, "8bfb"));
+      return __webpack_require__.e(/* import() */ 3).then(__webpack_require__.bind(null, "8bfb"));
     },
     RadioDesc: function RadioDesc() {
       return __webpack_require__.e(/* import() */ 20).then(__webpack_require__.bind(null, "795e"));
@@ -381,22 +387,22 @@ var es_number_constructor = __webpack_require__("a9e3");
       return __webpack_require__.e(/* import() */ 19).then(__webpack_require__.bind(null, "7f81"));
     },
     LabelRow: function LabelRow() {
-      return __webpack_require__.e(/* import() */ 6).then(__webpack_require__.bind(null, "ab64"));
+      return __webpack_require__.e(/* import() */ 7).then(__webpack_require__.bind(null, "ab64"));
     },
     SelectDisplay: function SelectDisplay() {
       return __webpack_require__.e(/* import() */ 21).then(__webpack_require__.bind(null, "1d25"));
     },
     MarkupTitle: function MarkupTitle() {
-      return __webpack_require__.e(/* import() */ 9).then(__webpack_require__.bind(null, "725b"));
+      return __webpack_require__.e(/* import() */ 10).then(__webpack_require__.bind(null, "725b"));
     },
     MarkupImage: function MarkupImage() {
-      return __webpack_require__.e(/* import() */ 8).then(__webpack_require__.bind(null, "1c8e"));
+      return __webpack_require__.e(/* import() */ 9).then(__webpack_require__.bind(null, "1c8e"));
     },
     files: function files() {
       return Promise.all(/* import() */[__webpack_require__.e(0), __webpack_require__.e(17)]).then(__webpack_require__.bind(null, "65db"));
     },
     LabelUp: function LabelUp() {
-      return __webpack_require__.e(/* import() */ 7).then(__webpack_require__.bind(null, "cc4c"));
+      return __webpack_require__.e(/* import() */ 8).then(__webpack_require__.bind(null, "cc4c"));
     },
     recapitulatif: function recapitulatif() {
       return __webpack_require__.e(/* import() */ 11).then(__webpack_require__.bind(null, "1247"));
@@ -717,6 +723,9 @@ var forms_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var input_forms = (forms_component.exports);
+// EXTERNAL MODULE: ./src/App/config/config.js
+var config = __webpack_require__("f158");
+
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/FormStep.vue?vue&type=script&lang=js&
 
 
@@ -725,6 +734,8 @@ var forms_component = Object(componentNormalizer["a" /* default */])(
 
 
 
+
+
 //
 //
 //
@@ -791,6 +802,8 @@ var forms_component = Object(componentNormalizer["a" /* default */])(
 //
 //
 //
+//
+
 
 
 
@@ -842,16 +855,58 @@ var forms_component = Object(componentNormalizer["a" /* default */])(
   }),
   methods: {
     deleteSteps: function deleteSteps() {
-      var all = this.$store.getters.form.forms;
-      var r = all.indexOf(this.formDatas);
+      var _this = this;
 
-      for (var i = all.length - 1; i >= 0; i--) {
-        if (i === r) {
-          all.splice(i, 1);
-          this.$store.state.stepsIndex = this.form.forms.length - 1;
+      var stapes = this.$store.state.form.forms;
+
+      var delStep = function delStep() {
+        for (var i = stapes.length - 1; i >= 0; i--) {
+          if (i === r) {
+            stapes.splice(i, 1); // si cest le dernier element, on remet à zero.
+
+            if (stapes.length < _this.$store.state.stepsIndex) {
+              _this.$store.state.stepsIndex = 0;
+            }
+          }
         }
-      } //this.$store.dispatch("deleteStepsInAllSteps");
+      };
 
+      var r = stapes.indexOf(this.formDatas);
+      var key_step = this.formDatas.info.name;
+      this.StepHasChildren(key_step).then(function (r) {
+        if (r) {
+          config["a" /* default */].modalConfirmDelete("Cette etape contient des etapes enfant, souhaitez vous vraiment la supprimer ?").then(function () {
+            delStep();
+          });
+        } else {
+          delStep();
+        }
+      });
+    },
+
+    /**
+     * Determine si l'etape contient une etape enfant
+     */
+    StepHasChildren: function StepHasChildren(key_step) {
+      var _this2 = this;
+
+      return new Promise(function (resolv) {
+        var stepes = _this2.$store.state.form.forms;
+
+        for (var i in stepes) {
+          var step = stepes[i];
+          if (step.states && step.states.length) step.states.forEach(function (item) {
+            if (key_step == item.state_name) {
+              resolv(true);
+            }
+          });
+          var ii = parseInt(i) + 1;
+
+          if (stepes.length == ii) {
+            resolv(false);
+          }
+        }
+      });
     },
     addFormField: function addFormField() {
       var idModel = "modal-addForm--form-step";
@@ -886,8 +941,8 @@ var forms_component = Object(componentNormalizer["a" /* default */])(
 
 var FormStep_component = Object(componentNormalizer["a" /* default */])(
   App_FormStepvue_type_script_lang_js_,
-  FormStepvue_type_template_id_39c617e4_render,
-  FormStepvue_type_template_id_39c617e4_staticRenderFns,
+  FormStepvue_type_template_id_1d398994_render,
+  FormStepvue_type_template_id_1d398994_staticRenderFns,
   false,
   null,
   null,
