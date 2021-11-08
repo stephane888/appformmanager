@@ -68137,17 +68137,23 @@ module.exports = fails(function () {
     return new Promise(function (resolvParent) {
       var loop = function loop(j) {
         return new Promise(function (resolv) {
+          console.log("etape en cours : ", j, " : ", forms[j].info);
+
           if (!forms[j]) {
             resolv(null);
           }
 
-          self.validateState(forms[j].states).then(function (rep) {
+          if (forms[j].states && forms[j].states.length > 0) self.validateState(forms[j].states).then(function (rep) {
+            console.log(" Status final de validation : ", rep);
+
             if (rep) {
               resolv(j);
             } else {
-              resolv(loop(j + 1));
+              var ii = j + 1;
+              console.log(" Passage à letape suivante ", ii);
+              resolv(loop(ii));
             }
-          });
+          });else resolv(j);
         });
       };
 
@@ -68156,13 +68162,20 @@ module.exports = fails(function () {
       });
     });
   },
-  validateState: function validateState(states) {
+
+  /**
+   * Validation des conditions.
+   * @param {*} states
+   * @returns
+   */
+  validateStateNone: function validateStateNone(states) {
     var _this = this;
 
     return new Promise(function (resolv) {
-      if (!states || states.length === 0) resolv(true);
+      if (!states || states.length === 0) resolv(true); // On parcourt toutes les etapes.
 
       for (var k in _this.forms) {
+        // On recupere la premiere etape et on verifie si on doit l'afficher ou pas.
         var form = _this.forms[k];
 
         for (var s in states) {
@@ -68176,10 +68189,13 @@ module.exports = fails(function () {
                 var field = form.fields[f]; // Identification du champs.
 
                 if (field.name === state.name) {
-                  // action à verifier
+                  // Action à verifier
                   if (state.operator === "egal") {
                     if (field.value) {
-                      resolv(field.value.includes(state.value) ? true : false);
+                      console.log(field.name + " : valeur : " + field.value, " \n condition à valider : ", state.value);
+                      var staValidation = field.value.includes(state.value);
+                      console.log(" Condition de validation : ", staValidation, "\n ");
+                      resolv(staValidation);
                     } else {
                       resolv(false);
                     }
@@ -68198,6 +68214,98 @@ module.exports = fails(function () {
           resolv(true);
         }
       }
+    });
+  },
+
+  /**
+   * Validation des conditions.
+   * @param {*} states
+   * @returns
+   */
+  validateState: function validateState(states) {
+    var _this2 = this;
+
+    return new Promise(function (resolvPrent) {
+      if (!states || states.length === 0) resolvPrent(true);
+
+      var loopSteps = function loopSteps(key) {
+        return new Promise(function (resolv) {
+          console.log("loopSteps : ", key, " : ", states[key]);
+          var state = states[key];
+          if (!state) resolv(false);
+
+          if (state.action === "visible") {
+            //on parcourt chaque etape dans le but de recherche si ce cette etape corrospont à celui definit dans states.
+            var loopFomrs = function loopFomrs(k) {
+              return new Promise(function (resolvForms) {
+                var form = _this2.forms[k];
+
+                if (form.info.name === state.state_name) {
+                  console.log("check 1"); // si dans l'etape, il nya pas de champs, on renvoit false;
+
+                  if (!form.fields || form.fields.length === 0) resolvForms(true); // Recherche du champs.
+
+                  for (var f in form.fields) {
+                    var field = form.fields[f]; // Identification du champs.
+
+                    if (field.name === state.name) {
+                      console.log("check 2"); // Action à verifier
+
+                      if (state.operator === "egal") {
+                        if (field.value) {
+                          console.log(field.name + " : valeur : " + field.value, " \n condition à valider : ", state.value);
+                          var staValidation = field.value.includes(state.value);
+                          console.log(" Condition de validation : ", staValidation, "\n KEY : ", key); // on renvoit le status.
+
+                          resolvForms(staValidation);
+                        } else {
+                          console.log("field.value false");
+                          resolvForms(false);
+                        }
+                      } else {
+                        resolvForms(false);
+                        break;
+                      } // si on a un champs qui correspond, on ne verifie plus les autres champs.
+
+
+                      break;
+                    } else {
+                      // si on a parcourut tous les champs sans trouvé d'elment correspondant, on renvoit false.
+                      var ff = parseInt(f) + 1;
+
+                      if (ff >= form.fields.length) {
+                        resolvForms(false);
+                      }
+                    }
+                  }
+                } // si ces pas le bonne on passe à l'etape suivnte
+                else {
+                  if (_this2.forms.length > k + 1) {
+                    resolvForms(loopFomrs(k + 1));
+                  } // si cest la derniere on renvoit null
+                  else {
+                    resolvForms(false);
+                  }
+                }
+              });
+            };
+
+            loopFomrs(0).then(function (StatusForm) {
+              // si cette condition est validé, on passe à la condition suivante.(sauf s'il nya pas d'etape suivante.)
+              if (StatusForm) {
+                if (states[key + 1]) {
+                  resolv(loopSteps(key + 1));
+                } else resolv(StatusForm);
+              } // Si l'etape n'est pas validé, pas besoin de regarder la suite.
+              else resolv(StatusForm);
+            });
+          } else resolv(false);
+        });
+      };
+
+      loopSteps(0).then(function (status) {
+        resolvPrent(status);
+      });
     });
   },
   getFieldInForms: function getFieldInForms(state_name, field_name) {
@@ -68222,7 +68330,7 @@ module.exports = fails(function () {
    */
   getPriceStape: function getPriceStape(formDatas, forms) {
     var _arguments = arguments,
-        _this2 = this;
+        _this3 = this;
 
     return Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
       var type_cout, self, price, i, field, priceCurrentField, price2, datas_logique;
@@ -68231,9 +68339,9 @@ module.exports = fails(function () {
           switch (_context.prev = _context.next) {
             case 0:
               type_cout = _arguments.length > 2 && _arguments[2] !== undefined ? _arguments[2] : "prix_utilisables";
-              self = _this2;
+              self = _this3;
               price = 0;
-              _this2.forms = forms; //on parcout les champs de l'etape, afin de determiner le cout associé à chaque champs.
+              _this3.forms = forms; //on parcout les champs de l'etape, afin de determiner le cout associé à chaque champs.
 
               _context.t0 = regeneratorRuntime.keys(formDatas.fields);
 
@@ -68257,7 +68365,7 @@ module.exports = fails(function () {
               }
 
               _context.next = 12;
-              return _this2.getPriceForField(field, false, 0, type_cout);
+              return _this3.getPriceForField(field, false, 0, type_cout);
 
             case 12:
               priceCurrentField = _context.sent;
@@ -68268,7 +68376,7 @@ module.exports = fails(function () {
               }
 
               _context.next = 16;
-              return _this2.getPriceFieldInState(forms, field, 0, type_cout);
+              return _this3.getPriceFieldInState(forms, field, 0, type_cout);
 
             case 16:
               price2 = _context.sent;
@@ -68320,7 +68428,7 @@ module.exports = fails(function () {
    */
   getPriceFieldInState: function getPriceFieldInState(forms, field) {
     var _arguments2 = arguments,
-        _this3 = this;
+        _this4 = this;
 
     return Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
       var priceFinal, type_cout;
@@ -68347,7 +68455,7 @@ module.exports = fails(function () {
 
                         // On s'assure que c'est le champs qui a ete selectionné par l'utilisateur.
                         if (fieldState.name == component.name) {
-                          AllPromise.push(_this3.getPriceForField(fieldState, true, 0, type_cout));
+                          AllPromise.push(_this4.getPriceForField(fieldState, true, 0, type_cout));
                           break;
                         }
                       }
