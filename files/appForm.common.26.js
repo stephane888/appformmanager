@@ -7,15 +7,12 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/EditsFields/inputRecap.vue?vue&type=template&id=7e0f8e70&scoped=true&lang=html&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('b-row',{staticClass:"mb-3"},[_c('b-col',{attrs:{"sm":"12"}},[_c('compositeHeaderField',{attrs:{"field":_vm.field}})],1),_c('b-col',{attrs:{"sm":"12"}},[_c('b-form-group',[_c('ckeditor',{attrs:{"editor":_vm.editor,"config":_vm.editorConfig},model:{value:(_vm.field.value),callback:function ($$v) {_vm.$set(_vm.field, "value", $$v)},expression:"field.value"}})],1)],1),_c('b-col',{attrs:{"sm":"12"}},[_c('b-form-group',{attrs:{"label":"Coeficient pour estimation de prix en %"}},[_c('b-form-input',{attrs:{"required":"","type":"number"},model:{value:(_vm.field.percent),callback:function ($$v) {_vm.$set(_vm.field, "percent", $$v)},expression:"field.percent"}})],1)],1)],1)],1)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/EditsFields/inputRecap.vue?vue&type=template&id=4efb913d&scoped=true&lang=html&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('b-row',{staticClass:"mb-3"},[_c('b-col',{attrs:{"sm":"12"}},[_c('compositeHeaderField',{attrs:{"field":_vm.field}})],1),_c('b-col',{attrs:{"sm":"12"}},[_c('b-form-group',[_c('ckeditor',{attrs:{"editor":_vm.editor,"config":_vm.editorConfig},model:{value:(_vm.field.value),callback:function ($$v) {_vm.$set(_vm.field, "value", $$v)},expression:"field.value"}})],1)],1),_c('b-col',{attrs:{"sm":"12"}},[_c('b-form-group',{attrs:{"label":"Coeficient pour estimation de prix en %"}},[_c('b-form-input',{attrs:{"required":"","type":"number"},model:{value:(_vm.field.percent),callback:function ($$v) {_vm.$set(_vm.field, "percent", $$v)},expression:"field.percent"}})],1),_c('b-form-group',{attrs:{"label":"Logique de calcul complexe"}},[_c('b-form-checkbox',{attrs:{"size":"lg"},model:{value:(_vm.field.complex_logique),callback:function ($$v) {_vm.$set(_vm.field, "complex_logique", $$v)},expression:"field.complex_logique"}})],1),(_vm.field.complex_logique)?_c('b-form-group',{attrs:{"label":"Logique calcul complexe"}},[_c('b-form-textarea',{attrs:{"placeholder":"","rows":"10"},model:{value:(_vm.field.preproccess_value),callback:function ($$v) {_vm.$set(_vm.field, "preproccess_value", $$v)},expression:"field.preproccess_value"}})],1):_vm._e()],1)],1)],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/EditsFields/inputRecap.vue?vue&type=template&id=7e0f8e70&scoped=true&lang=html&
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
-var es_function_name = __webpack_require__("b0c0");
+// CONCATENATED MODULE: ./src/App/EditsFields/inputRecap.vue?vue&type=template&id=4efb913d&scoped=true&lang=html&
 
 // EXTERNAL MODULE: ./node_modules/@ckeditor/ckeditor5-vue2/dist/ckeditor.js
 var ckeditor = __webpack_require__("6930");
@@ -29,7 +26,22 @@ var build_ckeditor = __webpack_require__("fb3d");
 var build_ckeditor_default = /*#__PURE__*/__webpack_require__.n(build_ckeditor);
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/EditsFields/inputRecap.vue?vue&type=script&lang=js&
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -69,10 +81,7 @@ var build_ckeditor_default = /*#__PURE__*/__webpack_require__.n(build_ckeditor);
   props: {
     field: {
       type: Object,
-      required: true,
-      validator: function validator(val) {
-        return val.label === undefined || val.value === undefined || val.name === undefined || val.require === undefined ? false : true;
-      }
+      required: true
     }
   },
   components: {
@@ -118,7 +127,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   null,
-  "7e0f8e70",
+  "4efb913d",
   null
   
 )

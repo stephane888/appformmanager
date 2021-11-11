@@ -1169,7 +1169,7 @@ var loaderIcon = __webpack_require__("021a");
   components: {
     block: bloc,
     typeDisplays: function typeDisplays() {
-      return __webpack_require__.e(/* import() */ 20).then(__webpack_require__.bind(null, "5b90"));
+      return __webpack_require__.e(/* import() */ 21).then(__webpack_require__.bind(null, "5b90"));
     },
     LoaderIcon: loaderIcon["a" /* default */]
   },

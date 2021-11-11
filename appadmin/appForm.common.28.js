@@ -1027,6 +1027,9 @@ var validationRessource = {
     }, {
       text: "la valeur du champs est superieur à",
       value: ">"
+    }, {
+      text: "la valeur du champs est inferieur à",
+      value: "<"
     }];
   },
   Action: function Action() {

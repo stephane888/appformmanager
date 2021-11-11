@@ -83,11 +83,11 @@ module.exports =
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"0":1,"1":1,"2":1,"4":1,"5":1,"7":1,"9":1,"10":1,"12":1,"13":1,"14":1,"15":1,"16":1,"17":1,"18":1,"19":1,"21":1,"22":1,"23":1,"25":1,"26":1,"30":1,"31":1,"32":1};
+/******/ 		var cssChunks = {"0":1,"1":1,"2":1,"4":1,"5":1,"7":1,"9":1,"10":1,"12":1,"13":1,"14":1,"15":1,"16":1,"17":1,"18":1,"19":1,"20":1,"22":1,"23":1,"25":1,"26":1,"30":1,"31":1,"32":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "css/" + ({}[chunkId]||chunkId) + "." + {"0":"f4f07acd","1":"ac327bf7","2":"5347cc27","3":"31d6cfe0","4":"ef8763e1","5":"945cb5cb","6":"31d6cfe0","7":"42efe657","9":"6e3ab6ab","10":"5ef89dde","11":"31d6cfe0","12":"e332f2ab","13":"442b78dd","14":"5f515804","15":"3def3390","16":"b2742065","17":"63248bb6","18":"dd3fcea7","19":"e5f1a246","20":"31d6cfe0","21":"5451517c","22":"dd36f6dd","23":"dc3d54c9","24":"31d6cfe0","25":"ac5b10c9","26":"42efe657","27":"31d6cfe0","28":"31d6cfe0","29":"31d6cfe0","30":"36d2244c","31":"36d2244c","32":"642d4926","33":"31d6cfe0","34":"31d6cfe0","35":"31d6cfe0","36":"31d6cfe0","37":"31d6cfe0","38":"31d6cfe0","39":"31d6cfe0","40":"31d6cfe0","41":"31d6cfe0","42":"31d6cfe0","43":"31d6cfe0","44":"31d6cfe0","45":"31d6cfe0"}[chunkId] + ".css";
+/******/ 				var href = "css/" + ({}[chunkId]||chunkId) + "." + {"0":"f4f07acd","1":"ac327bf7","2":"5347cc27","3":"31d6cfe0","4":"12dfd7d3","5":"945cb5cb","6":"31d6cfe0","7":"42efe657","9":"6e3ab6ab","10":"5ef89dde","11":"31d6cfe0","12":"e332f2ab","13":"442b78dd","14":"5f515804","15":"3def3390","16":"b2742065","17":"63248bb6","18":"dd3fcea7","19":"e5f1a246","20":"b472fe98","21":"31d6cfe0","22":"dd36f6dd","23":"dc3d54c9","24":"31d6cfe0","25":"ac5b10c9","26":"42efe657","27":"31d6cfe0","28":"31d6cfe0","29":"31d6cfe0","30":"36d2244c","31":"36d2244c","32":"642d4926","33":"31d6cfe0","34":"31d6cfe0","35":"31d6cfe0","36":"31d6cfe0","37":"31d6cfe0","38":"31d6cfe0","39":"31d6cfe0","40":"31d6cfe0","41":"31d6cfe0","42":"31d6cfe0","43":"31d6cfe0","44":"31d6cfe0","45":"31d6cfe0"}[chunkId] + ".css";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
@@ -68232,28 +68232,45 @@ module.exports = fails(function () {
                 var form = _this2.forms[k];
 
                 if (form.info.name === state.state_name) {
-                  console.log("check 1"); // si dans l'etape, il nya pas de champs, on renvoit false;
-
+                  //console.log("check 1");
+                  // si dans l'etape, il nya pas de champs, on renvoit false;
                   if (!form.fields || form.fields.length === 0) resolvForms(true); // Recherche du champs.
 
                   for (var f in form.fields) {
                     var field = form.fields[f]; // Identification du champs.
 
                     if (field.name === state.name) {
-                      console.log("check 2"); // Action à verifier
-
+                      //console.log("check 2");
+                      // Action à verifier
                       if (state.operator === "egal") {
                         if (field.value) {
-                          console.log(field.name + " : valeur : " + field.value, " \n condition à valider : ", state.value);
-                          var staValidation = field.value.includes(state.value);
-                          console.log(" Condition de validation : ", staValidation, "\n KEY : ", key); // on renvoit le status.
+                          var staValidation = field.value.includes(state.value); // on renvoit le status.
 
                           resolvForms(staValidation);
                         } else {
-                          console.log("field.value false");
                           resolvForms(false);
                         }
-                      } else {
+                      } //superieur à;
+                      else if (state.operator === ">") {
+                        if (field.value) {
+                          var _staValidation = field.value > state.value ? true : false; // on renvoit le status.
+
+
+                          resolvForms(_staValidation);
+                        } else {
+                          resolvForms(false);
+                        }
+                      } else if (state.operator === "<") {
+                        if (field.value) {
+                          var _staValidation2 = field.value < state.value ? true : false; // on renvoit le status.
+
+
+                          resolvForms(_staValidation2);
+                        } else {
+                          resolvForms(false);
+                        }
+                      } //
+                      else {
                         resolvForms(false);
                         break;
                       } // si on a un champs qui correspond, on ne verifie plus les autres champs.
