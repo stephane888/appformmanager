@@ -62432,19 +62432,21 @@ module.exports = function buildFullPath(baseURL, requestedURL) {
 /* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("159b");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("ac1f");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("5319");
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var core_js_modules_es_string_pad_start_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("4d90a");
-/* harmony import */ var core_js_modules_es_string_pad_start_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_pad_start_js__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("25f0");
-/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var wbuutilities__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__("a76e");
-/* harmony import */ var _Utilities_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__("2c10");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__("104d");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__("8bbf");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var core_js_modules_es_number_to_fixed_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("b680");
+/* harmony import */ var core_js_modules_es_number_to_fixed_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_to_fixed_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("ac1f");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("5319");
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var core_js_modules_es_string_pad_start_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("4d90a");
+/* harmony import */ var core_js_modules_es_string_pad_start_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_pad_start_js__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__("25f0");
+/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var wbuutilities__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__("a76e");
+/* harmony import */ var _Utilities_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__("2c10");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__("104d");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__("8bbf");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_15__);
 
 
 
@@ -62460,8 +62462,9 @@ module.exports = function buildFullPath(baseURL, requestedURL) {
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_14___default.a.use(bootstrap_vue__WEBPACK_IMPORTED_MODULE_13__[/* BVToastPlugin */ "a"]);
-/* harmony default export */ __webpack_exports__["a"] = (Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({}, wbuutilities__WEBPACK_IMPORTED_MODULE_11__[/* AjaxToastBootStrap */ "b"]), {}, {
+
+vue__WEBPACK_IMPORTED_MODULE_15___default.a.use(bootstrap_vue__WEBPACK_IMPORTED_MODULE_14__[/* BVToastPlugin */ "a"]);
+/* harmony default export */ __webpack_exports__["a"] = (Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({}, wbuutilities__WEBPACK_IMPORTED_MODULE_12__[/* AjaxToastBootStrap */ "b"]), {}, {
   TestDomain: "http://v2lesroisdelareno.kksa",
   //"http://lesroisdelareno.habeuk.com",
   typeSelection: ["radio", "select", "checkbox", "radiodesc", "checkboximg"],
@@ -62665,7 +62668,7 @@ vue__WEBPACK_IMPORTED_MODULE_14___default.a.use(bootstrap_vue__WEBPACK_IMPORTED_
     return this.saveForm([deleteData]);
   },
   prepareSettingForm: function prepareSettingForm(datas) {
-    return _Utilities_js__WEBPACK_IMPORTED_MODULE_12__[/* default */ "a"].settingForm(datas);
+    return _Utilities_js__WEBPACK_IMPORTED_MODULE_13__[/* default */ "a"].settingForm(datas);
   },
 
   /**
@@ -62695,7 +62698,7 @@ vue__WEBPACK_IMPORTED_MODULE_14___default.a.use(bootstrap_vue__WEBPACK_IMPORTED_
             datas: JSON.stringify([]),
             appformmanager_forms: datas.id,
             uid: uid,
-            price: price,
+            price: price.toFixed(2),
             status: status
           },
           action: "update"

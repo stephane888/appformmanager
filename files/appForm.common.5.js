@@ -7,12 +7,12 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/input/recapitulatif.vue?vue&type=template&id=1510f9d8&lang=html&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/input/recapitulatif.vue?vue&type=template&id=40b59576&lang=html&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:!_vm.validationField && _vm.mode ? 'mb-5' : ''},[(_vm.validationField)?_c('transition',{attrs:{"name":"fade"}},[_c('div',{staticClass:"row-content choice-section min-height",attrs:{"displayPreproccessValue":_vm.displayPreproccessValue}},[_c('b-row',{staticClass:"row-content__row"},[(!_vm.field.complex_logique)?_c('b-col',{staticClass:"mb-3",attrs:{"sm":"12"}},[_c('label',{staticClass:"label d-flex align-items-center"},[_c('span',{staticClass:"price-info label"},[_vm._v(_vm._s(_vm.field.label)+" :")]),_c('span',{staticClass:"price-info price"},[_vm._v(_vm._s(_vm.priceEstimation))]),_c('span',{staticClass:"price-info currency"},[_vm._v("€")])])]):_vm._e(),(_vm.field.complex_logique)?_c('b-col',{staticClass:"text-description",attrs:{"sm":"12"}},[_c('div',[_c('label',{staticClass:"label d-flex align-items-center"},[_c('span',{staticClass:"price-info label"},[_vm._v(_vm._s(_vm.field.label)+" :")])]),_c('div',{staticClass:"px-2 d-block text-left",domProps:{"innerHTML":_vm._s(_vm.field.montant)}})])]):_vm._e(),_c('b-col',{staticClass:"text-description",attrs:{"sm":"12"},domProps:{"innerHTML":_vm._s(_vm.field.value)}})],1)],1)]):_vm._e()],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/input/recapitulatif.vue?vue&type=template&id=1510f9d8&lang=html&
+// CONCATENATED MODULE: ./src/App/input/recapitulatif.vue?vue&type=template&id=40b59576&lang=html&
 
 // EXTERNAL MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/input/recapitulatif.vue?vue&type=script&lang=js&
 var recapitulatifvue_type_script_lang_js_ = __webpack_require__("2e83");
@@ -64,9 +64,12 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony import */ var _siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("f3f3");
 /* harmony import */ var regenerator_runtime_runtime_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("96cf");
 /* harmony import */ var regenerator_runtime_runtime_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("2f62");
-/* harmony import */ var _store_utilities_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("fd71");
-/* harmony import */ var _EditsFields_vee_validate_custom_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("b6d1");
+/* harmony import */ var core_js_modules_es_number_to_fixed_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("b6802");
+/* harmony import */ var core_js_modules_es_number_to_fixed_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_to_fixed_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("2f62");
+/* harmony import */ var _store_utilities_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("fd71");
+/* harmony import */ var _EditsFields_vee_validate_custom_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("b6d1");
+
 
 
 
@@ -111,7 +114,7 @@ var component = Object(componentNormalizer["a" /* default */])(
       require: true
     }
   },
-  computed: Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({}, Object(vuex__WEBPACK_IMPORTED_MODULE_3__[/* mapState */ "c"])(["price", "mode", "form"])), {}, {
+  computed: Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({}, Object(vuex__WEBPACK_IMPORTED_MODULE_4__[/* mapState */ "c"])(["price", "mode", "form"])), {}, {
     validationField: function validationField() {
       this.setStatus(true);
       this.setPrice();
@@ -126,12 +129,12 @@ var component = Object(componentNormalizer["a" /* default */])(
 
           if (percent > 0) {
             percent = price * percent / 100 + price;
-            return price + " - " + percent;
+            return price.toFixed(2) + " - " + percent.toFixed(2);
           }
         }
       }
 
-      return price;
+      return price.toFixed(2);
     },
     displayPreproccessValue: function displayPreproccessValue() {
       return this.preproccess_value();
@@ -147,8 +150,8 @@ var component = Object(componentNormalizer["a" /* default */])(
       };
     },
     getFieldInForms: function getFieldInForms(state_name, field_name) {
-      _store_utilities_js__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"].forms = this.form.forms;
-      return _store_utilities_js__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"].getFieldInForms(state_name, field_name);
+      _store_utilities_js__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"].forms = this.form.forms;
+      return _store_utilities_js__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"].getFieldInForms(state_name, field_name);
     },
     preproccess_value: function preproccess_value() {
       var _this = this;
