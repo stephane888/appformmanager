@@ -265,12 +265,12 @@ var select_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var affichage_select = (select_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/affichage/recapitulatif.vue?vue&type=template&id=5ea12809&scoped=true&lang=html&
-var recapitulatifvue_type_template_id_5ea12809_scoped_true_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"d-flex justify-content-center text-center",attrs:{"data-render":"recapitulatif"}},[(_vm.diplayLabel)?_c('div',{staticClass:"label-field"},[_vm._v(_vm._s(_vm.field.label))]):_vm._e(),(!_vm.field.complex_logique)?_c('strong',{staticClass:"field-content"},[_vm._v(" "+_vm._s(_vm.priceEstimation)+" € ")]):_vm._e(),(!_vm.field.complex_logique)?_c('div',{domProps:{"innerHTML":_vm._s(_vm.field.montant)}}):_vm._e()])}
-var recapitulatifvue_type_template_id_5ea12809_scoped_true_lang_html_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/affichage/recapitulatif.vue?vue&type=template&id=2e71d708&scoped=true&lang=html&
+var recapitulatifvue_type_template_id_2e71d708_scoped_true_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"d-flex justify-content-center text-center",attrs:{"data-render":"recapitulatif"}},[(_vm.diplayLabel)?_c('div',{staticClass:"label-field"},[_vm._v(_vm._s(_vm.field.label))]):_vm._e(),(!_vm.field.complex_logique)?_c('strong',{staticClass:"field-content"},[_vm._v(" "+_vm._s(_vm.priceEstimation)+" € ")]):_vm._e(),(_vm.field.complex_logique)?_c('div',{domProps:{"innerHTML":_vm._s(_vm.field.montant)}}):_vm._e()])}
+var recapitulatifvue_type_template_id_2e71d708_scoped_true_lang_html_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/traitement/affichage/recapitulatif.vue?vue&type=template&id=5ea12809&scoped=true&lang=html&
+// CONCATENATED MODULE: ./src/App/traitement/affichage/recapitulatif.vue?vue&type=template&id=2e71d708&scoped=true&lang=html&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/affichage/recapitulatif.vue?vue&type=script&lang=js&
 //
@@ -343,11 +343,11 @@ var recapitulatifvue_type_template_id_5ea12809_scoped_true_lang_html_staticRende
 
 var recapitulatif_component = Object(componentNormalizer["a" /* default */])(
   affichage_recapitulatifvue_type_script_lang_js_,
-  recapitulatifvue_type_template_id_5ea12809_scoped_true_lang_html_render,
-  recapitulatifvue_type_template_id_5ea12809_scoped_true_lang_html_staticRenderFns,
+  recapitulatifvue_type_template_id_2e71d708_scoped_true_lang_html_render,
+  recapitulatifvue_type_template_id_2e71d708_scoped_true_lang_html_staticRenderFns,
   false,
   null,
-  "5ea12809",
+  "2e71d708",
   null
   
 )
