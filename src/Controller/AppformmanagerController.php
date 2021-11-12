@@ -213,7 +213,7 @@ class AppformmanagerController extends ControllerBase {
     $body = JSON::decode($Request->getContent());
     $DevisId = isset($body['DevisId']) ? $body['DevisId'] : null;
     try {
-      $param = " select dv.step from `appformmanager_datas_steps` as dv ";
+      $param = " select * from `appformmanager_datas_steps` as dv ";
       $param .= " where dv.datasid='" . $DevisId . "' and dv.order > 0 ";
       $param .= " order by dv.order ASC ";
       $configs = $this->Connection->query($param)->fetchAll(\PDO::FETCH_ASSOC);

@@ -7,12 +7,12 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/input/recapitulatif.vue?vue&type=template&id=1f5e4244&lang=html&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:!_vm.validationField && _vm.mode ? 'mb-5' : ''},[(_vm.validationField)?_c('transition',{attrs:{"name":"fade"}},[_c('div',{staticClass:"row-content choice-section min-height",attrs:{"displayPreproccessValue":_vm.displayPreproccessValue}},[_c('b-row',{staticClass:"row-content__row"},[(!_vm.field.complex_logique)?_c('b-col',{staticClass:"mb-3",attrs:{"sm":"12"}},[_c('label',{staticClass:"label d-flex align-items-center"},[_c('span',{staticClass:"price-info label"},[_vm._v(_vm._s(_vm.field.label)+" :")]),_c('span',{staticClass:"price-info price"},[_vm._v(_vm._s(_vm.priceEstimation))]),_c('span',{staticClass:"price-info currency"},[_vm._v("€")])])]):_vm._e(),(_vm.field.complex_logique)?_c('b-col',{staticClass:"text-description",attrs:{"sm":"12"}},[_c('div',[_c('label',{staticClass:"label d-flex align-items-center"},[_c('span',{staticClass:"price-info label"},[_vm._v(_vm._s(_vm.field.label)+" :")])]),_c('div',{staticClass:"px-2 d-block text-left",domProps:{"innerHTML":_vm._s(_vm.displayComplexLogique)}})])]):_vm._e(),_c('b-col',{staticClass:"text-description",attrs:{"sm":"12"},domProps:{"innerHTML":_vm._s(_vm.field.value)}})],1)],1)]):_vm._e()],1)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/input/recapitulatif.vue?vue&type=template&id=1510f9d8&lang=html&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:!_vm.validationField && _vm.mode ? 'mb-5' : ''},[(_vm.validationField)?_c('transition',{attrs:{"name":"fade"}},[_c('div',{staticClass:"row-content choice-section min-height",attrs:{"displayPreproccessValue":_vm.displayPreproccessValue}},[_c('b-row',{staticClass:"row-content__row"},[(!_vm.field.complex_logique)?_c('b-col',{staticClass:"mb-3",attrs:{"sm":"12"}},[_c('label',{staticClass:"label d-flex align-items-center"},[_c('span',{staticClass:"price-info label"},[_vm._v(_vm._s(_vm.field.label)+" :")]),_c('span',{staticClass:"price-info price"},[_vm._v(_vm._s(_vm.priceEstimation))]),_c('span',{staticClass:"price-info currency"},[_vm._v("€")])])]):_vm._e(),(_vm.field.complex_logique)?_c('b-col',{staticClass:"text-description",attrs:{"sm":"12"}},[_c('div',[_c('label',{staticClass:"label d-flex align-items-center"},[_c('span',{staticClass:"price-info label"},[_vm._v(_vm._s(_vm.field.label)+" :")])]),_c('div',{staticClass:"px-2 d-block text-left",domProps:{"innerHTML":_vm._s(_vm.field.montant)}})])]):_vm._e(),_c('b-col',{staticClass:"text-description",attrs:{"sm":"12"},domProps:{"innerHTML":_vm._s(_vm.field.value)}})],1)],1)]):_vm._e()],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/input/recapitulatif.vue?vue&type=template&id=1f5e4244&lang=html&
+// CONCATENATED MODULE: ./src/App/input/recapitulatif.vue?vue&type=template&id=1510f9d8&lang=html&
 
 // EXTERNAL MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/input/recapitulatif.vue?vue&type=script&lang=js&
 var recapitulatifvue_type_script_lang_js_ = __webpack_require__("2e83");
@@ -100,9 +100,6 @@ var component = Object(componentNormalizer["a" /* default */])(
 //
 //
 //
-//
-//
-//
 
 
 
@@ -113,17 +110,6 @@ var component = Object(componentNormalizer["a" /* default */])(
       type: Object,
       require: true
     }
-  },
-  components: {//
-  },
-  data: function data() {
-    return {
-      displayComplexLogique: ""
-    };
-  },
-  mounted: function mounted() {//
-  },
-  watch: {//
   },
   computed: Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({}, Object(vuex__WEBPACK_IMPORTED_MODULE_3__[/* mapState */ "c"])(["price", "mode", "form"])), {}, {
     validationField: function validationField() {
@@ -176,21 +162,26 @@ var component = Object(componentNormalizer["a" /* default */])(
                 self = _this;
 
                 if (!(self && self.field.preproccess_value)) {
-                  _context.next = 8;
+                  _context.next = 11;
                   break;
                 }
 
-                _context.next = 4;
+                _context.t0 = _this;
+                _context.t1 = _this.field;
+                _context.next = 6;
                 return eval(self.field.preproccess_value);
 
-              case 4:
-                _this.displayComplexLogique = _context.sent;
+              case 6:
+                _context.t2 = _context.sent;
+
+                _context.t0.$set.call(_context.t0, _context.t1, "montant", _context.t2);
+
                 return _context.abrupt("return", 1);
 
-              case 8:
+              case 11:
                 return _context.abrupt("return", 0);
 
-              case 9:
+              case 12:
               case "end":
                 return _context.stop();
             }
