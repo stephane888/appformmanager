@@ -68287,20 +68287,15 @@ module.exports = fails(function () {
     return new Promise(function (resolvParent) {
       var loop = function loop(j) {
         return new Promise(function (resolv) {
-          console.log("etape en cours : ", j, " : ", forms[j].info);
-
           if (!forms[j]) {
             resolv(null);
           }
 
           if (forms[j].states && forms[j].states.length > 0) self.validateState(forms[j].states).then(function (rep) {
-            console.log(" Status final de validation : ", rep);
-
             if (rep) {
               resolv(j);
             } else {
               var ii = j + 1;
-              console.log(" Passage à letape suivante ", ii);
               resolv(loop(ii));
             }
           });else resolv(j);
@@ -68318,69 +68313,14 @@ module.exports = fails(function () {
    * @param {*} states
    * @returns
    */
-  validateStateNone: function validateStateNone(states) {
-    var _this = this;
-
-    return new Promise(function (resolv) {
-      if (!states || states.length === 0) resolv(true); // On parcourt toutes les etapes.
-
-      for (var k in _this.forms) {
-        // On recupere la premiere etape et on verifie si on doit l'afficher ou pas.
-        var form = _this.forms[k];
-
-        for (var s in states) {
-          var state = states[s];
-
-          if (state.action === "visible") {
-            // Identification de l'etape;
-            if (form.info.name === state.state_name) {
-              // Recherche du champs.
-              for (var f in form.fields) {
-                var field = form.fields[f]; // Identification du champs.
-
-                if (field.name === state.name) {
-                  // Action à verifier
-                  if (state.operator === "egal") {
-                    if (field.value) {
-                      console.log(field.name + " : valeur : " + field.value, " \n condition à valider : ", state.value);
-                      var staValidation = field.value.includes(state.value);
-                      console.log(" Condition de validation : ", staValidation, "\n ");
-                      resolv(staValidation);
-                    } else {
-                      resolv(false);
-                    }
-                  }
-                }
-              }
-            }
-          } else {
-            resolv(true);
-          }
-        }
-
-        var ii = parseInt(k) + 1;
-
-        if (_this.forms.length === ii) {
-          resolv(true);
-        }
-      }
-    });
-  },
-
-  /**
-   * Validation des conditions.
-   * @param {*} states
-   * @returns
-   */
   validateState: function validateState(states) {
-    var _this2 = this;
+    var _this = this;
 
     return new Promise(function (resolvPrent) {
       if (!states || states.length === 0) resolvPrent(true);
 
       var loopSteps = function loopSteps(key) {
         return new Promise(function (resolv) {
-          console.log("loopSteps : ", key, " : ", states[key]);
           var state = states[key];
           if (!state) resolv(false);
 
@@ -68388,10 +68328,9 @@ module.exports = fails(function () {
             //on parcourt chaque etape dans le but de recherche si ce cette etape corrospont à celui definit dans states.
             var loopFomrs = function loopFomrs(k) {
               return new Promise(function (resolvForms) {
-                var form = _this2.forms[k];
+                var form = _this.forms[k];
 
                 if (form.info.name === state.state_name) {
-                  //console.log("check 1");
                   // si dans l'etape, il nya pas de champs, on renvoit false;
                   if (!form.fields || form.fields.length === 0) resolvForms(true); // Recherche du champs.
 
@@ -68399,7 +68338,6 @@ module.exports = fails(function () {
                     var field = form.fields[f]; // Identification du champs.
 
                     if (field.name === state.name) {
-                      //console.log("check 2");
                       // Action à verifier
                       if (state.operator === "egal") {
                         if (field.value) {
@@ -68447,7 +68385,7 @@ module.exports = fails(function () {
                   }
                 } // si ces pas le bonne on passe à l'etape suivnte
                 else {
-                  if (_this2.forms.length > k + 1) {
+                  if (_this.forms.length > k + 1) {
                     resolvForms(loopFomrs(k + 1));
                   } // si cest la derniere on renvoit null
                   else {
@@ -68497,7 +68435,7 @@ module.exports = fails(function () {
    */
   getPriceStape: function getPriceStape(formDatas, forms) {
     var _arguments = arguments,
-        _this3 = this;
+        _this2 = this;
 
     return Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
       var type_cout, self, price, i, field, priceCurrentField, price2, datas_logique;
@@ -68506,82 +68444,83 @@ module.exports = fails(function () {
           switch (_context.prev = _context.next) {
             case 0:
               type_cout = _arguments.length > 2 && _arguments[2] !== undefined ? _arguments[2] : "prix_utilisables";
-              self = _this3;
+              self = _this2;
               price = 0;
-              _this3.forms = forms; //on parcout les champs de l'etape, afin de determiner le cout associé à chaque champs.
+              _this2.forms = forms; //on parcout les champs de l'etape, afin de determiner le cout associé à chaque champs.
 
               _context.t0 = regeneratorRuntime.keys(formDatas.fields);
 
             case 5:
               if ((_context.t1 = _context.t0()).done) {
-                _context.next = 28;
+                _context.next = 29;
                 break;
               }
 
               i = _context.t1.value;
               field = formDatas.fields[i];
 
-              if (!field.prix) {
-                _context.next = 26;
+              if (!(field.prix && field.status)) {
+                _context.next = 27;
                 break;
               }
 
               if (!((field.prix.complex_logique === undefined || !field.prix.complex_logique) && type_cout == field.prix.action)) {
-                _context.next = 20;
+                _context.next = 21;
                 break;
               }
 
-              _context.next = 12;
-              return _this3.getPriceForField(field, false, 0, type_cout);
+              alert(field.name);
+              _context.next = 13;
+              return _this2.getPriceForField(field, false, 0, type_cout);
 
-            case 12:
+            case 13:
               priceCurrentField = _context.sent;
 
               if (!(field.prix && field.prix.components.length)) {
-                _context.next = 18;
+                _context.next = 19;
                 break;
               }
 
-              _context.next = 16;
-              return _this3.getPriceFieldInState(forms, field, 0, type_cout);
+              _context.next = 17;
+              return _this2.getPriceFieldInState(forms, field, 0, type_cout);
 
-            case 16:
+            case 17:
               price2 = _context.sent;
 
               if (price2) {
                 price += price2 * priceCurrentField;
               }
 
-            case 18:
-              _context.next = 26;
+            case 19:
+              _context.next = 27;
               break;
 
-            case 20:
+            case 21:
               if (!(field.prix.complex_logique && field.prix.action === type_cout)) {
-                _context.next = 26;
+                _context.next = 27;
                 break;
               }
 
               if (!self) {
-                _context.next = 26;
+                _context.next = 27;
                 break;
               }
 
-              _context.next = 24;
+              _context.next = 25;
               return eval(field.prix.datas_logique);
 
-            case 24:
+            case 25:
               datas_logique = _context.sent;
               price += parseInt(datas_logique);
 
-            case 26:
+            case 27:
               _context.next = 5;
               break;
 
-            case 28:
+            case 29:
               return _context.abrupt("return", price);
 
-            case 29:
+            case 30:
             case "end":
               return _context.stop();
           }
@@ -68595,7 +68534,7 @@ module.exports = fails(function () {
    */
   getPriceFieldInState: function getPriceFieldInState(forms, field) {
     var _arguments2 = arguments,
-        _this4 = this;
+        _this3 = this;
 
     return Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
       var priceFinal, type_cout;
@@ -68621,8 +68560,8 @@ module.exports = fails(function () {
                         var fieldState = form.fields[f]; // On s'assure que c'est le champs qui a ete selectionné par l'utilisateur.
 
                         // On s'assure que c'est le champs qui a ete selectionné par l'utilisateur.
-                        if (fieldState.name == component.name) {
-                          AllPromise.push(_this4.getPriceForField(fieldState, true, 0, type_cout));
+                        if (fieldState.status && fieldState.name == component.name) {
+                          AllPromise.push(_this3.getPriceForField(fieldState, true, 0, type_cout));
                           break;
                         }
                       }
@@ -68656,14 +68595,15 @@ module.exports = fails(function () {
    * on doit s'assurer en amont que le type de champs soit valide.( i.e type_cout == field.prix.action )
    */
   getPriceForField: function getPriceForField(field) {
-    var use = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+    var use = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
     var priceFinal = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
     var type_cout = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : "prix_utilisables";
+    console.log("use : ", use, " type_cout : ", type_cout, "\n field ", field, "\n field.name ", field.name);
     return new Promise(function (resolvParent) {
       var execution = function execution() {
         var price = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
         return new Promise(function (resolv, reject) {
-          if (field.prix && (field.prix.action === type_cout || use) && field.status) {
+          if (field.prix) {
             var typeDatas = Object(_siteweb_AppVuejs_app_form_node_modules_vue_babel_preset_app_node_modules_babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(field.value); // Cas des champs type selection.
 
 
@@ -68690,11 +68630,11 @@ module.exports = fails(function () {
 
               resolv(price);
             } else {
-              reject("Erreur dans le champs : " + field.name + " Cas de figure non pris en compte, (type : " + field.type + ")");
+              reject("Erreur dans le champs : " + field.name + " Cas de figure non pris en compte, (type : " + field.type + "\n cout :" + field.prix.cout + " )");
             }
           } // Si le champs ne respecte pas les regles. on emet une erreur.
           else {
-            reject("Erreur dans le champs : " + field.name + " (" + type_cout + " est different de " + field.prix.action + ")");
+            reject(field);
           }
         });
       };
