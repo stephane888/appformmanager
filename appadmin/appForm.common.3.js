@@ -1,19 +1,5 @@
 ((typeof self !== 'undefined' ? self : this)["webpackJsonpappForm"] = (typeof self !== 'undefined' ? self : this)["webpackJsonpappForm"] || []).push([[3],{
 
-/***/ "408a":
-/***/ (function(module, exports) {
-
-var valueOf = 1.0.valueOf;
-
-// `thisNumberValue` abstract operation
-// https://tc39.es/ecma262/#sec-thisnumbervalue
-module.exports = function (value) {
-  return valueOf.call(value);
-};
-
-
-/***/ }),
-
 /***/ "5784":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -369,12 +355,12 @@ var recapitulatif_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var recapitulatif = (recapitulatif_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/affichage/userlogin.vue?vue&type=template&id=3910144a&scoped=true&lang=html&
-var userloginvue_type_template_id_3910144a_scoped_true_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('ul',{staticClass:"m-0 p-0 pl-4"},_vm._l((_vm.currentDevisDisplay),function(value,i){return _c('li',{key:i,staticClass:"d-flex"},[_c('strong',{staticClass:"value"},[_vm._v(" "+_vm._s(value.text)+" ")])])}),0)])}
-var userloginvue_type_template_id_3910144a_scoped_true_lang_html_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/affichage/userlogin.vue?vue&type=template&id=3681c70a&scoped=true&lang=html&
+var userloginvue_type_template_id_3681c70a_scoped_true_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('ul',{staticClass:"m-0 p-0 pl-4"},_vm._l((_vm.currentDevisDisplay),function(value,i){return _c('li',{key:i,staticClass:"d-flex"},[_c('strong',{staticClass:"value"},[_vm._v(" "+_vm._s(value)+" ")])])}),0)])}
+var userloginvue_type_template_id_3681c70a_scoped_true_lang_html_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/traitement/affichage/userlogin.vue?vue&type=template&id=3910144a&scoped=true&lang=html&
+// CONCATENATED MODULE: ./src/App/traitement/affichage/userlogin.vue?vue&type=template&id=3681c70a&scoped=true&lang=html&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/affichage/userlogin.vue?vue&type=script&lang=js&
 //
@@ -413,7 +399,29 @@ var userloginvue_type_template_id_3910144a_scoped_true_lang_html_staticRenderFns
   computed: {
     currentDevisDisplay: function currentDevisDisplay() {
       if (this.currentDevis && this.currentDevis.user) {
-        return this.currentDevis.user;
+        var fields = [];
+
+        for (var i in this.currentDevis.user) {
+          var field = this.currentDevis.user[i];
+
+          if (i == "name") {
+            fields.push("Nom d'utilisateur : " + field[0].value);
+          }
+
+          if (i == "mail") {
+            fields.push("e-mail : " + field[0].value);
+          }
+
+          if (i == "field_prenom" && field[0]) {
+            fields.push("Nom & prenom : " + field[0].value);
+          }
+
+          if (i == "field_telephone" && field[0]) {
+            fields.push("Telephone : " + field[0].value);
+          }
+        }
+
+        return fields;
       } else {
         return [];
       }
@@ -434,11 +442,11 @@ var userloginvue_type_template_id_3910144a_scoped_true_lang_html_staticRenderFns
 
 var userlogin_component = Object(componentNormalizer["a" /* default */])(
   affichage_userloginvue_type_script_lang_js_,
-  userloginvue_type_template_id_3910144a_scoped_true_lang_html_render,
-  userloginvue_type_template_id_3910144a_scoped_true_lang_html_staticRenderFns,
+  userloginvue_type_template_id_3681c70a_scoped_true_lang_html_render,
+  userloginvue_type_template_id_3681c70a_scoped_true_lang_html_staticRenderFns,
   false,
   null,
-  "3910144a",
+  "3681c70a",
   null
   
 )
@@ -761,15 +769,15 @@ module.exports = function ($this, dummy, Wrapper) {
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/blocks/listBlocks.vue?vue&type=template&id=4af5d0c2&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('loader-icon',{attrs:{"busy":_vm.isBusy}}),(!_vm.isBusy)?_c('div',{staticClass:"titre-project-resume"},[_c('b-col',{staticClass:"notif",attrs:{"cols":"12","md":"5","lg":"3"}},[_c('span',{staticClass:"notif-alert notif-at"},[_vm._v(" "+_vm._s(_vm.nombreStatus.rappel.length)+" ")]),_c('span',[_vm._v(" Projet en attente de rappel ")])]),_c('b-col',{staticClass:"notif",attrs:{"cols":"12","md":"5","lg":"3"}},[_c('span',{staticClass:"notif-alert notif-sa"},[_vm._v(_vm._s(_vm.nombreStatus.save.length))]),_c('span',[_vm._v(" Projet sauvegardé ")])]),(_vm.$store.state.mode)?_c('b-col',{staticClass:"notif",attrs:{"cols":"12","md":"5","lg":"3"}},[_c('span',{staticClass:"notif-ab notif-alert"},[_vm._v(" "+_vm._s(_vm.nombreStatus.loose.length)+" ")]),_c('span',[_vm._v(" Projet abandonné ")])]):_vm._e()],1):_vm._e(),(!_vm.isBusy)?_c('b-row',{staticClass:"list-block",attrs:{"trigger_perfom":_vm.trigger_perfom}},_vm._l((_vm.traitementFormItemsDisplay),function(item,i){return _c('b-col',{key:i,attrs:{"md":"12"}},[_c('block',{attrs:{"item":item,"form":_vm.form,"traitementFormItems":_vm.traitementFormItems,"data-id":i},on:{"get-valide-stepe":_vm.getValideStepe,"form-traiter":_vm.formTraiter,"get-info-user":_vm.getInfoUser}})],1)}),1):_vm._e(),(_vm.totalRows > _vm.perPage)?_c('b-pagination',{staticClass:"pt-5 pb-5 mt-5 mb-0",attrs:{"total-rows":_vm.totalRows,"per-page":_vm.perPage,"align":"fill","size":"sm"},on:{"change":_vm.changePagination},model:{value:(_vm.currentPage),callback:function ($$v) {_vm.currentPage=$$v},expression:"currentPage"}}):_vm._e(),_c('b-modal',{ref:"modal",staticClass:"super-hover",attrs:{"id":"modal--closing","size":"lg","title":'Résultat du formulaire ...',"scrollable":"","cancelTitle":"Quitter","okTitle":"Me rappeler"},scopedSlots:_vm._u([{key:"modal-footer",fn:function(){return [_c('div',{staticClass:"d-flex"},[_c('div',{staticClass:"w-100"},[_c('b-button',{staticClass:"mr-3",attrs:{"variant":"primary","size":"sm"},on:{"click":function($event){return _vm.$bvModal.hide('modal--closing')}}},[_vm._v(" Quitter ")]),(
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/blocks/listBlocks.vue?vue&type=template&id=3e14ddea&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('loader-icon',{attrs:{"busy":_vm.isBusy}}),(!_vm.isBusy)?_c('div',{staticClass:"titre-project-resume"},[_c('b-col',{staticClass:"notif",attrs:{"cols":"12","md":"5","lg":"3"}},[_c('span',{staticClass:"notif-alert notif-at"},[_vm._v(" "+_vm._s(_vm.nombreStatus.rappel.length)+" ")]),_c('span',[_vm._v(" Projet en attente de rappel ")])]),_c('b-col',{staticClass:"notif",attrs:{"cols":"12","md":"5","lg":"3"}},[_c('span',{staticClass:"notif-alert notif-sa"},[_vm._v(_vm._s(_vm.nombreStatus.save.length))]),_c('span',[_vm._v(" Projet sauvegardé ")])]),(_vm.$store.state.mode)?_c('b-col',{staticClass:"notif",attrs:{"cols":"12","md":"5","lg":"3"}},[_c('span',{staticClass:"notif-ab notif-alert"},[_vm._v(" "+_vm._s(_vm.nombreStatus.loose.length)+" ")]),_c('span',[_vm._v(" Projet abandonné ")])]):_vm._e()],1):_vm._e(),(!_vm.isBusy)?_c('b-row',{staticClass:"list-block",attrs:{"trigger_perfom":_vm.trigger_perfom}},_vm._l((_vm.traitementFormItemsDisplay),function(item,i){return _c('b-col',{key:i,attrs:{"md":"12"}},[_c('block',{attrs:{"item":item,"form":_vm.form,"traitementFormItems":_vm.traitementFormItemsDisplay,"data-id":i},on:{"get-valide-stepe":_vm.getValideStepe,"form-traiter":_vm.formTraiter,"get-info-user":_vm.getInfoUser}})],1)}),1):_vm._e(),(_vm.totalRows > _vm.perPage)?_c('b-pagination',{staticClass:"pt-5 pb-5 mt-5 mb-0",attrs:{"total-rows":_vm.totalRows,"per-page":_vm.perPage,"align":"fill","size":"sm"},on:{"change":_vm.changePagination},model:{value:(_vm.currentPage),callback:function ($$v) {_vm.currentPage=$$v},expression:"currentPage"}}):_vm._e(),_c('b-modal',{ref:"modal",staticClass:"super-hover",attrs:{"id":"modal--closing","size":"lg","title":'Résultat du formulaire',"scrollable":"","cancelTitle":"Quitter","okTitle":"Me rappeler"},scopedSlots:_vm._u([{key:"modal-footer",fn:function(){return [_c('div',{staticClass:"d-flex"},[_c('div',{staticClass:"w-100"},[_c('b-button',{staticClass:"mr-3",attrs:{"variant":"primary","size":"sm"},on:{"click":function($event){return _vm.$bvModal.hide('modal--closing')}}},[_vm._v(" Quitter ")]),(
               (_vm.currentDevis.status === '1' || _vm.currentDevis.status === 1) &&
               _vm.currentDevis.uid.includes(_vm.$store.getters.uid)
-            )?_c('b-button',{attrs:{"variant":"primary","size":"sm"},on:{"click":function($event){return _vm.updateStatus()}}},[_vm._v(" Me rappeler ")]):_vm._e()],1)])]},proxy:true}]),model:{value:(_vm.showModal),callback:function ($$v) {_vm.showModal=$$v},expression:"showModal"}},[(_vm.traitementFormItems.length)?_c('b-row',{attrs:{"align-h":"center"}},_vm._l((_vm.validSteps2),function(steps,i){return _c('b-col',{key:i,staticClass:"mb-4",attrs:{"sm":"12"}},[(steps !== undefined)?_c('b-card',{staticClass:"mb-1",attrs:{"no-body":""}},[_c('b-card-header',{staticClass:"p-1",attrs:{"header-tag":"header","role":"tab"}},[_c('b-button',{attrs:{"block":"","variant":"dark","disabled":""}},[_vm._v(" "+_vm._s(steps.info.title)+" ")])],1),_c('b-collapse',{attrs:{"id":"accordion-option","accordion":"my-accordion","role":"tabpanel","visible":""}},[_c('b-card-body',{staticClass:"p-2"},[_c('b-row',{staticClass:"d-flex flex-wrap"},_vm._l((steps.fields),function(field,index){return _c('b-col',{key:index,attrs:{"cols":"12"}},[(field.status === undefined || field.status)?_c('type-displays',{staticClass:"mb-2",attrs:{"field":field,"currentDevis":_vm.currentDevis}}):_vm._e()],1)}),1)],1)],1)],1):_vm._e()],1)}),1):_vm._e()],1)],1)}
+            )?_c('b-button',{attrs:{"variant":"primary","size":"sm"},on:{"click":function($event){return _vm.updateStatus()}}},[_vm._v(" Me rappeler ")]):_vm._e()],1)])]},proxy:true}]),model:{value:(_vm.showModal),callback:function ($$v) {_vm.showModal=$$v},expression:"showModal"}},[(_vm.traitementFormItemsDisplay.length)?_c('b-row',{attrs:{"align-h":"center"}},_vm._l((_vm.validSteps2),function(steps,i){return _c('b-col',{key:i,staticClass:"mb-4",attrs:{"sm":"12"}},[(steps !== undefined)?_c('b-card',{staticClass:"mb-1",attrs:{"no-body":""}},[_c('b-card-header',{staticClass:"p-1",attrs:{"header-tag":"header","role":"tab"}},[_c('b-button',{attrs:{"block":"","variant":"dark","disabled":""}},[_vm._v(" "+_vm._s(steps.info.title)+" ")])],1),_c('b-collapse',{attrs:{"id":"accordion-option","accordion":"my-accordion","role":"tabpanel","visible":""}},[_c('b-card-body',{staticClass:"p-2"},[_c('b-row',{staticClass:"d-flex flex-wrap"},_vm._l((steps.fields),function(field,index){return _c('b-col',{key:index,attrs:{"cols":"12"}},[(field.status === undefined || field.status)?_c('type-displays',{staticClass:"mb-2",attrs:{"field":field,"currentDevis":_vm.currentDevis}}):_vm._e()],1)}),1)],1)],1)],1):_vm._e()],1)}),1):_vm._e()],1)],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/traitement/blocks/listBlocks.vue?vue&type=template&id=4af5d0c2&
+// CONCATENATED MODULE: ./src/App/traitement/blocks/listBlocks.vue?vue&type=template&id=3e14ddea&
 
 // EXTERNAL MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js + 1 modules
 var objectSpread2 = __webpack_require__("f3f3");
@@ -813,12 +821,12 @@ var config = __webpack_require__("f158");
 // EXTERNAL MODULE: ../drupal-vuejs/index.js + 16 modules
 var drupal_vuejs = __webpack_require__("e674");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/affichage/bloc.vue?vue&type=template&id=799887d9&
-var blocvue_type_template_id_799887d9_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"block"},[_c('b-button',{staticClass:"mb-2",attrs:{"variant":_vm.statusColor}},[_vm._v(" "+_vm._s(_vm.displayStatus)+" ")]),_c('div',{staticClass:"date"},[_vm._v(_vm._s(_vm.getDateDisplay))]),(_vm.infosUser)?_c('div',{staticClass:"infos-user"},[_c(_vm.infosUser,{tag:"component",staticClass:"infos-user"})],1):_vm._e(),_c('div',{staticClass:"d-flex align-items-center"},[_c('h3',{staticClass:"titre"},[_vm._v(_vm._s(_vm.formName))]),_c('div',{staticClass:"d-flex"},[_c('span',{staticClass:"action mb-2",on:{"click":_vm.getValideStepe}},[_vm._v(" Voir ")]),(_vm.$store.state.mode)?_c('span',{staticClass:"action",on:{"click":_vm.formTraiter}},[_vm._v(" Traiter ")]):_vm._e()])]),_c('b-row',{staticClass:"d-flex liste-fields",attrs:{"align-h":"center"}},_vm._l((_vm.itemFields),function(field,i){return _c('b-col',{key:i,attrs:{"cols":"4"}},[_c(_vm.getTemplatesFiles(field.type),{tag:"component",staticClass:"content-field",attrs:{"field":field,"diplayLabel":true}})],1)}),1)],1)}
-var blocvue_type_template_id_799887d9_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/affichage/bloc.vue?vue&type=template&id=1ab23068&
+var blocvue_type_template_id_1ab23068_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"block"},[_c('b-button',{staticClass:"mb-2",attrs:{"variant":_vm.statusColor}},[_vm._v(" "+_vm._s(_vm.displayStatus)+" ")]),_c('div',{staticClass:"date"},[_vm._v(_vm._s(_vm.getDateDisplay))]),(_vm.infosUser)?_c('div',{staticClass:"infos-user"},[_c(_vm.infosUser,{tag:"component",staticClass:"infos-user"})],1):_vm._e(),_c('div',{staticClass:"d-flex align-items-center"},[_c('h3',{staticClass:"titre"},[_vm._v(_vm._s(_vm.formName))]),_c('div',{staticClass:"d-flex"},[_c('span',{staticClass:"action mb-2",on:{"click":_vm.getValideStepe}},[_vm._v(" Voir ")]),(_vm.$store.state.mode)?_c('span',{staticClass:"action",on:{"click":_vm.formTraiter}},[_vm._v(" Traiter ")]):_vm._e()])])],1)}
+var blocvue_type_template_id_1ab23068_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/traitement/affichage/bloc.vue?vue&type=template&id=799887d9&
+// CONCATENATED MODULE: ./src/App/traitement/affichage/bloc.vue?vue&type=template&id=1ab23068&
 
 // EXTERNAL MODULE: ./src/App/traitement/affichage/traitement-display.js + 30 modules
 var traitement_display = __webpack_require__("5784");
@@ -826,6 +834,7 @@ var traitement_display = __webpack_require__("5784");
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/affichage/bloc.vue?vue&type=script&lang=js&
 
 
+//
 //
 //
 //
@@ -985,8 +994,8 @@ var componentNormalizer = __webpack_require__("2877");
 
 var component = Object(componentNormalizer["a" /* default */])(
   affichage_blocvue_type_script_lang_js_,
-  blocvue_type_template_id_799887d9_render,
-  blocvue_type_template_id_799887d9_staticRenderFns,
+  blocvue_type_template_id_1ab23068_render,
+  blocvue_type_template_id_1ab23068_staticRenderFns,
   false,
   null,
   null,
@@ -1231,6 +1240,7 @@ var loaderIcon = __webpack_require__("021a");
           created: rowData.created,
           price: rowData.price,
           uid: rowData.uid,
+          datas: rowData.datas,
           user: {},
           //pour gerer les informations provenant de la connexions.
           idloop: i // permet de retrouver aisement, le devis dans le current table (traitementFormItems);
@@ -1252,6 +1262,8 @@ var loaderIcon = __webpack_require__("021a");
 
         this.traitementFormItemsDisplay.push(row);
       }
+
+      console.log("traitementFormItemsDisplay : ", this.traitementFormItemsDisplay);
     },
 
     /**
@@ -1370,19 +1382,19 @@ var loaderIcon = __webpack_require__("021a");
       //var self = this;
       this.showModal = !this.showModal;
       this.validSteps2 = [];
-      this.currentDataId = this.traitementFormItems[id].id;
-      this.currentDevis = this.traitementFormItems[id];
-      this.validSteps2 = this.traitementFormItems[id].datas;
+      this.currentDataId = this.traitementFormItemsDisplay[id].id;
+      this.currentDevis = this.traitementFormItemsDisplay[id];
+      this.validSteps2 = this.traitementFormItemsDisplay[id].datas;
 
-      if (!this.traitementFormItems[id]["all-steps-loaded"]) {
+      if (!this.traitementFormItemsDisplay[id]["all-steps-loaded"]) {
         this.loadAllStepOfDevis({
           DevisId: this.currentDataId
         }).then(function (steps) {
           steps.forEach(function (row) {
-            _this2.traitementFormItems[id].datas.push(row.step);
+            _this2.traitementFormItemsDisplay[id].datas.push(row.step);
           });
         });
-        this.traitementFormItems[id]["all-steps-loaded"] = true;
+        this.traitementFormItemsDisplay[id]["all-steps-loaded"] = true;
       }
     },
 

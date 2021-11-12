@@ -1,19 +1,5 @@
 ((typeof self !== 'undefined' ? self : this)["webpackJsonpappForm"] = (typeof self !== 'undefined' ? self : this)["webpackJsonpappForm"] || []).push([[6],{
 
-/***/ "408a":
-/***/ (function(module, exports) {
-
-var valueOf = 1.0.valueOf;
-
-// `thisNumberValue` abstract operation
-// https://tc39.es/ecma262/#sec-thisnumbervalue
-module.exports = function (value) {
-  return valueOf.call(value);
-};
-
-
-/***/ }),
-
 /***/ "5899":
 /***/ (function(module, exports) {
 

@@ -58,12 +58,12 @@ module.exports = function from(arrayLike /* , mapfn = undefined, thisArg = undef
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/affichage/typeDisplays.vue?vue&type=template&id=31f1ca17&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"38d0f794-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App/traitement/affichage/typeDisplays.vue?vue&type=template&id=72be2e4b&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"simple-champ",class:_vm.field.type},[_c('div',{staticClass:"label-title"},[_vm._v(_vm._s(_vm.field.label))]),(_vm.field.value)?_c('div',{staticClass:"label-title flex-wrap"},[_c(_vm.getTemplatesFiles(),{tag:"component",staticClass:"content-field",attrs:{"field":_vm.field,"currentDevis":_vm.currentDevis}})],1):_vm._e()])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App/traitement/affichage/typeDisplays.vue?vue&type=template&id=31f1ca17&
+// CONCATENATED MODULE: ./src/App/traitement/affichage/typeDisplays.vue?vue&type=template&id=72be2e4b&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.symbol.js
 var es_symbol = __webpack_require__("a4d3");
@@ -248,6 +248,12 @@ var traitement_display = __webpack_require__("5784");
   },
   methods: {
     getTemplatesFiles: function getTemplatesFiles() {
+      console.log(" this.field.type ", this.field.type);
+
+      if ("userlogin" == this.field.type) {
+        console.log("field : ", this.field, "\n currentDevis : ", this.currentDevis);
+      }
+
       return traitement_display["a" /* default */].getTemplatesFiles(this.field.type);
     }
   }
@@ -319,7 +325,7 @@ $({ target: 'Array', stat: true, forced: INCORRECT_ITERATION }, {
 
 /***/ }),
 
-/***/ "b680":
+/***/ "b6802":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -351,7 +357,7 @@ function _arrayLikeToArray(arr, len) {
 /* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("3ca3");
 /* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("b680");
+/* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("b6802");
 
 
 
