@@ -68443,7 +68443,7 @@ module.exports = fails(function () {
 
             case 5:
               if ((_context.t1 = _context.t0()).done) {
-                _context.next = 29;
+                _context.next = 28;
                 break;
               }
 
@@ -68451,67 +68451,66 @@ module.exports = fails(function () {
               field = formDatas.fields[i];
 
               if (!(field.prix && field.status)) {
-                _context.next = 27;
+                _context.next = 26;
                 break;
               }
 
               if (!((field.prix.complex_logique === undefined || !field.prix.complex_logique) && type_cout == field.prix.action)) {
-                _context.next = 21;
+                _context.next = 20;
                 break;
               }
 
-              alert(field.name);
-              _context.next = 13;
+              _context.next = 12;
               return _this2.getPriceForField(field, false, 0, type_cout);
 
-            case 13:
+            case 12:
               priceCurrentField = _context.sent;
 
               if (!(field.prix && field.prix.components.length)) {
-                _context.next = 19;
+                _context.next = 18;
                 break;
               }
 
-              _context.next = 17;
+              _context.next = 16;
               return _this2.getPriceFieldInState(forms, field, 0, type_cout);
 
-            case 17:
+            case 16:
               price2 = _context.sent;
 
               if (price2) {
                 price += price2 * priceCurrentField;
               }
 
-            case 19:
-              _context.next = 27;
+            case 18:
+              _context.next = 26;
               break;
 
-            case 21:
+            case 20:
               if (!(field.prix.complex_logique && field.prix.action === type_cout)) {
-                _context.next = 27;
+                _context.next = 26;
                 break;
               }
 
               if (!self) {
-                _context.next = 27;
+                _context.next = 26;
                 break;
               }
 
-              _context.next = 25;
+              _context.next = 24;
               return eval(field.prix.datas_logique);
 
-            case 25:
+            case 24:
               datas_logique = _context.sent;
               price += parseInt(datas_logique);
 
-            case 27:
+            case 26:
               _context.next = 5;
               break;
 
-            case 29:
+            case 28:
               return _context.abrupt("return", price);
 
-            case 30:
+            case 29:
             case "end":
               return _context.stop();
           }
