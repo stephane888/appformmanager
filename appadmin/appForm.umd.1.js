@@ -1349,7 +1349,7 @@ var Utilities = __webpack_require__("2c10");
 /* harmony default export */ var inputOptionFormvue_type_script_lang_js_ = ({
   components: {
     FormCheckbox: function FormCheckbox() {
-      return __webpack_require__.e(/* import() */ 43).then(__webpack_require__.bind(null, "331f"));
+      return __webpack_require__.e(/* import() */ 44).then(__webpack_require__.bind(null, "331f"));
     },
     FormSelect: FormSelect,
     FormRadioDesc: FormRadioDesc,
@@ -1357,28 +1357,28 @@ var Utilities = __webpack_require__("2c10");
     FormCheckImg: FormCheckImg,
     FormNumberUp: FormNumberUp,
     InputText: function InputText() {
-      return __webpack_require__.e(/* import() */ 38).then(__webpack_require__.bind(null, "4790"));
+      return __webpack_require__.e(/* import() */ 39).then(__webpack_require__.bind(null, "4790"));
     },
     InputFiles: function InputFiles() {
-      return __webpack_require__.e(/* import() */ 37).then(__webpack_require__.bind(null, "15e7"));
+      return __webpack_require__.e(/* import() */ 38).then(__webpack_require__.bind(null, "15e7"));
     },
     FormSpinner: function FormSpinner() {
-      return __webpack_require__.e(/* import() */ 45).then(__webpack_require__.bind(null, "6174"));
+      return __webpack_require__.e(/* import() */ 46).then(__webpack_require__.bind(null, "6174"));
     },
     FormAutocomplete: function FormAutocomplete() {
-      return __webpack_require__.e(/* import() */ 42).then(__webpack_require__.bind(null, "47e7"));
+      return __webpack_require__.e(/* import() */ 43).then(__webpack_require__.bind(null, "47e7"));
     },
     FormMarkup: function FormMarkup() {
-      return __webpack_require__.e(/* import() */ 44).then(__webpack_require__.bind(null, "3b12"));
+      return __webpack_require__.e(/* import() */ 45).then(__webpack_require__.bind(null, "3b12"));
     },
     inputRecap: function inputRecap() {
-      return __webpack_require__.e(/* import() */ 40).then(__webpack_require__.bind(null, "c40c"));
+      return __webpack_require__.e(/* import() */ 41).then(__webpack_require__.bind(null, "c40c"));
     },
     inputUserLogin: function inputUserLogin() {
-      return __webpack_require__.e(/* import() */ 41).then(__webpack_require__.bind(null, "ebe6"));
+      return __webpack_require__.e(/* import() */ 42).then(__webpack_require__.bind(null, "ebe6"));
     },
     inputAideFinanciere: function inputAideFinanciere() {
-      return __webpack_require__.e(/* import() */ 39).then(__webpack_require__.bind(null, "b8d0"));
+      return __webpack_require__.e(/* import() */ 40).then(__webpack_require__.bind(null, "b8d0"));
     }
   },
   props: {
@@ -2109,6 +2109,9 @@ var validationRessource = {
     }, {
       text: "la valeur du champs est inferieur à",
       value: "<"
+    }, {
+      text: "Term parent",
+      value: "taxo_term_parent"
     }];
   },
   Action: function Action() {

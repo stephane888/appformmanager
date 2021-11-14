@@ -1008,6 +1008,9 @@ var validationRessource = {
     }, {
       text: "la valeur du champs est inferieur à",
       value: "<"
+    }, {
+      text: "Term parent",
+      value: "taxo_term_parent"
     }];
   },
   Action: function Action() {

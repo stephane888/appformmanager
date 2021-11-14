@@ -87,7 +87,7 @@ module.exports =
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "css/" + ({}[chunkId]||chunkId) + "." + {"0":"f4f07acd","1":"ac327bf7","2":"5347cc27","3":"31d6cfe0","4":"12dfd7d3","5":"945cb5cb","6":"31d6cfe0","7":"42efe657","9":"6e3ab6ab","10":"5ef89dde","11":"31d6cfe0","12":"e332f2ab","13":"442b78dd","14":"5f515804","15":"3def3390","16":"b2742065","17":"63248bb6","18":"dd3fcea7","19":"e5f1a246","20":"b472fe98","21":"31d6cfe0","22":"dd36f6dd","23":"dc3d54c9","24":"31d6cfe0","25":"ac5b10c9","26":"42efe657","27":"31d6cfe0","28":"31d6cfe0","29":"31d6cfe0","30":"36d2244c","31":"36d2244c","32":"642d4926","33":"31d6cfe0","34":"31d6cfe0","35":"31d6cfe0","36":"31d6cfe0","37":"31d6cfe0","38":"31d6cfe0","39":"31d6cfe0","40":"31d6cfe0","41":"31d6cfe0","42":"31d6cfe0","43":"31d6cfe0","44":"31d6cfe0","45":"31d6cfe0"}[chunkId] + ".css";
+/******/ 				var href = "css/" + ({}[chunkId]||chunkId) + "." + {"0":"f4f07acd","1":"ac327bf7","2":"5347cc27","3":"31d6cfe0","4":"67a0a577","5":"945cb5cb","6":"31d6cfe0","7":"42efe657","9":"6e3ab6ab","10":"5ef89dde","11":"31d6cfe0","12":"e332f2ab","13":"442b78dd","14":"5f515804","15":"3def3390","16":"b2742065","17":"63248bb6","18":"dd3fcea7","19":"e5f1a246","20":"b472fe98","21":"31d6cfe0","22":"dd36f6dd","23":"dc3d54c9","24":"31d6cfe0","25":"ac5b10c9","26":"42efe657","27":"31d6cfe0","28":"31d6cfe0","29":"31d6cfe0","30":"36d2244c","31":"36d2244c","32":"642d4926","33":"31d6cfe0","34":"31d6cfe0","35":"31d6cfe0","36":"31d6cfe0","37":"31d6cfe0","38":"31d6cfe0","39":"31d6cfe0","40":"31d6cfe0","41":"31d6cfe0","42":"31d6cfe0","43":"31d6cfe0","44":"31d6cfe0","45":"31d6cfe0","46":"31d6cfe0"}[chunkId] + ".css";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
@@ -58209,6 +58209,63 @@ var termsTaxo_termsTaxo = /*#__PURE__*/function () {
       });
     }
     /**
+     *
+     * @returns *
+     */
+
+  }, {
+    key: "getValue",
+    value: function getValue(term) {
+      var _this3 = this;
+
+      var filter = new buildFilter();
+      filter.addFilter("name", "=", term);
+      return new Promise(function (resolv) {
+        App_utilities.get(_this3.url + "?" + filter.query, Confs.headers).then(function (resp) {
+          _this3.terms = resp.data;
+          resolv(resp.data);
+        });
+      });
+    }
+    /**
+     *
+     * @returns *
+     */
+
+  }, {
+    key: "getValueByTid",
+    value: function getValueByTid(id) {
+      var _this4 = this;
+
+      var filter = new buildFilter();
+      filter.addFilter("tid", "=", id);
+      return new Promise(function (resolv) {
+        App_utilities.get(_this4.url + "?" + filter.query, Confs.headers).then(function (resp) {
+          _this4.terms = resp.data;
+          resolv(resp.data);
+        });
+      });
+    }
+    /**
+     *
+     * @returns *
+     */
+
+  }, {
+    key: "getValueById",
+    value: function getValueById(id) {
+      var _this5 = this;
+
+      var filter = new buildFilter();
+      filter.addFilter("id", "=", id);
+      return new Promise(function (resolv) {
+        App_utilities.get(_this5.url + "?" + filter.query, Confs.headers).then(function (resp) {
+          _this5.terms = resp.data;
+          resolv(resp.data);
+        });
+      });
+    }
+    /**
      * Retourne les termes sous formes de liste d'otpions.
      */
 
@@ -68252,6 +68309,8 @@ module.exports = fails(function () {
 /* harmony import */ var core_js_modules_es_number_to_fixed_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__("b680");
 /* harmony import */ var core_js_modules_es_number_to_fixed_js__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_to_fixed_js__WEBPACK_IMPORTED_MODULE_12__);
 /* harmony import */ var _App_config_config_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__("f158");
+/* harmony import */ var drupal_vuejs__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__("e674");
+
 
 
 
@@ -68357,6 +68416,36 @@ module.exports = fails(function () {
 
 
                           resolvForms(_staValidation2);
+                        } else {
+                          resolvForms(false);
+                        }
+                      } // Permet de verifier si l'id selectionner par l'utilisateur appartient à un parent bien definit.
+                      else if (state.operator === "taxo_term_parent") {
+                        if (field.value && field.value.value) {
+                          console.log("field : ", field);
+                          var terms = new drupal_vuejs__WEBPACK_IMPORTED_MODULE_14__[/* termsTaxo */ "d"]("departement_de_france");
+                          terms.getValueByTid(field.value.value).then(function (resp) {
+                            if (resp.data && resp.data[0] && resp.data[0].relationships.parent) {
+                              var parent = resp.data[0].relationships.parent.data[0];
+                              console.log(" Parent : ", parent, "\n State : ", state);
+
+                              if (state.term_condition == "=") {
+                                if (parent.id === state.value) {
+                                  resolvForms(true);
+                                } else {
+                                  resolvForms(false);
+                                }
+                              } else {
+                                if (parent.id !== state.value) {
+                                  resolvForms(true);
+                                } else {
+                                  resolvForms(false);
+                                }
+                              }
+                            } else resolvForms(false);
+                          }).catch(function () {
+                            resolvForms(false);
+                          });
                         } else {
                           resolvForms(false);
                         }
