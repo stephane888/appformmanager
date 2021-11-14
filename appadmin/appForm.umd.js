@@ -68336,6 +68336,7 @@ module.exports = fails(function () {
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   forms: [],
+  formDatas: {},
 
   /**
    * Selectionne l'indice de la prochaine etape valide.
@@ -68538,13 +68539,14 @@ module.exports = fails(function () {
               type_cout = _arguments.length > 2 && _arguments[2] !== undefined ? _arguments[2] : "prix_utilisables";
               self = _this2;
               price = 0;
-              _this2.forms = forms; //on parcout les champs de l'etape, afin de determiner le cout associé à chaque champs.
+              _this2.forms = forms;
+              _this2.formDatas = formDatas; //on parcout les champs de l'etape, afin de determiner le cout associé à chaque champs.
 
               _context.t0 = regeneratorRuntime.keys(formDatas.fields);
 
-            case 5:
+            case 6:
               if ((_context.t1 = _context.t0()).done) {
-                _context.next = 28;
+                _context.next = 29;
                 break;
               }
 
@@ -68552,66 +68554,66 @@ module.exports = fails(function () {
               field = formDatas.fields[i];
 
               if (!(field.prix && field.status)) {
-                _context.next = 26;
+                _context.next = 27;
                 break;
               }
 
               if (!((field.prix.complex_logique === undefined || !field.prix.complex_logique) && type_cout == field.prix.action)) {
-                _context.next = 20;
+                _context.next = 21;
                 break;
               }
 
-              _context.next = 12;
+              _context.next = 13;
               return _this2.getPriceForField(field, false, 0, type_cout);
 
-            case 12:
+            case 13:
               priceCurrentField = _context.sent;
 
               if (!(field.prix && field.prix.components.length)) {
-                _context.next = 18;
+                _context.next = 19;
                 break;
               }
 
-              _context.next = 16;
+              _context.next = 17;
               return _this2.getPriceFieldInState(forms, field, 0, type_cout);
 
-            case 16:
+            case 17:
               price2 = _context.sent;
 
               if (price2) {
                 price += price2 * priceCurrentField;
               }
 
-            case 18:
-              _context.next = 26;
+            case 19:
+              _context.next = 27;
               break;
 
-            case 20:
+            case 21:
               if (!(field.prix.complex_logique && field.prix.action === type_cout)) {
-                _context.next = 26;
+                _context.next = 27;
                 break;
               }
 
               if (!self) {
-                _context.next = 26;
+                _context.next = 27;
                 break;
               }
 
-              _context.next = 24;
+              _context.next = 25;
               return eval(field.prix.datas_logique);
 
-            case 24:
+            case 25:
               datas_logique = _context.sent;
               price += parseInt(datas_logique);
 
-            case 26:
-              _context.next = 5;
+            case 27:
+              _context.next = 6;
               break;
 
-            case 28:
+            case 29:
               return _context.abrupt("return", price);
 
-            case 29:
+            case 30:
             case "end":
               return _context.stop();
           }
