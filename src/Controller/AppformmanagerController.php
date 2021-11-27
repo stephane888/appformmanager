@@ -1,4 +1,5 @@
 <?php
+
 namespace Drupal\appformmanager\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
@@ -18,22 +19,18 @@ use Drupal\appformmanager\Appformmanager;
  * Returns responses for AppFormManager routes.
  */
 class AppformmanagerController extends ControllerBase {
-
   protected $UserAuth;
-
   protected $Connection;
-
   protected $InsertUpdate;
-
   protected $DomainElementManager;
-
+  
   public function __construct(UserAuth $UserAuth, Connection $Connection, InsertUpdate $InsertUpdate, DomainElementManager $DomainElementManager) {
     $this->UserAuth = $UserAuth;
     $this->Connection = $Connection;
     $this->InsertUpdate = $InsertUpdate;
     $this->DomainElementManager = $DomainElementManager;
   }
-
+  
   /**
    *
    * {@inheritdoc}
@@ -41,7 +38,7 @@ class AppformmanagerController extends ControllerBase {
   public static function create(ContainerInterface $container) {
     return new static($container->get('user.auth'), $container->get('database'), $container->get('query_ajax.insert_update'), $container->get('domain.element_manager'));
   }
-
+  
   /**
    * Builds the response.
    */
@@ -57,7 +54,7 @@ class AppformmanagerController extends ControllerBase {
     $configs['#attached']['library'][] = 'appformmanager/app_form';
     return $configs;
   }
-
+  
   /**
    * Builds the response.
    */
@@ -73,7 +70,7 @@ class AppformmanagerController extends ControllerBase {
     $configs['#attached']['library'][] = 'appformmanager/manager';
     return $configs;
   }
-
+  
   /**
    *
    * {@inheritdoc}
@@ -87,12 +84,13 @@ class AppformmanagerController extends ControllerBase {
       $data = $serializer->serialize($user, 'json', [
         'plugin_id' => 'entity'
       ]);
-    } else {
+    }
+    else {
       $data = $id;
     }
     return $this->reponse($data);
   }
-
+  
   /**
    * Recupere les informations d'un utilisateur à partir de son nom utilisateur
    * ou email.
@@ -102,8 +100,8 @@ class AppformmanagerController extends ControllerBase {
     $msg = "Votre login ou mot de passe est invalide";
     $content = $Request->getContent();
     $content = Json::decode($content);
-    $password = ! empty($content['password']) ? $content['password'][0]['value'] : null;
-    $login = ! empty($content['name']) ? $content['name'][0]['value'] : null;
+    $password = !empty($content['password']) ? $content['password'][0]['value'] : null;
+    $login = !empty($content['name']) ? $content['name'][0]['value'] : null;
     // if(! empty( $login )){
     // $user = $this->loadByMailOrLogin( $login );
     // if(! $user){
@@ -127,7 +125,7 @@ class AppformmanagerController extends ControllerBase {
     }
     return $this->reponse($content, $code, $msg);
   }
-
+  
   /**
    *
    * @param int $step
@@ -140,7 +138,7 @@ class AppformmanagerController extends ControllerBase {
     // $formId = 13;
     $nbreSteps = 10;
     try {
-      $param = " select f.id,f.name,f.description, st.info, st.states, stf.defaultjson,stf.stepid,stf.label, af.jsonfield from `appformmanager_fomrs` as f ";
+      $param = " select f.id,f.name,f.description, st.info, st.states, stf.defaultjson,stf.stepid,stf.label,stf.fieldjson, af.jsonfield from `appformmanager_fomrs` as f ";
       $param .= " inner join appformmanager_steps as st ON st.formid = f.id ";
       $param .= " inner join appformmanager_steps_fields as stf ON (stf.formid = f.id and st.stepid = stf.stepid) ";
       $param .= " left join appformmanager_fields as af ON (af.formid = f.id and af.machine_name = stf.machine_name) ";
@@ -148,12 +146,13 @@ class AppformmanagerController extends ControllerBase {
       $param .= " order by st.stepid ASC ";
       $configs = $this->Connection->query($param)->fetchAll(\PDO::FETCH_ASSOC);
       $configs = $this->retrieveDatas($configs);
-    } catch (\Exception $e) {
+    }
+    catch (\Exception $e) {
       return $this->reponse($e->getTrace(), $e->getCode(), $e->getMessage());
     }
     return $this->reponse($configs);
   }
-
+  
   /**
    * Recupere un devis plus sa premiere etape.
    */
@@ -163,9 +162,10 @@ class AppformmanagerController extends ControllerBase {
       $param = " select dv.price, dv.status, dv.domaineid, dv.created, dv.uid, dv.id, st.step, f.name from `appformmanager_datas` as dv ";
       $param .= " inner join appformmanager_datas_steps as st ON st.datasid = dv.id ";
       $param .= " inner join appformmanager_fomrs as f ON f.id = dv.appformmanager_forms ";
-      // $param .= " where dv.appformmanager_forms='" . $formId . "' and st.order='0' and dv.domaineid = '" . $activeDomaine . "' ";
+      // $param .= " where dv.appformmanager_forms='" . $formId . "' and
+      // st.order='0' and dv.domaineid = '" . $activeDomaine . "' ";
       $filters = [];
-      if (! empty($body['filters'])) {
+      if (!empty($body['filters'])) {
         $filters = $body['filters'];
       }
       Appformmanager::AddFilterByDomain($filters, "domaineid", "dv");
@@ -174,12 +174,13 @@ class AppformmanagerController extends ControllerBase {
       $param .= " order by dv.id DESC limit " . $perpage . " OFFSET " . $pagination * $perpage;
       $configs = $this->Connection->query($param)->fetchAll(\PDO::FETCH_ASSOC);
       $this->retrieveDevis($configs);
-    } catch (\Exception $e) {
+    }
+    catch (\Exception $e) {
       return $this->reponse($e->getMessage(), 409, urlencode($e->getMessage()));
     }
     return $this->reponse($configs);
   }
-
+  
   /**
    * Recupere un devis plus sa premiere etape.
    */
@@ -189,9 +190,10 @@ class AppformmanagerController extends ControllerBase {
       $param = " select dv.price, dv.status, dv.domaineid, dv.created, dv.uid, dv.id, st.step, f.name from `appformmanager_datas` as dv ";
       $param .= " inner join appformmanager_datas_steps as st ON st.datasid = dv.id ";
       $param .= " inner join appformmanager_fomrs as f ON f.id = dv.appformmanager_forms ";
-      // $param .= " where dv.appformmanager_forms='" . $formId . "' and st.order='0' and dv.domaineid = '" . $activeDomaine . "' ";
+      // $param .= " where dv.appformmanager_forms='" . $formId . "' and
+      // st.order='0' and dv.domaineid = '" . $activeDomaine . "' ";
       $filters = [];
-      if (! empty($body['filters'])) {
+      if (!empty($body['filters'])) {
         $filters = $body['filters'];
       }
       Appformmanager::AddFilterByDomainOwn($filters, "domaineid", "dv");
@@ -200,12 +202,13 @@ class AppformmanagerController extends ControllerBase {
       $param .= " order by dv.id DESC limit " . $perpage . " OFFSET " . $pagination * $perpage;
       $configs = $this->Connection->query($param)->fetchAll(\PDO::FETCH_ASSOC);
       $this->retrieveDevis($configs);
-    } catch (\Exception $e) {
+    }
+    catch (\Exception $e) {
       return $this->reponse($e->getMessage(), 409, urlencode($e->getMessage()));
     }
     return $this->reponse($configs);
   }
-
+  
   /**
    * Recupere les etapes de devis de maniere progressive.
    */
@@ -217,17 +220,18 @@ class AppformmanagerController extends ControllerBase {
       $param .= " where dv.datasid='" . $DevisId . "' and dv.order > 0 ";
       $param .= " order by dv.order ASC ";
       $configs = $this->Connection->query($param)->fetchAll(\PDO::FETCH_ASSOC);
-      if (! empty($configs)) {
+      if (!empty($configs)) {
         foreach ($configs as $k => $row) {
           $configs[$k]['step'] = JSON::decode($row['step']);
         }
       }
-    } catch (\Exception $e) {
+    }
+    catch (\Exception $e) {
       return $this->reponse($param, 409, urlencode($e->getMessage()));
     }
     return $this->reponse($configs);
   }
-
+  
   /**
    * Permet à un administrateur de voir tous les devis d'un domain.
    *
@@ -236,58 +240,61 @@ class AppformmanagerController extends ControllerBase {
   function CountDevis(Request $Request) {
     try {
       $body = JSON::decode($Request->getContent());
-      if (! empty($body['beginSql']))
+      if (!empty($body['beginSql']))
         $param = $body['beginSql'];
       $filters = [];
-      if (! empty($body['filters'])) {
+      if (!empty($body['filters'])) {
         $filters = $body['filters'];
       }
       Appformmanager::AddFilterByDomain($filters);
       $filtersString = QueryUtility::buildFilterSql($filters);
-      if (! empty($filtersString)) {
+      if (!empty($filtersString)) {
         $param .= " where ";
         $param .= $filtersString;
       }
-      if (! empty($body['endSql'])) {
+      if (!empty($body['endSql'])) {
         $param .= $body['endSql'];
       }
       $configs = $this->Connection->query($param)->fetchAll(\PDO::FETCH_ASSOC);
-    } catch (\Exception $e) {
+    }
+    catch (\Exception $e) {
       return $this->reponse($param, 409, urlencode($e->getMessage()));
     }
     return $this->reponse($configs);
   }
-
+  
   /**
-   * Cette route est diponible auniquement pour une route et un admin bien defini
+   * Cette route est diponible auniquement pour une route et un admin bien
+   * defini
    *
    * @param Request $Request
    */
   function CountDevisOwn(Request $Request) {
     try {
       $body = JSON::decode($Request->getContent());
-      if (! empty($body['beginSql']))
+      if (!empty($body['beginSql']))
         $param = $body['beginSql'];
       $filters = [];
-      if (! empty($body['filters'])) {
+      if (!empty($body['filters'])) {
         $filters = $body['filters'];
       }
       Appformmanager::AddFilterByDomainOwn($filters);
       $filtersString = QueryUtility::buildFilterSql($filters);
-      if (! empty($filtersString)) {
+      if (!empty($filtersString)) {
         $param .= " where ";
         $param .= $filtersString;
       }
-      if (! empty($body['endSql'])) {
+      if (!empty($body['endSql'])) {
         $param .= $body['endSql'];
       }
       $configs = $this->Connection->query($param)->fetchAll(\PDO::FETCH_ASSOC);
-    } catch (\Exception $e) {
+    }
+    catch (\Exception $e) {
       return $this->reponse($param, 409, urlencode($e->getMessage()));
     }
     return $this->reponse($configs);
   }
-
+  
   /**
    *
    * @param array $devis
@@ -299,7 +306,7 @@ class AppformmanagerController extends ControllerBase {
       ];
     }
   }
-
+  
   function SaveSoumissions(Request $Request) {
     $payLoad = JSON::decode($Request->getContent());
     foreach ($payLoad as $key => $table) {
@@ -313,7 +320,7 @@ class AppformmanagerController extends ControllerBase {
     $configs = $this->InsertUpdate->buildInserts($payLoad);
     return $this->reponse($configs, $this->InsertUpdate->AjaxStatus->getCode(), $this->InsertUpdate->AjaxStatus->getMessage());
   }
-
+  
   protected function retrieveDatas(array $fields) {
     $results = [];
     foreach ($fields as $field) {
@@ -324,9 +331,10 @@ class AppformmanagerController extends ControllerBase {
           'states' => Json::decode($field['states']),
           'fields' => []
         ];
-
+        
         $this->overrideField($results[$field['stepid']]['step']['fields'], $field);
-      } else {
+      }
+      else {
         $this->overrideField($results[$field['stepid']]['step']['fields'], $field);
       }
       // suppression des champs non utile, (reduction de labande passante)
@@ -341,14 +349,15 @@ class AppformmanagerController extends ControllerBase {
     }
     return $resultsArray;
   }
-
+  
   /**
    *
    * @param array $fields
    * @param array $field
    */
   protected function overrideField(array &$fields, array $field) {
-    if ($field['jsonfield']) {
+    // champs en prevenance du gestionnaire de champs.
+    if (!empty($field['jsonfield'])) {
       $jsonfield = Json::decode($field['jsonfield']);
       // On ajoute la clee de surcharge.
       $jsonfield['override'] = [
@@ -356,17 +365,31 @@ class AppformmanagerController extends ControllerBase {
         'label' => $jsonfield['label'] // permet de verifier si le label est
                                        // surchargé.
       ];
+      // on garde le prix par defaut (afin de determiner si une surcharge a été
+      // effectué.
+      $jsonfield['default_prix'] = $jsonfield['prix'];
+      // ajoute des conditions d'affichage
+      if (!empty($field['fieldjson'])) {
+        $fieldjson = Json::decode($field['fieldjson']);
+        if (!empty($fieldjson['states']))
+          $jsonfield['states'] = $fieldjson['states'];
+        if (!empty($fieldjson['prix']))
+          $jsonfield['prix'] = $fieldjson['prix'];
+      }
+      
       // on verifie si un label est definit, on le surchage directement.
-      if (! empty($field['label'])) {
+      if (!empty($field['label'])) {
         $jsonfield['label'] = $field['label'];
       }
       $fields[] = $jsonfield;
-    } else {
+    }
+    // Champs creer dans le formulaire.
+    elseif (!empty($field['defaultjson'])) {
       $jsonfield = Json::decode($field['defaultjson']);
       $fields[] = $jsonfield;
     }
   }
-
+  
   /**
    *
    * @param string $mail
@@ -387,7 +410,7 @@ class AppformmanagerController extends ControllerBase {
       return reset($users);
     return FALSE;
   }
-
+  
   /**
    * Retourne l'uid de l'utilisateur ou false.
    *
@@ -398,7 +421,7 @@ class AppformmanagerController extends ControllerBase {
   protected function authentification($username, $password) {
     return $this->UserAuth->authenticate($username, $password);
   }
-
+  
   /**
    *
    * @param array|string $configs
@@ -407,7 +430,7 @@ class AppformmanagerController extends ControllerBase {
    * @return \Symfony\Component\HttpFoundation\JsonResponse
    */
   protected function reponse($configs, $code = null, $message = null) {
-    if (! is_string($configs))
+    if (!is_string($configs))
       $configs = Json::encode($configs);
     $reponse = new JsonResponse();
     if ($code)
@@ -415,4 +438,5 @@ class AppformmanagerController extends ControllerBase {
     $reponse->setContent($configs);
     return $reponse;
   }
+  
 }
