@@ -39,10 +39,10 @@ vuejs:
 #
 app_form:
   js:
-    files/appForm.umd.min.js: {}
+    files/appForm.umd.min.js: {preprocess: false}
   css:
     component:
-      files/appForm.css: {}
+      files/appForm.css: {preprocess: false}
   dependencies:
     - core/drupalSettings
     - wb_universe/vue_js
@@ -50,10 +50,10 @@ app_form:
 #
 manager:
   js:
-    appadmin/appForm.umd.min.js: {}
+    appadmin/appForm.umd.min.js: {preprocess: false}
   css:
     component:
-      appadmin/appForm.css: {}
+      appadmin/appForm.css: {preprocess: false}
   dependencies:
     - core/drupalSettings
     - wb_universe/vue_js
